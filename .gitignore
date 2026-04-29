@@ -13,6 +13,8 @@ image/
 .image/
 .scrapbook/
 scrapbook/
+__pycache__/
+*.pyc
 
 # Android Studio generated files and folders
 captures/

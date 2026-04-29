@@ -1,5 +1,10 @@
 import jwt
-from mcp.server.fastmcp import Context
+from typing import Any
+
+try:
+    from mcp.server.fastmcp import Context
+except ImportError:  # pragma: no cover
+    Context = Any  # type: ignore[assignment]
 
 from fhir_context import FhirContext
 from mcp_constants import FHIR_ACCESS_TOKEN_HEADER, FHIR_SERVER_URL_HEADER, PATIENT_ID_HEADER

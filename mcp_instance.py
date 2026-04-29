@@ -1,7 +1,16 @@
 from mcp.server.fastmcp import FastMCP
-from tools.patient_age_tool import get_patient_age
-from tools.patient_allergies_tool import get_patient_allergies
 from tools.patient_id_tool import find_patient_id
+
+
+def get_patient_age(patient_id: str) -> int:
+    """Gets the age of a patient."""
+    pass
+
+
+def get_patient_allergies(patient_id: str) -> list:
+    """Gets the known allergies of a patient."""
+    pass
+
 
 mcp = FastMCP("Python Template", stateless_http=True, host="0.0.0.0")
 
