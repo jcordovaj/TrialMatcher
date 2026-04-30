@@ -1,9 +1,9 @@
 |-- .gitattributes
 |-- .gitignore
+|-- audit_manager.py
 |-- Dockerfile.txt
 |-- fhir_client.py
 |-- fhir_context.py
-|-- fhir_utilities.py
 |-- gitignore.txt
 |-- main.py
 |-- MCPServer
@@ -4940,9 +4940,13 @@
 |-- mcp_instance.py
 |-- mcp_utilities.py
 |-- README.md
+|-- reasoning
+    |-- templates.py
 |-- requirements.txt
 |-- tools
+    |-- eligibility.py
     |-- patient_id_tool.py
 |-- __pycache__
+    |-- fhir_context.cpython-311.pyc
     |-- main.cpython-311.pyc
     |-- mcp_instance.cpython-311.pyc

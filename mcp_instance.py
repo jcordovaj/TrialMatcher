@@ -1,39 +1,37 @@
-from mcp.server.fastmcp import FastMCP
-from tools.patient_id_tool import find_patient_id
+from mcp_instance import mcp
+from fhir_client import FHIRClient
+# Importar fhir_context si se usa el helper de extracción
 
+@mcp.tool()
+async def fetch_and_match(protocol_text: str, context: any = None):
+    """
+    Herramienta que utiliza el FHIR Client para obtener datos en tiempo real
+    y compararlos con el protocolo del Trial Agent.
+    """
+    # 1. Extraer contexto de los headers (inyectados por la plataforma)
+    # Nota: En FastMCP, puedes acceder a los headers del request de FastAPI
+    # si el server está montado como vimos en main.py
+    
+    # Supongamos que extraemos estos valores del request actual:
+    fhir_url   = "..." # Desde X-FHIR-URL
+    token      = "..."    # Desde X-FHIR-Token
+    patient_id = "..." # Desde X-FHIR-PatientId
 
-def get_patient_age(patient_id: str) -> int:
-    """Gets the age of a patient."""
-    pass
-
-
-def get_patient_allergies(patient_id: str) -> list:
-    """Gets the known allergies of a patient."""
-    pass
-
-
-mcp = FastMCP("Python Template", stateless_http=True, host="0.0.0.0")
-
-_original_get_capabilities = mcp._mcp_server.get_capabilities
-
-def _patched_get_capabilities(notification_options, experimental_capabilities):
-    caps = _original_get_capabilities(notification_options, experimental_capabilities)
-    caps.model_extra["extensions"] = {
-        "ai.promptopinion/fhir-context": {
-            "scopes": [
-                {"name": "patient/Patient.rs", "required": True},
-                {"name": "patient/Observation.rs"},
-                {"name": "patient/MedicationStatement.rs"},
-                {"name": "patient/Condition.rs"},
-            ]
-        }
-    }
-    return caps
-
-mcp._mcp_server.get_capabilities = _patched_get_capabilities
-
-
-
-mcp.tool(name="GetPatientAge", description="Gets the age of a patient.")(get_patient_age)
-mcp.tool(name="GetPatientAllergies", description="Gets the known allergies of a patient.")(get_patient_allergies)
-mcp.tool(name="FindPatientId", description="Finds a patient id given a first name and last name")(find_patient_id)
+    client = FHIRClient(fhir_url, token, patient_id)
+    
+    # 2. Obtener datos clave para el TrialMatcher (ej. HbA1c y Metformina)
+    # Basado en el protocolo del ejemplo
+    labs = await client.query_resource("Observation", {"code": "26436-6"}) # Código para HbA1c
+    meds = await client.query_resource("MedicationStatement")
+    
+    # 3. Retornar el prompt de razonamiento con datos REALES
+    return f"""
+    DATOS DEL EHR RECUPERADOS:
+    Laboratorios: {labs}
+    Medicaciones: {meds}
+    
+    PROTOCOLO A EVALUAR:
+    {protocol_text}
+    
+    Por favor, determina la elegibilidad considerando la estabilidad de 3 meses.
+    """
