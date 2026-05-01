@@ -346,4 +346,4 @@ Un **Trial Candidate Processor** competitivo debe ofrecer:
 
 En una frase:
 
-**no es un clasificador** , es un **motor operativo de reclutamiento clínico con IA explicable y compliance integrado** .
+**TrialMatcher no es un clasificador** , es un **motor operativo basado en la aplicación de AI explicable que agiliza los procesos para el reclutamiento clínico con IA explicable y compliance integrado** .
