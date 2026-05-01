@@ -1,22 +1,26 @@
 class ReasoningTemplates:
     @staticmethod
-    def get_matching_prompt(protocol, clinical_data):
+    def get_agnostic_matching_prompt(protocol_rules, clinical_evidence):
         return f"""
-        ACTÚA COMO UN EXPERTO EN SCREENING DE ENSAYOS CLÍNICOS.
+        # EVALUADOR CLÍNICO AGNÓSTICO (TrialMatcher)
         
-        PROTOCOLO DEL TRIAL AGENT:
-        {protocol}
+        ## 1. REGLAS DE ENTRADA (Contexto del Trial Agent):
+        {protocol_rules}
+
+        ## 2. EVIDENCIA CLÍNICA (Contexto del EHR):
+        {clinical_evidence}
+
+        ## 3. TAREA:
+        Actúa como un auditor de datos. No asumas nada que no esté en la evidencia.
+        - Identifica en la 'EVIDENCIA' los valores que corresponden a las variables de las 'REGLAS'.
+        - Para cualquier criterio de tiempo (estabilidad, duración), usa las fechas de los registros.
+        - Si una variable requerida en las REGLAS no existe en la EVIDENCIA, márcala como 'DATO FALTANTE'.
+
+        ## 4. FORMATO DE AUDITORÍA:
+        Por cada criterio analizado, indica:
+        - Criterio: [Nombre del parámetro]
+        - Valor Hallado: [Valor en EHR]
+        - Resultado: [CUMPLE / NO CUMPLE / FALTANTE]
         
-        DATOS FRESCOS DEL EHR (VÍA FHIR):
-        {clinical_data}
-        
-        TAREAS:
-        1. Cruza cada criterio de inclusión/exclusión.
-        2. REGLA DE ORO (Estabilidad): Si el protocolo pide estabilidad de dosis (ej. 3 meses), 
-        compara la fecha de la receta más antigua de ese medicamento contra la fecha actual. 
-        Si hay menos de 90 días, marca como NO ELEGIBLE.
-        3. Compara resultados previos si existen.
-        
-        SALIDA:
-        Devuelve un análisis detallado y una conclusión final: [ELEGIBLE / NO ELEGIBLE / INFORMACIÓN INSUFICIENTE].
+        CONCLUSIÓN FINAL: [ELEGIBLE / NO ELEGIBLE]
         """

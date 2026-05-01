@@ -1,37 +1,41 @@
-from mcp_instance import mcp
-from fhir_client import FHIRClient
-# Importar fhir_context si se usa el helper de extracción
+from mcp.server.fastmcp import FastMCP
+from tools.match_patient_tool import match_patient_to_trial
+from tools.check_audit_tool import check_previous_evaluation
+from tools.reset_tool import reset_screening_history
 
-@mcp.tool()
-async def fetch_and_match(protocol_text: str, context: any = None):
-    """
-    Herramienta que utiliza el FHIR Client para obtener datos en tiempo real
-    y compararlos con el protocolo del Trial Agent.
-    """
-    # 1. Extraer contexto de los headers (inyectados por la plataforma)
-    # Nota: En FastMCP, puedes acceder a los headers del request de FastAPI
-    # si el server está montado como vimos en main.py
-    
-    # Supongamos que extraemos estos valores del request actual:
-    fhir_url   = "..." # Desde X-FHIR-URL
-    token      = "..."    # Desde X-FHIR-Token
-    patient_id = "..." # Desde X-FHIR-PatientId
+mcp = FastMCP("TrialMatcher Pro", stateless_http=True)
 
-    client = FHIRClient(fhir_url, token, patient_id)
-    
-    # 2. Obtener datos clave para el TrialMatcher (ej. HbA1c y Metformina)
-    # Basado en el protocolo del ejemplo
-    labs = await client.query_resource("Observation", {"code": "26436-6"}) # Código para HbA1c
-    meds = await client.query_resource("MedicationStatement")
-    
-    # 3. Retornar el prompt de razonamiento con datos REALES
-    return f"""
-    DATOS DEL EHR RECUPERADOS:
-    Laboratorios: {labs}
-    Medicaciones: {meds}
-    
-    PROTOCOLO A EVALUAR:
-    {protocol_text}
-    
-    Por favor, determina la elegibilidad considerando la estabilidad de 3 meses.
-    """
+# Patching capabilities for FHIR Scopes (Essential for the .rs permissions)
+_original_get_capabilities = mcp._mcp_server.get_capabilities
+
+def _patched_get_capabilities(notification_options, experimental_capabilities):
+    caps = _original_get_capabilities(notification_options, experimental_capabilities)
+    caps.model_extra["extensions"] = {
+        "ai.promptopinion/fhir-context": {
+            "scopes": [
+                {"name": "patient/Patient.rs", "required": True},
+                {"name": "patient/Observation.rs"},
+                {"name": "patient/MedicationStatement.rs"},
+                {"name": "patient/Condition.rs"},
+            ]
+        }
+    }
+    return caps
+
+mcp._mcp_server.get_capabilities = _patched_get_capabilities
+
+# Registration
+mcp.tool(
+    name="MatchPatientToTrial", 
+    description="Evaluates patient eligibility against a clinical trial protocol using real-time FHIR data."
+)(match_patient_to_trial)
+
+mcp.tool(
+    name="CheckEvaluationHistory", 
+    description="Retrieves the historical screening results for a patient from the internal audit database."
+)(check_previous_evaluation)
+
+mcp.tool(
+    name="AdminResetHistory", 
+    description="Developer tool to clear patient screening logs for re-testing."
+)(reset_screening_history)

@@ -1,8 +1,11 @@
-# Gradle files
-.gradle/
-build/
+# Folders
+Include/
+Lib/
+Scripts/
 
 # Local configuration file (sdk path, etc)
+*.cfg
+
 local.properties
 .git/
 # Log/OS Files

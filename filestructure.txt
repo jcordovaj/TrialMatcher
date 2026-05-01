@@ -4,6 +4,7 @@
 |-- Dockerfile.txt
 |-- fhir_client.py
 |-- fhir_context.py
+|-- fhir_utilities.py
 |-- gitignore.txt
 |-- main.py
 |-- MCPServer
@@ -1227,36 +1228,14 @@
                         |-- cli.cpython-311.pyc
                         |-- __init__.cpython-311.pyc
                 |-- client
-                    |-- auth
-                        |-- exceptions.py
-                        |-- extensions
-                            |-- client_credentials.py
-                            |-- __init__.py
-                            |-- __pycache__
-                                |-- client_credentials.cpython-311.pyc
-                                |-- __init__.cpython-311.pyc
-                        |-- oauth2.py
-                        |-- utils.py
-                        |-- __init__.py
-                        |-- __pycache__
-                            |-- exceptions.cpython-311.pyc
-                            |-- oauth2.cpython-311.pyc
-                            |-- utils.cpython-311.pyc
-                            |-- __init__.cpython-311.pyc
-                    |-- experimental
-                        |-- tasks.py
-                        |-- task_handlers.py
-                        |-- __init__.py
-                        |-- __pycache__
-                            |-- tasks.cpython-311.pyc
-                            |-- task_handlers.cpython-311.pyc
-                            |-- __init__.cpython-311.pyc
                     |-- session.py
                     |-- session_group.py
                     |-- sse.py
                     |-- stdio
+                        |-- win32.py
                         |-- __init__.py
                         |-- __pycache__
+                            |-- win32.cpython-311.pyc
                             |-- __init__.cpython-311.pyc
                     |-- streamable_http.py
                     |-- websocket.py
@@ -1270,22 +1249,6 @@
                         |-- websocket.cpython-311.pyc
                         |-- __init__.cpython-311.pyc
                         |-- __main__.cpython-311.pyc
-                |-- os
-                    |-- posix
-                        |-- utilities.py
-                        |-- __init__.py
-                        |-- __pycache__
-                            |-- utilities.cpython-311.pyc
-                            |-- __init__.cpython-311.pyc
-                    |-- win32
-                        |-- utilities.py
-                        |-- __init__.py
-                        |-- __pycache__
-                            |-- utilities.cpython-311.pyc
-                            |-- __init__.cpython-311.pyc
-                    |-- __init__.py
-                    |-- __pycache__
-                        |-- __init__.cpython-311.pyc
                 |-- py.typed
                 |-- server
                     |-- auth
@@ -1326,30 +1289,17 @@
                             |-- routes.cpython-311.pyc
                             |-- settings.cpython-311.pyc
                             |-- __init__.cpython-311.pyc
-                    |-- elicitation.py
-                    |-- experimental
-                        |-- request_context.py
-                        |-- session_features.py
-                        |-- task_context.py
-                        |-- task_result_handler.py
-                        |-- task_support.py
-                        |-- __init__.py
-                        |-- __pycache__
-                            |-- request_context.cpython-311.pyc
-                            |-- session_features.cpython-311.pyc
-                            |-- task_context.cpython-311.pyc
-                            |-- task_result_handler.cpython-311.pyc
-                            |-- task_support.cpython-311.pyc
-                            |-- __init__.cpython-311.pyc
                     |-- fastmcp
                         |-- exceptions.py
                         |-- prompts
                             |-- base.py
                             |-- manager.py
+                            |-- prompt_manager.py
                             |-- __init__.py
                             |-- __pycache__
                                 |-- base.cpython-311.pyc
                                 |-- manager.cpython-311.pyc
+                                |-- prompt_manager.cpython-311.pyc
                                 |-- __init__.cpython-311.pyc
                         |-- resources
                             |-- base.py
@@ -1373,13 +1323,11 @@
                                 |-- tool_manager.cpython-311.pyc
                                 |-- __init__.cpython-311.pyc
                         |-- utilities
-                            |-- context_injection.py
                             |-- func_metadata.py
                             |-- logging.py
                             |-- types.py
                             |-- __init__.py
                             |-- __pycache__
-                                |-- context_injection.cpython-311.pyc
                                 |-- func_metadata.cpython-311.pyc
                                 |-- logging.cpython-311.pyc
                                 |-- types.cpython-311.pyc
@@ -1390,14 +1338,10 @@
                             |-- server.cpython-311.pyc
                             |-- __init__.cpython-311.pyc
                     |-- lowlevel
-                        |-- experimental.py
-                        |-- func_inspection.py
                         |-- helper_types.py
                         |-- server.py
                         |-- __init__.py
                         |-- __pycache__
-                            |-- experimental.cpython-311.pyc
-                            |-- func_inspection.cpython-311.pyc
                             |-- helper_types.cpython-311.pyc
                             |-- server.cpython-311.pyc
                             |-- __init__.cpython-311.pyc
@@ -1407,75 +1351,40 @@
                     |-- stdio.py
                     |-- streamable_http.py
                     |-- streamable_http_manager.py
-                    |-- transport_security.py
-                    |-- validation.py
+                    |-- streaming_asgi_transport.py
                     |-- websocket.py
                     |-- __init__.py
                     |-- __main__.py
                     |-- __pycache__
-                        |-- elicitation.cpython-311.pyc
                         |-- models.cpython-311.pyc
                         |-- session.cpython-311.pyc
                         |-- sse.cpython-311.pyc
                         |-- stdio.cpython-311.pyc
                         |-- streamable_http.cpython-311.pyc
                         |-- streamable_http_manager.cpython-311.pyc
-                        |-- transport_security.cpython-311.pyc
-                        |-- validation.cpython-311.pyc
+                        |-- streaming_asgi_transport.cpython-311.pyc
                         |-- websocket.cpython-311.pyc
                         |-- __init__.cpython-311.pyc
                         |-- __main__.cpython-311.pyc
                 |-- shared
                     |-- auth.py
-                    |-- auth_utils.py
                     |-- context.py
                     |-- exceptions.py
-                    |-- experimental
-                        |-- tasks
-                            |-- capabilities.py
-                            |-- context.py
-                            |-- helpers.py
-                            |-- in_memory_task_store.py
-                            |-- message_queue.py
-                            |-- polling.py
-                            |-- resolver.py
-                            |-- store.py
-                            |-- __init__.py
-                            |-- __pycache__
-                                |-- capabilities.cpython-311.pyc
-                                |-- context.cpython-311.pyc
-                                |-- helpers.cpython-311.pyc
-                                |-- in_memory_task_store.cpython-311.pyc
-                                |-- message_queue.cpython-311.pyc
-                                |-- polling.cpython-311.pyc
-                                |-- resolver.cpython-311.pyc
-                                |-- store.cpython-311.pyc
-                                |-- __init__.cpython-311.pyc
-                        |-- __init__.py
-                        |-- __pycache__
-                            |-- __init__.cpython-311.pyc
                     |-- memory.py
                     |-- message.py
-                    |-- metadata_utils.py
                     |-- progress.py
-                    |-- response_router.py
                     |-- session.py
-                    |-- tool_name_validation.py
                     |-- version.py
                     |-- _httpx_utils.py
                     |-- __init__.py
                     |-- __pycache__
                         |-- auth.cpython-311.pyc
-                        |-- auth_utils.cpython-311.pyc
                         |-- context.cpython-311.pyc
                         |-- exceptions.cpython-311.pyc
                         |-- memory.cpython-311.pyc
                         |-- message.cpython-311.pyc
-                        |-- metadata_utils.cpython-311.pyc
                         |-- progress.cpython-311.pyc
-                        |-- response_router.cpython-311.pyc
                         |-- session.cpython-311.pyc
-                        |-- tool_name_validation.cpython-311.pyc
                         |-- version.cpython-311.pyc
                         |-- _httpx_utils.cpython-311.pyc
                         |-- __init__.cpython-311.pyc
@@ -1484,7 +1393,7 @@
                 |-- __pycache__
                     |-- types.cpython-311.pyc
                     |-- __init__.cpython-311.pyc
-            |-- mcp-1.27.0.dist-info
+            |-- mcp-1.9.0.dist-info
                 |-- entry_points.txt
                 |-- INSTALLER
                 |-- licenses
@@ -4942,11 +4851,29 @@
 |-- README.md
 |-- reasoning
     |-- templates.py
+    |-- __init__.py
+    |-- __pycache__
+        |-- templates.cpython-311.pyc
+        |-- __init__.cpython-311.pyc
 |-- requirements.txt
 |-- tools
+    |-- benchmark_tool.py
+    |-- check_audit_tool.py
     |-- eligibility.py
+    |-- match_patient_tool.py
     |-- patient_id_tool.py
+    |-- reset_tool.py
+    |-- __init__.py
+    |-- __pycache__
+        |-- check_audit_tool.cpython-311.pyc
+        |-- match_patient_tool.cpython-311.pyc
+        |-- __init__.cpython-311.pyc
 |-- __pycache__
+    |-- audit_manager.cpython-311.pyc
+    |-- fhir_client.cpython-311.pyc
     |-- fhir_context.cpython-311.pyc
+    |-- fhir_utilities.cpython-311.pyc
     |-- main.cpython-311.pyc
+    |-- mcp_constants.cpython-311.pyc
     |-- mcp_instance.cpython-311.pyc
+    |-- mcp_utilities.cpython-311.pyc
