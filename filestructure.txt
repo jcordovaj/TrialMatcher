@@ -6,6 +6,8 @@
 |-- fhir_context.py
 |-- fhir_utilities.py
 |-- gitignore.txt
+|-- Helpers
+    |-- json2pdf_converter.py
 |-- main.py
 |-- MCPServer
     |-- Include
@@ -779,6 +781,31 @@
                 |-- METADATA
                 |-- RECORD
                 |-- REQUESTED
+                |-- WHEEL
+            |-- fpdf
+                |-- fonts.py
+                |-- fpdf.py
+                |-- html.py
+                |-- php.py
+                |-- py3k.py
+                |-- template.py
+                |-- ttfonts.py
+                |-- __init__.py
+                |-- __pycache__
+                    |-- fonts.cpython-311.pyc
+                    |-- fpdf.cpython-311.pyc
+                    |-- html.cpython-311.pyc
+                    |-- php.cpython-311.pyc
+                    |-- py3k.cpython-311.pyc
+                    |-- template.cpython-311.pyc
+                    |-- ttfonts.cpython-311.pyc
+                    |-- __init__.cpython-311.pyc
+            |-- fpdf-1.7.2.dist-info
+                |-- INSTALLER
+                |-- METADATA
+                |-- RECORD
+                |-- REQUESTED
+                |-- top_level.txt
                 |-- WHEEL
             |-- h11
                 |-- py.typed
