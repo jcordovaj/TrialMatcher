@@ -163,6 +163,33 @@ classDiagram
         +List~InclusionCriteria~ inclusion_rules
         +List~ExclusionCriteria~ exclusion_rules
     }
+
+    class EvaluationResult {
+        +String evaluation_id
+        +String status "ELIGIBLE|INELIGIBLE|POTENTIAL"
+        +Float score (0-100)
+        +String primary_reason
+        +JSON evidence_summary
+    }
+
+    class AuditLog {
+        +String log_id
+        +Timestamp logged_at
+        +JSON criteria_evaluation_json
+        +String ai_reasoning
+    }
+
+    class RiskFlag {
+        +String type (DATA_GAP|SAFETY)
+        +String description
+    }
+
+    PatientRecord "1" --> "*" EvaluationResult : is evaluated for
+    Protocol "1" --> "*" EvaluationResult : defines rules for
+    EvaluationResult "1" --> "*" AuditLog : generates
+    EvaluationResult "1" --> "*" RiskFlag : may contain
+
+    note for EvaluationResult "Core Entity: Bridges Patient\n& Protocol with Logic"
 ```
 ![Data model audit.db](image/README/datamodel.png)
 
