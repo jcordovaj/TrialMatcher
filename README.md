@@ -216,7 +216,6 @@ classDiagram
 
     note for EvaluationResult "Core Entity: Bridges Patient\n& Protocol with Logic"
 ```
-![Data model audit.db](image/README/datamodel.png)
 
 ## 🛠️ Installation & Usage
 
@@ -264,4 +263,21 @@ We increase the probability of trial success by providing an explainable AI laye
 
 ## Walkthrough
 
-### 1.
+### 1.Screening rápido
+
+```mermaid
+flowchart LR
+    Start([Inicio]) --> Input[Input: ID Paciente]
+    Input --> Fetch{MCP: fetch_patient_context}
+    Fetch --> Parse[Parse FHIR: Labs, Meds, History]
+    Parse --> Evaluate{MCP: evaluate_vs_protocol}
+    Evaluate -->|Pass| Log[Log: Eligible (Audit)]
+    Evaluate -->|Fail| LogFail[Log: Ineligible (Reason)]
+    Evaluate -->|Missing| Request[Request: Specific Lab]
+    
+    Log --> Rank[Ranking: High Priority]
+    Request --> Rank[Ranking: Med Priority]
+    LogFail --> Rank[Ranking: Low Priority]
+    
+    Rank --> End([Output: Dashboard List])
+```
