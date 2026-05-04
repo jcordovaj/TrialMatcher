@@ -14,7 +14,7 @@
 
 By leveraging **Conversational Interoperability (COIN)**, we bridge the gap between unstructured patient data (EHRs, PDFs) and complex trial protocols, reducing screening time from weeks to hours while maintaining strict regulatory compliance.
 
-````mermaid
+```mermaid
 flowchart TD
 subgraph User_Actor ["👤 Clinical Coordinator"]
 U1[Asks: "Is Patient X eligible?"]
@@ -59,7 +59,7 @@ UI -->|Summary & Evidence| U1
 
 style MCP_Core fill:#1e293b,stroke:#38bdf8,color:#fff
 style Data_Sources fill:#f1f5f9,stroke:#94a3b8```
-````
+```
 
 ---
 
