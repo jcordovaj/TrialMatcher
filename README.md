@@ -8,7 +8,7 @@
 
 ## 🚀 TheExecutiveSummary
 
-80% ofclinicaltrialsfailtomeetenrollmenttimelines, costingtheindustrybillionsanddelayinglife-savingtreatments.
+80% of clinical trials fail to meet enrollment timelines, costing the industry billions and delaying life-saving treatments.
 
 **TrialMatcher** is an Agnostic Clinical Candidate Processor built on the Model Context Protocol (MCP). Unlike simple eligibility checkers, TrialMatcher is a fully operational AI engine that transforms heterogeneous clinical data into a prioritized, audit-ready short list of eligible patients.
 
