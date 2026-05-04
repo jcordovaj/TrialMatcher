@@ -16,23 +16,23 @@ By leveraging **Conversational Interoperability (COIN)**, we bridge the gap betw
 
 ```mermaid
 flowchart TD
-    subgraph User_Actor ["👤 Clinical Coordinator"]
-        U1[Asks: "Is Patient X eligible?"]
+    subgraph User_Actor [👤 Clinical Coordinator]
+        U1[Asks: Is Patient X eligible?]
     end
 
-    subgraph PO_Platform ["📱 PromptOpinion (Host)"]
+    subgraph PO_Platform [📱 PromptOpinion (Host)]
         UI[Chat Interface]
         LLM[Agentic Core / LLM]
     end
 
-    subgraph MCP_Core ["⚡ TrialMatcher-MCP Server"]
+    subgraph MCP_Core [⚡ TrialMatcher-MCP Server]
         T1[Tool: get_trial_protocol]
         T2[Tool: prepare_fhir_evaluation]
         T3[Tool: log_eligibility_decision]
         LOGIC[Reasoning Engine & Temporal Logic]
     end
 
-    subgraph Data_Sources ["🏥 Data Layer"]
+    subgraph Data_Sources [🏥 Data Layer]
         FHIR[EHR / FHIR Server]
         PDF[Protocol PDFs / JSON]
         DB[(SQLite Audit DB)]
