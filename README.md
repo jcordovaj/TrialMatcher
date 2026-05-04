@@ -4,7 +4,7 @@
 
 [ ![MCP Compatible](https://img.shields.io/badge/MCP-Model%20Context%20Protocol-blue)](https://modelcontextprotocol.io/)[ ![License](https://img.shields.io/badge/License-MIT-green.svg)](https://chat.z.ai/c/LICENSE)
 
----
+![Snapshot TrialMatcher](image/README/banner2.png)
 
 ## 🚀 TheExecutiveSummary
 
@@ -15,52 +15,50 @@
 By leveraging **Conversational Interoperability (COIN)**, we bridge the gap between unstructured patient data (EHRs, PDFs) and complex trial protocols, reducing screening time from weeks to hours while maintaining strict regulatory compliance.
 
 ````mermaid
-
 flowchart TD
-    subgraph User_Actor ["👤 Clinical Coordinator"]
-    U1[Asks: "Is Patient X eligible?"]
-    end
+subgraph User_Actor ["👤 Clinical Coordinator"]
+U1[Asks: "Is Patient X eligible?"]
+end
 
-    subgraph PO_Platform ["📱 PromptOpinion (Host)"]
-    UI[Chat Interface]
-    LLM[Agentic Core / LLM]
-    end
+subgraph PO_Platform \["📱 PromptOpinion (Host)"\]
+UI\[Chat Interface\]
+LLM\[Agentic Core / LLM\]
+end
 
-    subgraph MCP_Core ["⚡ TrialMatcher-MCP Server"]
-    T1[Tool: get_trial_protocol]
-    T2[Tool: prepare_fhir_evaluation]
-    T3[Tool: log_eligibility_decision]
-    LOGIC[Reasoning Engine & Temporal Logic]
-    end
+subgraph MCP_Core \["⚡ TrialMatcher-MCP Server"\]
+T1\[Tool: get_trial_protocol\]
+T2\[Tool: prepare_fhir_evaluation\]
+T3\[Tool: log_eligibility_decision\]
+LOGIC\[Reasoning Engine & Temporal Logic\]
+end
 
-    subgraph Data_Sources ["🏥 Data Layer"]
-    FHIR[EHR / FHIR Server]
-    PDF[Protocol PDFs / JSON]
-    DB[(SQLite Audit DB)]
-    end
+subgraph Data_Sources \["🏥 Data Layer"\]
+FHIR\[EHR / FHIR Server\]
+PDF\[Protocol PDFs / JSON\]
+DB\[(SQLite Audit DB)\]
+end
 
-    %% Flow
-    U1 --> UI
-    UI --> LLM
+%% Flow
+U1 --> UI
+UI --> LLM
 
-    LLM --"SSE Call: Get Protocol"--> T1
-    T1 --> PDF
+LLM --"SSE Call: Get Protocol"--> T1
+T1 --> PDF
 
-    LLM --"SSE Call: Evaluate Patient"--> T2
-    T2 --"Fetch Context"--> FHIR
-    T2 --> LOGIC
+LLM --"SSE Call: Evaluate Patient"--> T2
+T2 --"Fetch Context"--> FHIR
+T2 --> LOGIC
 
-    LOGIC -->|Results & Evidence| LLM
+LOGIC -->|Results & Evidence| LLM
 
-    LLM --"SSE Call: Log Decision"--> T3
-    T3 --> DB
+LLM --"SSE Call: Log Decision"--> T3
+T3 --> DB
 
-    LLM -->|Structured JSON| UI
-    UI -->|Summary & Evidence| U1
+LLM -->|Structured JSON| UI
+UI -->|Summary & Evidence| U1
 
-    style MCP_Core fill:#1e293b,stroke:#38bdf8,color:#fff
-    style Data_Sources fill:#f1f5f9,stroke:#94a3b8```
-
+style MCP_Core fill:#1e293b,stroke:#38bdf8,color:#fff
+style Data_Sources fill:#f1f5f9,stroke:#94a3b8```
 ````
 
 ---
@@ -78,8 +76,6 @@ flowchart TD
 - Agentic workflow: An AI agent retrieves patient data while another parses protocols; TrialMatcher MCP conducts the match.
 - Non-Binary logic: We don't just return "Eligible/NotEligible". We are able to identify "Potential Matches", "Data Gaps", and "Missing Lab Requirements".
 - Audit-Ready by design: Every match decision is backed by a "Clinical Reasoning Trace", citing specific record IDs, timestamps, and values.
-
----
 
 ## ✨ Key Capabilities
 
@@ -102,7 +98,7 @@ Moves beyond binary classification:
 
 #### 3.1 Flow example: Patient with incomplete data
 
-![1777872934780](image/README/1777872934780.png)
+![Diagram: Case Patiente with incomplete lab exams - Human in the Loop](image/README/caso_datos_incompletos.png)
 
 ### 4. Smart Ranking & Prioritization
 
@@ -116,9 +112,7 @@ Commercially powerful scoring algorithms:
 
 Not just "Patient-> Trial," but "Patient-> All Applicable Trials." Crucial for finding alternatives when a patient fails a primary screen.
 
----
-
-## 🔒 Compliance & Security (Non-Negotiable)
+## 🔒 Compliance & Security
 
 We are built for the highly regulated Pharma environment.
 
@@ -127,8 +121,6 @@ We are built for the highly regulated Pharma environment.
 - **Audit trails:** Immutable logs of who accessed what data and when.
 - **Regional compliance:** Designed with GDPR (EU), HIPAA (US), and LGPD (LATAM) principles in mind.
 
----
-
 ## 🏗️ Architecture highlights
 
 - **Core:** `FastMCP` server with `SSE`transport.
@@ -136,13 +128,9 @@ We are built for the highly regulated Pharma environment.
 - **Interoperability:** Native FHIR context support.
 - **Frontend:** Exposes tools via PromptOpinion ecosystem.
 
----
+## 📱Database model
 
-## 🏗️ Database model
-
-![1777869423581](image/README/1777869423581.png)
-
----
+![Data model audit.db](image/README/datamodel.png)
 
 ## 🛠️ Installation & Usage
 
@@ -154,7 +142,19 @@ We are built for the highly regulated Pharma environment.
 ### QuickStart
 
 ```bash
-# Clone the repogit clone https://github.com/your-org/trial-matcher-mcp.gitcd trial-matcher-mcp# Install dependenciespip install -r requirements.txt# Run the MCP Serverpython main.py
+# Clone the repo
+
+git clone https://github.com/jcordovaj/TrialMatcher.git
+
+cd TrialMatcher
+
+# Install dependencies
+
+pip install -r requirements.txt
+
+# Run the MCP server
+
+python main.py
 ```
 
 ### IntegrationwithPromptOpinion
@@ -164,17 +164,18 @@ We are built for the highly regulated Pharma environment.
 3. Transport: `StreamableHttp`.
 4. Endpoint: YourNgrokURL + `/mcp`.
 
----
-
-## 📈 Roadmap & FutureVision
+## 📈 Roadmap and future vision
 
 - **Protocol sandbox :** "What if we lowered the ECOG criteria to 2?" Simulation tools.
 - **GenomicsIntegration:** Support for NGS panels and Biomarkers (PD-L1, EGFR).
 - **CRMIntegration :** Direct work flow to site coordinators.
 
----
+## 💎 For Investors and Pharma Industry members
 
-## 💎 ForInvestors & Judges
+TrialMatcher is not a classifier. It is an Operational Engine for clinical operations based on GenAI.
 
-TrialMatcher is not a classifier. It is an Operational Engine for clinical operations.
-We increase the probability of trial success by providing an Explainable AI layer that sits on top of messy, real-world hospital data, ensuring that every recruitment decision is fast, safe, and scientifically justified.
+We increase the probability of trial success by providing an explainable AI layer that sits on top of messy, real-world hospital data, ensuring that every recruitment decision is fast, safe, and scientifically justified.
+
+## Walkthrough
+
+### 1.

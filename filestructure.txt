@@ -1,3 +1,4 @@
+|-- .env
 |-- .gitattributes
 |-- .gitignore
 |-- audit_manager.py
@@ -13,9 +14,12 @@
     |-- json2pdf_converter.py
 |-- image
     |-- README
-        |-- 1777869423581.png
-        |-- 1777872934780.png
         |-- banner.png
+        |-- banner2.png
+        |-- caso_datos_incompletos.png
+        |-- datamodel.png
+        |-- Screenshot 2026-05-04 022235.png
+        |-- Snapshot.png
 |-- main.py
 |-- MCPServer
     |-- Include
