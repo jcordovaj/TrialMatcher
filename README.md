@@ -67,13 +67,13 @@ flowchart TD
 
 ### The Problem
 
-- Heterogeneous data : Patient info is scattered across FHIR servers, PDFs, and free-text notes.
-- Protocol complexity: Criteria involving temporal logic ("≥3 months stability") are impossible to query via SQL alone.
-- Audit blindspots: AI decisions often lack the clinical evidence trail required by Pharma compliance.
+- **Heterogeneous data:** Patient info is scattered across FHIR servers, PDFs, and free-text notes.
+- **Protocol complexity:** Criteria involving temporal logic ("≥3 months stability") are impossible to query via SQL alone.
+- **Audit blindspots:** AI decisions often lack the clinical evidence trail required by Pharma compliance.
 
 ### The Solution
 
-- Agentic workflow: An AI agent retrieves patient data while another parses protocols; TrialMatcher MCP conducts the match.
+- ***Agentic workflow:*** An AI agent retrieves patient data while another parses protocols; TrialMatcher MCP conducts the match.
 - Non-Binary logic: We don't just return "Eligible/NotEligible". We are able to identify "Potential Matches", "Data Gaps", and "Missing Lab Requirements".
 - Audit-Ready by design: Every match decision is backed by a "Clinical Reasoning Trace", citing specific record IDs, timestamps, and values.
 
