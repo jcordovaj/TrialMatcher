@@ -15,50 +15,50 @@
 By leveraging **Conversational Interoperability (COIN)**, we bridge the gap between unstructured patient data (EHRs, PDFs) and complex trial protocols, reducing screening time from weeks to hours while maintaining strict regulatory compliance.
 
 ```mermaid
-flowchart TD
-subgraph User_Actor ["👤 Clinical Coordinator"]
-U1[Asks: "Is Patient X eligible?"]
-end
-
-subgraph PO_Platform \["📱 PromptOpinion (Host)"\]
-UI\[Chat Interface\]
-LLM\[Agentic Core / LLM\]
-end
-
-subgraph MCP_Core \["⚡ TrialMatcher-MCP Server"\]
-T1\[Tool: get_trial_protocol\]
-T2\[Tool: prepare_fhir_evaluation\]
-T3\[Tool: log_eligibility_decision\]
-LOGIC\[Reasoning Engine & Temporal Logic\]
-end
-
-subgraph Data_Sources \["🏥 Data Layer"\]
-FHIR\[EHR / FHIR Server\]
-PDF\[Protocol PDFs / JSON\]
-DB\[(SQLite Audit DB)\]
-end
-
-%% Flow
-U1 --> UI
-UI --> LLM
-
-LLM --"SSE Call: Get Protocol"--> T1
-T1 --> PDF
-
-LLM --"SSE Call: Evaluate Patient"--> T2
-T2 --"Fetch Context"--> FHIR
-T2 --> LOGIC
-
-LOGIC -->|Results & Evidence| LLM
-
-LLM --"SSE Call: Log Decision"--> T3
-T3 --> DB
-
-LLM -->|Structured JSON| UI
-UI -->|Summary & Evidence| U1
-
-style MCP_Core fill:#1e293b,stroke:#38bdf8,color:#fff
-style Data_Sources fill:#f1f5f9,stroke:#94a3b8
+  flowchart TD
+    subgraph User_Actor ["👤 Clinical Coordinator"]
+    U1[Asks: "Is Patient X eligible?"]
+    end
+    
+    subgraph PO_Platform \["📱 PromptOpinion (Host)"\]
+    UI\[Chat Interface\]
+    LLM\[Agentic Core / LLM\]
+    end
+    
+    subgraph MCP_Core \["⚡ TrialMatcher-MCP Server"\]
+    T1\[Tool: get_trial_protocol\]
+    T2\[Tool: prepare_fhir_evaluation\]
+    T3\[Tool: log_eligibility_decision\]
+    LOGIC\[Reasoning Engine & Temporal Logic\]
+    end
+    
+    subgraph Data_Sources \["🏥 Data Layer"\]
+    FHIR\[EHR / FHIR Server\]
+    PDF\[Protocol PDFs / JSON\]
+    DB\[(SQLite Audit DB)\]
+    end
+    
+    %% Flow
+    U1 --> UI
+    UI --> LLM
+    
+    LLM --"SSE Call: Get Protocol"--> T1
+    T1 --> PDF
+    
+    LLM --"SSE Call: Evaluate Patient"--> T2
+    T2 --"Fetch Context"--> FHIR
+    T2 --> LOGIC
+    
+    LOGIC -->|Results & Evidence| LLM
+    
+    LLM --"SSE Call: Log Decision"--> T3
+    T3 --> DB
+    
+    LLM -->|Structured JSON| UI
+    UI -->|Summary & Evidence| U1
+    
+    style MCP_Core fill:#1e293b,stroke:#38bdf8,color:#fff
+    style Data_Sources fill:#f1f5f9,stroke:#94a3b8
 ```
 
 ---
