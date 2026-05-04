@@ -1,12 +1,9 @@
 from typing import Annotated
-
 from mcp.server.fastmcp import Context
 from pydantic import Field
-
 from fhir_client import FhirClient
 from fhir_utilities import get_fhir_context
 from mcp_utilities import create_text_response
-
 
 async def find_patient_id(
     firstName: Annotated[str, Field(description="The patient's first name")],  # noqa: N803
@@ -24,7 +21,6 @@ async def find_patient_id(
         return create_text_response(patients[0]["id"])
 
     return create_text_response("No patient could be found with that name", is_error=True)
-
 
 async def _find_patient(
     ctx: Context,

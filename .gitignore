@@ -2,6 +2,7 @@
 Include/
 Lib/
 Scripts/
+MCPServer/
 
 # Local configuration file (sdk path, etc)
 *.cfg
