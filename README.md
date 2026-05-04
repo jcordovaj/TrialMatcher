@@ -271,13 +271,16 @@ flowchart LR
     Input --> Fetch{MCP: fetch_patient_context}
     Fetch --> Parse[Parse FHIR: Labs, Meds, History]
     Parse --> Evaluate{MCP: evaluate_vs_protocol}
-    Evaluate -->|Pass| Log[Log: Eligible (Audit)]
-    Evaluate -->|Fail| LogFail[Log: Ineligible (Reason)]
+    
+    Evaluate -->|Pass| Log1[Log: Eligible Audit]
+    Evaluate -->|Fail| LogFail[Log: Ineligible Reason]
     Evaluate -->|Missing| Request[Request: Specific Lab]
     
-    Log --> Rank[Ranking: High Priority]
-    Request --> Rank[Ranking: Med Priority]
-    LogFail --> Rank[Ranking: Low Priority]
+    Log1 --> RankHigh[Ranking: High Priority]
+    Request --> RankMed[Ranking: Med Priority]
+    LogFail --> RankLow[Ranking: Low Priority]
     
-    Rank --> End([Output: Dashboard List])
+    RankHigh --> End([Output: Dashboard List])
+    RankMed --> End
+    RankLow --> End
 ```
