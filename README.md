@@ -57,7 +57,7 @@ flowchart TD
     LLM -->|Structured JSON| UI
     UI -->|Summary & Evidence| U1
 
-    style MCP_Core fill:#1e293b,stroke:#38bdf8,color:#fff
+    style MCP_Core fill:#66d0fa,stroke:#38bdf8,color:#fff
     style Data_Sources fill:#f1f5f9,stroke:#94a3b8
 ```
 
