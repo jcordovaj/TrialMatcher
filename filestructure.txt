@@ -11,6 +11,11 @@
     |-- fake_patients.json
     |-- generate_patients.py
     |-- json2pdf_converter.py
+|-- image
+    |-- README
+        |-- 1777869423581.png
+        |-- 1777872934780.png
+        |-- banner.png
 |-- main.py
 |-- MCPServer
     |-- Include
