@@ -98,6 +98,25 @@ Moves beyond binary classification:
 
 #### 3.1 Flow example: Patient with incomplete data
 
+```mermaid
+sequenceDiagram
+    participant U as Coordinator
+    participant MCP as TrialMatcher
+    participant DB as SQLite
+    
+    U->>MCP: Evaluate Patient 459 (Incomplete Labs)
+    MCP->>MCP: Logic: Cannot confirm ECOG status
+    MCP-->>U: Status: "DATA_GAP"
+    MCP-->>U: Action: "Request recent physical exam"
+    
+    Note over U,MCP: Coordinator manually updates record
+    
+    U->>MCP: Re-evaluate Patient 459
+    MCP->>MCP: Logic: ECOG confirmed (1) -> Pass
+    MCP->>DB: Update Log: "Eligible after manual review"
+    MCP-->>U: Status: "ELIGIBLE" (High Confidence)
+```
+
 ![Diagram: Case Patiente with incomplete lab exams - Human in the Loop](image/README/caso_datos_incompletos.png)
 
 ### 4. Smart Ranking & Prioritization
