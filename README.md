@@ -73,15 +73,15 @@ flowchart TD
 
 ### The Solution
 
-- ***Agentic workflow:*** An AI agent retrieves patient data while another parses protocols; TrialMatcher MCP conducts the match.
-- Non-Binary logic: We don't just return "Eligible/NotEligible". We are able to identify "Potential Matches", "Data Gaps", and "Missing Lab Requirements".
-- Audit-Ready by design: Every match decision is backed by a "Clinical Reasoning Trace", citing specific record IDs, timestamps, and values.
+- **Agentic workflow:** An AI agent retrieves patient data while another parses protocols; TrialMatcher MCP conducts the match.
+- **Non-Binary logic:** We don't just return "Eligible/NotEligible". We are able to identify "Potential Matches", "Data Gaps", and "Missing Lab Requirements".
+- **Audit-Ready by design:** Every action, change, or match decision is backed by a "Clinical Reasoning Trace", citing specific record IDs, timestamps, and values.
 
 ## ✨ Key Capabilities
 
 ### 1. Universal data ingestion
 
-Agnostic compatibility with HL7/FHIR, majorEHRs (Epic, Cerner), and unstructured sources (PDFs, ClinicalNotes).
+Agnostic compatibility with HL7/FHIR, major EHRs (Epic, Cerner), and unstructured sources (PDFs, ClinicalNotes).
 
 ### 2. Protocol intelligence 🧠
 
@@ -94,7 +94,7 @@ Automatically parses complex protocols to extract temporal criteria and biomarke
 Moves beyond binary classification:
 
 - Eligible / Possibly Eligible / Not Eligible / Data Gap.
-- Un certainty Handling: Flags casesm needing "Physician Review" (Human-in-the-loop).
+- Un certainty Handling: Flags cases needing "Physician Review" (Human-in-the-loop).
 
 #### 3.1 Use Case: Patient with incomplete lab data - Sequence Diagram
 
@@ -125,9 +125,34 @@ Commercially powerful scoring algorithms:
 - Risk of screen failure score.
 - Prioritization by data completeness and geographic proximity.
 
-### 5. Multi-Trial routing (The "Inverter")\*
+### 5. Multi-Trial routing (The "Inverter")
 
 Not just "Patient-> Trial," but "Patient-> All Applicable Trials." Crucial for finding alternatives when a patient fails a primary screen.
+
+### 6. What-if analysis (Feasability analysis)
+
+Analyst, scientific or MD, can apply and run feasability analysis, real-time, no need to re-process everything, just move a variable a ask "What if...".
+
+```mermaid
+flowchart TD
+    S([Sponsor uploads Protocol]) --> P[Protocol Parser]
+    P --> M[Analyze 50k Patients Batch]
+    M --> F{Feasibility Engine}
+    
+    F --> Check1[Check: Exclusion Filters]
+    F --> Check2[Check: Rare Biomarkers]
+    F --> Check3[Check: Temporal Criteria]
+    
+    Check1 --> R1[Pool A: Hard Exclusions]
+    Check2 --> R2[Pool B: Likely Matches]
+    Check3 --> R3[Pool C: Borderline Cases]
+    
+    R1 --> Report[Generate Feasibility Report]
+    R2 --> Report
+    R3 --> Report
+    
+    Report --> Recommendation[Recommend: Site Selection / Protocol Modification]
+```
 
 ## 🔒 Compliance & Security
 
