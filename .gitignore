@@ -15,8 +15,6 @@ local.properties
 *.log
 .docs/
 docs/
-image/
-.image/
 .scrapbook/
 scrapbook/
 __pycache__/
