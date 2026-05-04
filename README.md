@@ -96,7 +96,7 @@ Moves beyond binary classification:
 - Eligible / Possibly Eligible / Not Eligible / Data Gap.
 - Un certainty Handling: Flags casesm needing "Physician Review" (Human-in-the-loop).
 
-#### 3.1 Flow example: Patient with incomplete data
+#### 3.1 Use Case: Patient with incomplete lab data - Sequence Diagram
 
 ```mermaid
 sequenceDiagram
@@ -116,8 +116,6 @@ sequenceDiagram
     MCP->>DB: Update Log: "Eligible after manual review"
     MCP-->>U: Status: "ELIGIBLE" (High Confidence)
 ```
-
-![Diagram: Case Patiente with incomplete lab exams - Human in the Loop](image/README/caso_datos_incompletos.png)
 
 ### 4. Smart Ranking & Prioritization
 
@@ -149,6 +147,23 @@ We are built for the highly regulated Pharma environment.
 
 ## 📱Database model
 
+```mermaid
+classDiagram
+    class PatientRecord {
+        +String hashed_mrn
+        +String demographics_json
+        +String conditions_json
+        +String medications_json
+        +String labs_json
+    }
+
+    class Protocol {
+        +String trial_id
+        +String title
+        +List~InclusionCriteria~ inclusion_rules
+        +List~ExclusionCriteria~ exclusion_rules
+    }
+```
 ![Data model audit.db](image/README/datamodel.png)
 
 ## 🛠️ Installation & Usage
