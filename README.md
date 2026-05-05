@@ -129,13 +129,35 @@ graph TD
   class G success;
 ```
 
-1. Stratified Weighting System ($W$)Every inclusion and exclusion criterion extracted from clinical protocol documents is categorized based on clinical severity and impact on patient safety:HIGH ($W = 3$): Critical, non-negotiable determinants (e.g., exact histopathological diagnosis, specific genomic mutations, or age requirements).MEDIUM ($W = 2$): Secondary clinical conditions or manageable comorbidities (e.g., controlled hypertension, body mass index limits).LOW ($W = 1$): Secondary lab thresholds, administrative, or logistically flexible requirements.2. Compliance Multiplier ($C$)The evaluation engine processes the patient's FHIR context against each rule within the evidence_summary array and assigns a strict numeric modifier based on its specific status:MET = $1.0$ (Complete alignment with clinical evidence).MISSING / DATA_GAP = $0.5$ (Clinical uncertainty; penalizes the case without triggering an outright rejection).NOT_MET = $0.0$ (Failure to satisfy the condition).3. The Absolute Hard-Stop RuleSafety Overrule: If any mandatory inclusion criterion evaluates to NOT_MET with a weight of HIGH, or an absolute exclusion criterion is triggered, the engine executes an immediate algebraic bypass. The final score automatically plummets to 0, overrunning any other matching criteria. This enforces safety and absolute compliance.4. Mathematical EquationWhen a patient passes all hard-stops, the system calculates the final eligibility percentage by establishing a ratio between the weighted score obtained and the maximum possible clinical score:
+1. Stratified Weighting System (**$$**)
 
-   $$
-   Score = \left( \frac{\sum (W_i \times C_i)}{\sum W_i} \right) \times 100
-   $$
+Every inclusion and exclusion criterion extracted from clinical protocol documents is categorized based on clinical severity and impact on patient safety:
 
-   Where $W_i$ represents the assigned weight of the criterion $i$ (HIGH = 3, MEDIUM = 2, LOW = 1), and $C_i$ represents the compliance modifier (MET = 1, MISSING = 0.5, NOT_MET = 0). Minor secondary deductions can be applied mathematically based on active risk_indicators to arrive at a balanced, predictable, and fully traceable final score.
+* **HIGH (**$W = 3$**):** Critical, non-negotiable determinants (e.g., exact histopathological diagnosis, specific genomic mutations, or age requirements).
+* **MEDIUM (**$W = 2$**):** Secondary clinical conditions or manageable comorbidities (e.g., controlled hypertension, body mass index limits).
+* **LOW (**$W = 1$**):** Secondary lab thresholds, administrative, or logistically flexible requirements.
+
+### 2. Compliance Multiplier (**$C$**)
+
+The evaluation engine processes the patient's FHIR context against each rule within the `evidence_summary` array and assigns a strict numeric modifier based on its specific `status`:
+
+* **MET** = **$1.0$** (Complete alignment with clinical evidence).
+* **MISSING / DATA_GAP** = **$0.5$** (Clinical uncertainty; penalizes the case without triggering an outright rejection).
+* **NOT_MET** = **$0.0$** (Failure to satisfy the condition).
+
+### 3. The Absolute Hard-Stop Rule
+
+> **Safety Overrule:** If any mandatory inclusion criterion evaluates to `NOT_MET` with a weight of `HIGH`, or an absolute exclusion criterion is triggered, the engine executes an immediate algebraic bypass.  **The final score automatically plummets to 0** , overrunning any other matching criteria. This enforces safety and absolute compliance.
+
+### 4. Mathematical Equation
+
+When a patient passes all hard-stops, the system calculates the final eligibility percentage by establishing a ratio between the weighted score obtained and the maximum possible clinical score:
+
+$$
+Score = \left( \frac{\sum (W_i \times C_i)}{\sum W_i} \right) \times 100
+$$
+
+Where **$W_i$** represents the assigned weight of the criterion **$i$** (`HIGH` = 3, `MEDIUM` = 2, `LOW` = 1), and **$C_i$** represents the compliance modifier (`MET` = 1, `MISSING` = 0.5, `NOT_MET` = 0). Minor secondary deductions can be applied mathematically based on active `risk_indicators` to arrive at a balanced, predictable, and fully traceable final score.
 
 #### 3.2 Use Case: Patient with incomplete lab data - Sequence Diagram
 
