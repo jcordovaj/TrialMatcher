@@ -100,32 +100,32 @@ Moves beyond binary classification:
 
 To ensure clinical objectivity, regulatory transparency, and auditability, TrialMatcher rejects unweighted "black box" heuristics. Instead, the AI operates under a Multi-Criteria Decision Analysis (MCDA) framework combined with a mathematical Hard-Stop Rule to compute patient eligibility scores.
 
-    [ Protocol Retrieval via Search Tool ]
-                                                                       │
-                                                                       ▼
-           ┌───────────────────────────┐
-           │   Stratified Weighting                                                                            │
-           │  • HIGH (3) • MED (2)                                                                         │
-           │  • LOW (1)                                                                                                 │
-           └─────────────┬─────────────┘
-                         │
-                         ▼
-           ┌───────────────────────────┐
-           │  Compliance Multiplier    │
-           │  • MET: 1.0  • GAP: 0.5   │
-           │  • NOT_MET: 0.0           │
-           └─────────────┬─────────────┘
-                         │
-                         ▼
-           ❌ Does any HIGH criterion  ────── YES ────► [ SCORE = 0 ]
-              trigger a NOT_MET status?                  (Hard-Stop Rule)
-                         │
-                         │ NO
-                         ▼
-           ┌───────────────────────────┐
-           │    Algebraic Equation     │
-           │ Σ(Wi × Ci) / ΣWi × 100    │ ─────────────► [ FINAL SCORE ]
-           └───────────────────────────┘
+[ Protocol Retrieval via Search Tool ]
+│
+▼
+┌───────────────────────────┐
+│ Stratified Weighting │
+│ • HIGH (3) • MED (2) │
+│ • LOW (1) │
+└─────────────┬─────────────┘
+│
+▼
+┌───────────────────────────┐
+│ Compliance Multiplier │
+│ • MET: 1.0 • GAP: 0.5 │
+│ • NOT_MET: 0.0 │
+└─────────────┬─────────────┘
+│
+▼
+❌ Does any HIGH criterion ────── YES ────► [ SCORE = 0 ]
+trigger a NOT_MET status? (Hard-Stop Rule)
+│
+│ NO
+▼
+┌───────────────────────────┐
+│ Algebraic Equation │
+│ Σ(Wi × Ci) / ΣWi × 100 │ ─────────────► [ FINAL SCORE ]
+└───────────────────────────┘
 
 1. Stratified Weighting System ($W$)Every inclusion and exclusion criterion extracted from clinical protocol documents is categorized based on clinical severity and impact on patient safety:HIGH ($W = 3$): Critical, non-negotiable determinants (e.g., exact histopathological diagnosis, specific genomic mutations, or age requirements).MEDIUM ($W = 2$): Secondary clinical conditions or manageable comorbidities (e.g., controlled hypertension, body mass index limits).LOW ($W = 1$): Secondary lab thresholds, administrative, or logistically flexible requirements.2. Compliance Multiplier ($C$)The evaluation engine processes the patient's FHIR context against each rule within the evidence_summary array and assigns a strict numeric modifier based on its specific status:MET = $1.0$ (Complete alignment with clinical evidence).MISSING / DATA_GAP = $0.5$ (Clinical uncertainty; penalizes the case without triggering an outright rejection).NOT_MET = $0.0$ (Failure to satisfy the condition).3. The Absolute Hard-Stop RuleSafety Overrule: If any mandatory inclusion criterion evaluates to NOT_MET with a weight of HIGH, or an absolute exclusion criterion is triggered, the engine executes an immediate algebraic bypass. The final score automatically plummets to 0, overrunning any other matching criteria. This enforces safety and absolute compliance.4. Mathematical EquationWhen a patient passes all hard-stops, the system calculates the final eligibility percentage by establishing a ratio between the weighted score obtained and the maximum possible clinical score:
 
