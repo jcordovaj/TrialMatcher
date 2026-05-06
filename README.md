@@ -6,7 +6,7 @@
 
 ![Snapshot TrialMatcher](image/README/banner2.png)
 
-## 🚀 TheExecutiveSummary
+## 🚀 The Executive Summary
 
 80% of clinical trials fail to meet enrollment timelines, costing the industry billions and delaying life-saving treatments.
 
@@ -212,7 +212,7 @@ The baseline protocol defines inclusion for **SCAI Stage C (Classic Cardiogenic 
 2. _Decreased urine output (< 30ml/hour)._
 3. **Lactate level > 2.0 mmol/L.**
 
-#### The "What-If" Question:
+#### The "What-If" Question
 
 > _"What happens to our available candidate pool, demographic diversity, and individual risk profiles if we relax the biochemical barrier and change the inclusion threshold from **Lactate > 2.0 mmol/L to > 1.5 mmol/L** ?"_
 
@@ -279,11 +279,11 @@ When a researcher runs this simulation, TrialMatcher internally returns an insta
     }
 ```
 
-### Business and Clinical Value for Pharma Sites
+### Business and clinical value for Pharma Players
 
-* **Zero Infrastructure Overhead:** Run complex protocol design optimization directly in the chat interface using natural language.
-* **Protocol Failure De-risking:** Know if your trial will fail to recruit before spending millions on site activation.
-* **Demographic Equity:** Instantly visualize if your exclusion criteria are accidentally blocking minority or specific gender groups from participating.
+- **Zero Infrastructure Overhead:** Run complex protocol design optimization directly in the chat interface using natural language.
+- **Protocol Failure De-risking:** Know if your trial will fail to recruit before spending millions on site activation.
+- **Demographic Equity:** Instantly visualize if your exclusion criteria are accidentally blocking minority or specific gender groups from participating.
 
 ```mermaid
 flowchart TD
@@ -380,26 +380,42 @@ classDiagram
 
 ```bash
 # Clone the repo
-
 git clone https://github.com/jcordovaj/TrialMatcher.git
-
 cd TrialMatcher
+```
 
-# Install dependencies
+On macOS/Linux:
 
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+
+On Windows:
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+Install dependencies:
+
+```bash
 pip install -r requirements.txt
+```
 
-# Run the MCP server
+Run the MCP server
 
+```bash
 python main.py
 ```
 
-### IntegrationwithPromptOpinion
+### Integration with PromptOpinion
 
 1. Run `ngrok http 8000`.
 2. Add a new MCP server in PromptOpinion.
 3. Transport: `StreamableHttp`.
-4. Endpoint: YourNgrokURL + `/mcp`.
+4. Endpoint: Your Ngrok URL + `/mcp`.
 
 ## 📈 Roadmap and future vision
 
@@ -409,7 +425,7 @@ python main.py
 
 ## 💎 For Investors and Pharma Industry members
 
-TrialMatcher is not a classifier. It is an Operational Engine for clinical operations based on GenAI.
+TrialMatcher is not just a simple classifier. It is an Operational Engine for clinical operations based on GenAI.
 
 We increase the probability of trial success by providing an explainable AI layer that sits on top of messy, real-world hospital data, ensuring that every recruitment decision is fast, safe, and scientifically justified.
 
