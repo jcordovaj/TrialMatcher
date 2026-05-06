@@ -1,7 +1,7 @@
 from mcp_instance import mcp
 from fhir_client import FHIRClient
 from audit_manager import AuditManager # El que hicimos antes
-from reasoning.templates import ReasoningTemplates
+from scrapbook.reasoning.templates import ReasoningTemplates
 
 @mcp.tool()
 async def evaluate_clinical_eligibility(trial_id: str, protocol_text: str):

@@ -129,7 +129,7 @@ graph TD
   class G success;
 ```
 
-1. Stratified Weighting System (**$$**)
+##### a. Stratified Weighting System (**$$**)
 
 Every inclusion and exclusion criterion extracted from clinical protocol documents is categorized based on clinical severity and impact on patient safety:
 
@@ -137,7 +137,7 @@ Every inclusion and exclusion criterion extracted from clinical protocol documen
 - **MEDIUM (**$W = 2$**):** Secondary clinical conditions or manageable comorbidities (e.g., controlled hypertension, body mass index limits).
 - **LOW (**$W = 1$**):** Secondary lab thresholds, administrative, or logistically flexible requirements.
 
-### 2. Compliance Multiplier (**$C$**)
+##### b. Compliance Multiplier (**$C$**)
 
 The evaluation engine processes the patient's FHIR context against each rule within the `evidence_summary` array and assigns a strict numeric modifier based on its specific `status`:
 
@@ -145,11 +145,11 @@ The evaluation engine processes the patient's FHIR context against each rule wit
 - **MISSING / DATA_GAP** = **$0.5$** (Clinical uncertainty; penalizes the case without triggering an outright rejection).
 - **NOT_MET** = **$0.0$** (Failure to satisfy the condition).
 
-### 3. The Absolute Hard-Stop Rule
+##### c. The Absolute Hard-Stop Rule
 
 > **Safety Overrule:** If any mandatory inclusion criterion evaluates to `NOT_MET` with a weight of `HIGH`, or an absolute exclusion criterion is triggered, the engine executes an immediate algebraic bypass. **The final score automatically plummets to 0** , overrunning any other matching criteria. This enforces safety and absolute compliance.
 
-### 4. Mathematical Equation
+##### d. Mathematical Equation
 
 When a patient passes all hard-stops, the system calculates the final eligibility percentage by establishing a ratio between the weighted score obtained and the maximum possible clinical score:
 
