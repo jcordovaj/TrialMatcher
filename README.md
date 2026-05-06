@@ -198,23 +198,25 @@ Not just "Patient-> Trial," but "Patient-> All Applicable Trials." Crucial for f
 
 Clinical trial design often suffers from a major bottleneck: protocols are either too strict (leading to enrollment failure) or too lax (introducing confounding variables). Modifying a single threshold traditionally requires weeks of database re-querying and institutional review.
 
-TrialMatcher introduces Real-Time "What-If" Analysis (Sandbox Mode). Because our underlying MCP architecture processes clinical records as semantically mapped, vector-grounded entities rather than static relational tables, researchers and MDs can dynamically manipulate protocol variables and see cohort shifts, demographic impacts, and risk modifications in seconds without re-processing the entire dataset.
+TrialMatcher introduces **Real-Time "What-If" Analysis (Sandbox Mode)** . Because our underlying MCP architecture processes clinical records as semantically mapped, vector-grounded entities rather than static relational tables, researchers and MDs can dynamically manipulate protocol variables and see cohort shifts, demographic impacts, and risk modifications in **seconds** without re-processing the entire dataset.
 
-Real-World Clinical Use Case: Re-defining Cardiogenic Shock Thresholds
-An investigator wants to optimize enrollment for an advanced cardiovascular trial based on the SCAI (Society for Cardiovascular Angiography and Interventions) shock stages.
+---
 
-The baseline protocol defines inclusion for SCAI Stage C (Classic Cardiogenic Shock) as follows:
+### Real-World Clinical Use Case: Re-defining Cardiogenic Shock Thresholds
 
-Mental status change, cool/clammy skin, or mottled appearance.
+An investigator wants to optimize enrollment for an advanced cardiovascular trial based on the **SCAI (Society for Cardiovascular Angiography and Interventions)** shock stages.
 
-Decreased urine output (< 30ml/hour).
+The baseline protocol defines inclusion for **SCAI Stage C (Classic Cardiogenic Shock)** as follows:
 
-Lactate level > 2.0 mmol/L.
+1. _Mental status change, cool/clammy skin, or mottled appearance._
+2. _Decreased urine output (< 30ml/hour)._
+3. **Lactate level > 2.0 mmol/L.**
 
-The "What-If" Question:
-"What happens to our available candidate pool, demographic diversity, and individual risk profiles if we relax the biochemical barrier and change the inclusion threshold from Lactate > 2.0 mmol/L to > 1.5 mmol/L?"
+#### The "What-If" Question:
 
-Fragmento de código
+> _"What happens to our available candidate pool, demographic diversity, and individual risk profiles if we relax the biochemical barrier and change the inclusion threshold from **Lactate > 2.0 mmol/L to > 1.5 mmol/L** ?"_
+
+Scenario diagram:
 
 ```mermaid
 graph LR
@@ -228,57 +230,60 @@ graph LR
     C[What-If Simulation] --> D(Lactate > 1.5 mmol/L)
     class D change;
 
-    B --> E[Cohort: 12 Patients]
-    D --> F[Cohort: 28 Patients <br> +133% Enrollment Increase]
+    B --> E[Cohort: 12 Patients <br> 3 risk candidates]
+    D --> F[Cohort: 28 Patients <br> +133% Enrollment Increase <br> 4 risk candidates]
     class E result;
     class F result;
 ```
 
-AI Cognitive Reasoning Chain (How it works in seconds)
+### AI Cognitive Reasoning Chain (How it works)
+
 Instead of running heavy SQL queries or manual chart reviews, the AI achieves real-time feasibility mapping through three synchronized steps:
 
-Parametric Abstract Syntax Tree (AST) Modification:
-The AI isolates the conditional node [Inclusion -> SCAI_C -> Lab_Parameter: Lactate -> Operator: > -> Value: 2.0] and dynamically rewires the operator boundary value to 1.5 within the session context.
+1. **Parametric Abstract Syntax Tree (AST) Modification:**
+   The AI isolates the conditional node `[Inclusion -> SCAI_C -> Lab_Parameter: Lactate -> Operator: > -> Value: 2.0]` and dynamically rewires the operator boundary value to `1.5` within the session context.
+2. **Instant Vector Boundary Shift:**
+   Because all patient lab records are fetched instantly via our active FHIR Client, the AI applies a mathematical filter across the pre-fetched structured context. It immediately flags patients in the `1.5 - 2.0 mmol/L` "gray area" who were previously rejected.
+3. **Dynamic Multicriterial Re-Scoring:**
+   The Stratified Multi-Criteria Scoring Model (MCDA) recalculates the final `eligibility_score` for the whole database in parallel. It updates the cohort size, outputs demographic shifts, and triggers new `risk_indicators` (e.g., higher probability of adverse metabolic events in the newly included lower-lactate cohort).
 
-Instant Vector Boundary Shift:
-Because all patient lab records are fetched instantly via our active FHIR Client, the AI applies a mathematical filter across the pre-fetched structured context. It immediately flags patients in the 1.5 - 2.0 mmol/L "gray area" who were previously rejected.
+---
 
-Dynamic Multicriterial Re-Scoring:
-The Stratified Multi-Criteria Scoring Model (MCDA) recalculates the final eligibility_score for the whole database in parallel. It updates the cohort size, outputs demographic shifts, and triggers new risk_indicators (e.g., higher probability of adverse metabolic events in the newly included lower-lactate cohort).
+### Example Sandbox Output Terminal
 
-Example Sandbox Output Terminal
-When a researcher runs this simulation, TrialMatcher returns an instant, export-ready comparison object:
+When a researcher runs this simulation, TrialMatcher internally returns an instant, export-ready comparison object:
 
-JSON
-{
-"feasibility_simulation": {
-"variable_changed": "SCAI_C.inclusion.lactate_threshold",
-"modification": "From > 2.0 mmol/L to > 1.5 mmol/L",
-"impact_metrics": {
-"baseline_eligible_cohort": 12,
-"simulated_eligible_cohort": 28,
-"enrollment_variance": "+133.3%",
-"demographic_shift": {
-"mean_age_variance": "-3.4 years (Includes younger acute-onset phenotypes)",
-"gender_ratio_delta": "Male: 54% -> 51% | Female: 46% -> 49%"
-}
-},
-"clinical_risk_assessment": {
-"cohort_vulnerability_index": "INCREASED (MEDIUM RISK)",
-"justification": "Lowering the lactate barrier captures early-stage hypoperfusion patients, increasing sample size but including profiles with higher risk of rapid compensation. Strict monitoring of next_steps is advised."
-},
-"newly_added_candidates": [
-{ "patient_id": "FHIR-5092", "patient_name": "Eleanor Vance", "new_score": 82, "previous_status": "INELIGIBLE" },
-{ "patient_id": "FHIR-2241", "patient_name": "Marcus Aureli", "new_score": 78, "previous_status": "DATA_GAP" }
-]
-}
-}
-Business and Clinical Value for Pharma Sites
-Zero Infrastructure Overhead: Run complex protocol design optimization directly in the chat interface using natural language.
+```JSON
+    {
+    "feasibility_simulation": {
+        "variable_changed": "SCAI_C.inclusion.lactate_threshold",
+        "modification": "From > 2.0 mmol/L to > 1.5 mmol/L",
+        "impact_metrics": {
+        "baseline_eligible_cohort": 12,
+        "simulated_eligible_cohort": 28,
+        "enrollment_variance": "+133.3%",
+        "demographic_shift": {
+            "mean_age_variance": "-3.4 years (Includes younger acute-onset phenotypes)",
+            "gender_ratio_delta": "Male: 54% -> 51% | Female: 46% -> 49%"
+            }
+        },
+        "clinical_risk_assessment": {
+            "cohort_vulnerability_index": "INCREASED (MEDIUM RISK)",
+            "justification": "Lowering the lactate barrier captures early-stage hypoperfusion patients, increasing sample size but including profiles with higher risk of rapid compensation. Strict monitoring of next_steps is advised."
+        },
+        "newly_added_candidates": [
+                    { "patient_id": "FHIR-5092", "patient_name": "Eleanor Vance", "new_score": 82, "previous_status": "INELIGIBLE" },
+                    { "patient_id": "FHIR-2241", "patient_name": "Marcus Aureli", "new_score": 78, "previous_status": "DATA_GAP" }
+                ]
+        }
+    }
+```
 
-Protocol Failure De-risking: Know if your trial will fail to recruit before spending millions on site activation.
+### Business and Clinical Value for Pharma Sites
 
-Demographic Equity: Instantly visualize if your exclusion criteria are accidentally blocking minority or specific gender groups from participating.
+* **Zero Infrastructure Overhead:** Run complex protocol design optimization directly in the chat interface using natural language.
+* **Protocol Failure De-risking:** Know if your trial will fail to recruit before spending millions on site activation.
+* **Demographic Equity:** Instantly visualize if your exclusion criteria are accidentally blocking minority or specific gender groups from participating.
 
 ```mermaid
 flowchart TD
