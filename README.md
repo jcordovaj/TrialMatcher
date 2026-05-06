@@ -133,21 +133,21 @@ graph TD
 
 Every inclusion and exclusion criterion extracted from clinical protocol documents is categorized based on clinical severity and impact on patient safety:
 
-* **HIGH (**$W = 3$**):** Critical, non-negotiable determinants (e.g., exact histopathological diagnosis, specific genomic mutations, or age requirements).
-* **MEDIUM (**$W = 2$**):** Secondary clinical conditions or manageable comorbidities (e.g., controlled hypertension, body mass index limits).
-* **LOW (**$W = 1$**):** Secondary lab thresholds, administrative, or logistically flexible requirements.
+- **HIGH (**$W = 3$**):** Critical, non-negotiable determinants (e.g., exact histopathological diagnosis, specific genomic mutations, or age requirements).
+- **MEDIUM (**$W = 2$**):** Secondary clinical conditions or manageable comorbidities (e.g., controlled hypertension, body mass index limits).
+- **LOW (**$W = 1$**):** Secondary lab thresholds, administrative, or logistically flexible requirements.
 
 ### 2. Compliance Multiplier (**$C$**)
 
 The evaluation engine processes the patient's FHIR context against each rule within the `evidence_summary` array and assigns a strict numeric modifier based on its specific `status`:
 
-* **MET** = **$1.0$** (Complete alignment with clinical evidence).
-* **MISSING / DATA_GAP** = **$0.5$** (Clinical uncertainty; penalizes the case without triggering an outright rejection).
-* **NOT_MET** = **$0.0$** (Failure to satisfy the condition).
+- **MET** = **$1.0$** (Complete alignment with clinical evidence).
+- **MISSING / DATA_GAP** = **$0.5$** (Clinical uncertainty; penalizes the case without triggering an outright rejection).
+- **NOT_MET** = **$0.0$** (Failure to satisfy the condition).
 
 ### 3. The Absolute Hard-Stop Rule
 
-> **Safety Overrule:** If any mandatory inclusion criterion evaluates to `NOT_MET` with a weight of `HIGH`, or an absolute exclusion criterion is triggered, the engine executes an immediate algebraic bypass.  **The final score automatically plummets to 0** , overrunning any other matching criteria. This enforces safety and absolute compliance.
+> **Safety Overrule:** If any mandatory inclusion criterion evaluates to `NOT_MET` with a weight of `HIGH`, or an absolute exclusion criterion is triggered, the engine executes an immediate algebraic bypass. **The final score automatically plummets to 0** , overrunning any other matching criteria. This enforces safety and absolute compliance.
 
 ### 4. Mathematical Equation
 
@@ -192,9 +192,93 @@ Commercially powerful scoring algorithms:
 
 Not just "Patient-> Trial," but "Patient-> All Applicable Trials." Crucial for finding alternatives when a patient fails a primary screen.
 
-### 6. What-if analysis (Feasability analysis)
+### 6. Real-Time "What-If" Eligibility & Feasibility Analysis
 
-Analyst, scientific or MD, can apply and run feasability analysis, real-time, no need to re-process everything, just move a variable a ask "What if...".
+#### 6.1 The Innovation
+
+Clinical trial design often suffers from a major bottleneck: protocols are either too strict (leading to enrollment failure) or too lax (introducing confounding variables). Modifying a single threshold traditionally requires weeks of database re-querying and institutional review.
+
+TrialMatcher introduces Real-Time "What-If" Analysis (Sandbox Mode). Because our underlying MCP architecture processes clinical records as semantically mapped, vector-grounded entities rather than static relational tables, researchers and MDs can dynamically manipulate protocol variables and see cohort shifts, demographic impacts, and risk modifications in seconds without re-processing the entire dataset.
+
+Real-World Clinical Use Case: Re-defining Cardiogenic Shock Thresholds
+An investigator wants to optimize enrollment for an advanced cardiovascular trial based on the SCAI (Society for Cardiovascular Angiography and Interventions) shock stages.
+
+The baseline protocol defines inclusion for SCAI Stage C (Classic Cardiogenic Shock) as follows:
+
+Mental status change, cool/clammy skin, or mottled appearance.
+
+Decreased urine output (< 30ml/hour).
+
+Lactate level > 2.0 mmol/L.
+
+The "What-If" Question:
+"What happens to our available candidate pool, demographic diversity, and individual risk profiles if we relax the biochemical barrier and change the inclusion threshold from Lactate > 2.0 mmol/L to > 1.5 mmol/L?"
+
+Fragmento de código
+
+```mermaid
+graph LR
+    classDef baseline fill:#edf2f7,stroke:#cbd5e0,color:#2d3748;
+    classDef change fill:#feebc8,stroke:#fbd38d,color:#7b341e,font-weight:bold;
+    classDef result fill:#e2e8f0,stroke:#cbd5e0,color:#4a5568;
+
+    A[Baseline Protocol] --> B(Lactate > 2.0 mmol/L)
+    class B baseline;
+
+    C[What-If Simulation] --> D(Lactate > 1.5 mmol/L)
+    class D change;
+
+    B --> E[Cohort: 12 Patients]
+    D --> F[Cohort: 28 Patients <br> +133% Enrollment Increase]
+    class E result;
+    class F result;
+```
+
+AI Cognitive Reasoning Chain (How it works in seconds)
+Instead of running heavy SQL queries or manual chart reviews, the AI achieves real-time feasibility mapping through three synchronized steps:
+
+Parametric Abstract Syntax Tree (AST) Modification:
+The AI isolates the conditional node [Inclusion -> SCAI_C -> Lab_Parameter: Lactate -> Operator: > -> Value: 2.0] and dynamically rewires the operator boundary value to 1.5 within the session context.
+
+Instant Vector Boundary Shift:
+Because all patient lab records are fetched instantly via our active FHIR Client, the AI applies a mathematical filter across the pre-fetched structured context. It immediately flags patients in the 1.5 - 2.0 mmol/L "gray area" who were previously rejected.
+
+Dynamic Multicriterial Re-Scoring:
+The Stratified Multi-Criteria Scoring Model (MCDA) recalculates the final eligibility_score for the whole database in parallel. It updates the cohort size, outputs demographic shifts, and triggers new risk_indicators (e.g., higher probability of adverse metabolic events in the newly included lower-lactate cohort).
+
+Example Sandbox Output Terminal
+When a researcher runs this simulation, TrialMatcher returns an instant, export-ready comparison object:
+
+JSON
+{
+"feasibility_simulation": {
+"variable_changed": "SCAI_C.inclusion.lactate_threshold",
+"modification": "From > 2.0 mmol/L to > 1.5 mmol/L",
+"impact_metrics": {
+"baseline_eligible_cohort": 12,
+"simulated_eligible_cohort": 28,
+"enrollment_variance": "+133.3%",
+"demographic_shift": {
+"mean_age_variance": "-3.4 years (Includes younger acute-onset phenotypes)",
+"gender_ratio_delta": "Male: 54% -> 51% | Female: 46% -> 49%"
+}
+},
+"clinical_risk_assessment": {
+"cohort_vulnerability_index": "INCREASED (MEDIUM RISK)",
+"justification": "Lowering the lactate barrier captures early-stage hypoperfusion patients, increasing sample size but including profiles with higher risk of rapid compensation. Strict monitoring of next_steps is advised."
+},
+"newly_added_candidates": [
+{ "patient_id": "FHIR-5092", "patient_name": "Eleanor Vance", "new_score": 82, "previous_status": "INELIGIBLE" },
+{ "patient_id": "FHIR-2241", "patient_name": "Marcus Aureli", "new_score": 78, "previous_status": "DATA_GAP" }
+]
+}
+}
+Business and Clinical Value for Pharma Sites
+Zero Infrastructure Overhead: Run complex protocol design optimization directly in the chat interface using natural language.
+
+Protocol Failure De-risking: Know if your trial will fail to recruit before spending millions on site activation.
+
+Demographic Equity: Instantly visualize if your exclusion criteria are accidentally blocking minority or specific gender groups from participating.
 
 ```mermaid
 flowchart TD
