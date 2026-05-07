@@ -6,20 +6,13 @@
 |-- fhir_client.py
 |-- fhir_context.py
 |-- fhir_utilities.py
-|-- filestructure_refactoring.txt
-|-- gitignore.txt
-|-- Helpers
+|-- helpers
     |-- fake_patients.json
     |-- generate_patients.py
     |-- json2pdf_converter.py
 |-- image
     |-- README
-        |-- banner.png
         |-- banner2.png
-        |-- caso_datos_incompletos.png
-        |-- datamodel.png
-        |-- Screenshot 2026-05-04 022235.png
-        |-- Snapshot.png
 |-- main.py
 |-- MCPServer
     |-- Include
@@ -9518,22 +9511,39 @@
 |-- mcp_instance.py
 |-- mcp_utilities.py
 |-- README.md
-|-- README_back_es.md
 |-- README_es.md
-|-- reasoning
-    |-- templates.py
-    |-- __init__.py
-    |-- __pycache__
-        |-- templates.cpython-311.pyc
-        |-- __init__.cpython-311.pyc
 |-- requirements.txt
-|-- tools
+|-- scrapbook
+    |-- banner.png
     |-- benchmark_tool.py
+    |-- caso_datos_incompletos.png
+    |-- datamodel.png
+    |-- feasibility_tool.py
+    |-- filestructure_refactoring.txt
+    |-- pasos.txt
+    |-- README_back_es.md
+    |-- reasoning
+        |-- templates.py
+        |-- __init__.py
+        |-- __pycache__
+            |-- templates.cpython-311.pyc
+            |-- __init__.cpython-311.pyc
+    |-- Screenshot 2026-05-04 022235.png
+    |-- simulate_protocol_feasibility_tool.py
+    |-- Snapshot.png
+|-- skills
+    |-- skill-cognitive-analysis
+        |-- SKILL.md
+    |-- skill-document-context-ingestion
+        |-- SKILL.md
+|-- tools
     |-- check_audit_tool.py
     |-- eligibility.py
+    |-- export_tool.py
     |-- match_patient_tool.py
     |-- patient_id_tool.py
     |-- reset_tool.py
+    |-- trial_parser.py
     |-- __init__.py
     |-- __pycache__
         |-- check_audit_tool.cpython-311.pyc
