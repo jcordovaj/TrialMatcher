@@ -9532,12 +9532,15 @@
     |-- simulate_protocol_feasibility_tool.py
     |-- Snapshot.png
 |-- skills
-    |-- skill-cognitive-analysis
+    |-- clinical-document-ingestion
         |-- SKILL.md
-    |-- skill-document-context-ingestion
+    |-- clinical-document-ingestion.zip
+    |-- cognitive-analysis
         |-- SKILL.md
-    |-- skill-multi-criteria-eligibility-scoring
-        |-- skill-multi-criteria-eligibility-scoring.md
+    |-- document-context-ingestion
+        |-- SKILL.md
+    |-- multi-criteria-eligibility-scoring
+        |-- SKILL.md
 |-- tools
     |-- check_audit_tool.py
     |-- eligibility.py

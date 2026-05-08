@@ -1,5 +1,5 @@
 ---
-name: skill-cognitive-analysis
+name: cognitive-analysis
 
 description: Comprehensive clinical trial matching toolkit. Includes PDF/JSON parsing, MCDA scoring, safety hard-stops, and pseudonymization guards. Use for patient eligibility screening and protocol feasibility analysis.
 license: None
