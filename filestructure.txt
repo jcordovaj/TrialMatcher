@@ -9537,10 +9537,12 @@
     |-- clinical-document-ingestion.zip
     |-- cognitive-analysis
         |-- SKILL.md
+    |-- cognitive-analysis.zip
     |-- document-context-ingestion
         |-- SKILL.md
     |-- multi-criteria-eligibility-scoring
         |-- SKILL.md
+    |-- multi-criteria-eligibility-scoring.zip
 |-- tools
     |-- check_audit_tool.py
     |-- eligibility.py
