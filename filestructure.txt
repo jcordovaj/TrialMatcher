@@ -9536,6 +9536,8 @@
         |-- SKILL.md
     |-- skill-document-context-ingestion
         |-- SKILL.md
+    |-- skill-multi-criteria-eligibility-scoring
+        |-- skill-multi-criteria-eligibility-scoring.md
 |-- tools
     |-- check_audit_tool.py
     |-- eligibility.py

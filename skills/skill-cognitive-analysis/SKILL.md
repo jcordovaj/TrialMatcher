@@ -1,8 +1,8 @@
 ---
-name: trial-matcher-core-skills
+name: skill-cognitive-analysis
 
 description: Comprehensive clinical trial matching toolkit. Includes PDF/JSON parsing, MCDA scoring, safety hard-stops, and pseudonymization guards. Use for patient eligibility screening and protocol feasibility analysis.
-license: MIT
+license: None
 metadata:
   author: TrialMatcher-Team
   version: "1.0"
