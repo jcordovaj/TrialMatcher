@@ -3,7 +3,7 @@
     "patientRecord": {
       "name": "Katelyn Dorsey",
       "mrn": "1892-B",
-      "dob": "1981-02-28",
+      "dob": "1981-02-25",
       "age": 45,
       "demographics": {
         "heightCm": 162,
