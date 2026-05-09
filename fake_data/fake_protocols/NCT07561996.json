@@ -1,0 +1,216 @@
+{
+    "protocolSection": {
+        "identificationModule": {
+            "nctId": "NCT07561996",
+            "orgStudyIdInfo": {
+                "id": "26-0439"
+            },
+            "organization": {
+                "fullName": "University of Colorado, Denver",
+                "class": "OTHER"
+            },
+            "briefTitle": "A 12-week Field Trial of the Movámonos Physical Activity Support Program",
+            "officialTitle": "Movámonos: Translation and Cultural Adaptation of a Theory-Based Physical Activity Support Program for Spanish-Speaking Adults - Aim 2",
+            "acronym": "Movámonos"
+        },
+        "statusModule": {
+            "statusVerifiedDate": "2026-04",
+            "overallStatus": "NOT_YET_RECRUITING",
+            "expandedAccessInfo": {
+                "hasExpandedAccess": false
+            },
+            "startDateStruct": {
+                "date": "2026-05-15",
+                "type": "ESTIMATED"
+            },
+            "primaryCompletionDateStruct": {
+                "date": "2026-12-31",
+                "type": "ESTIMATED"
+            },
+            "completionDateStruct": {
+                "date": "2027-07-31",
+                "type": "ESTIMATED"
+            },
+            "studyFirstSubmitDate": "2026-04-24",
+            "studyFirstSubmitQcDate": "2026-04-24",
+            "studyFirstPostDateStruct": {
+                "date": "2026-05-01",
+                "type": "ACTUAL"
+            },
+            "lastUpdateSubmitDate": "2026-04-24",
+            "lastUpdatePostDateStruct": {
+                "date": "2026-05-01",
+                "type": "ACTUAL"
+            }
+        },
+        "sponsorCollaboratorsModule": {
+            "responsibleParty": {
+                "type": "SPONSOR"
+            },
+            "leadSponsor": {
+                "name": "University of Colorado, Denver",
+                "class": "OTHER"
+            }
+        },
+        "oversightModule": {
+            "oversightHasDmc": false,
+            "isFdaRegulatedDrug": false,
+            "isFdaRegulatedDevice": false
+        },
+        "descriptionModule": {
+            "briefSummary": "The objective of this study is to design and refine an activity support program, called Movámonos, for adults with overweight or obesity who speak Spanish. The primary outcomes are feasibility and acceptability of the Movámonos physical activity support program.",
+            "detailedDescription": "The purpose of this study is to pilot test a 12-week physical activity support program, called Movámonos, designed for Spanish-speaking adults with overweight or obesity. Movámonos includes four intervention components: 1) weekly 60-minute group-based classes, 2) 3, 45-minute individualized support sessions, 3) group fitness classes, and 4) mental guided imagery sessions. Participants will be asked to build their physical activity levels up to 150 minutes/week. The primary outcome is to evaluate the program's acceptability and feasibility from the participant perspective."
+        },
+        "conditionsModule": {
+            "conditions": [
+                "Overweight and Obese Adults",
+                "Physical Inactivity"
+            ]
+        },
+        "designModule": {
+            "studyType": "INTERVENTIONAL",
+            "phases": [
+                "NA"
+            ],
+            "designInfo": {
+                "allocation": "NA",
+                "interventionModel": "SINGLE_GROUP",
+                "primaryPurpose": "TREATMENT",
+                "maskingInfo": {
+                    "masking": "NONE"
+                }
+            },
+            "enrollmentInfo": {
+                "count": 20,
+                "type": "ESTIMATED"
+            }
+        },
+        "armsInterventionsModule": {
+            "armGroups": [
+                {
+                    "label": "Movámonos physical activity support program",
+                    "type": "EXPERIMENTAL",
+                    "description": "Participants receive the physical activity support program over 12 weeks.",
+                    "interventionNames": [
+                        "Behavioral: Movámonos Physical Activity Support Program"
+                    ]
+                }
+            ],
+            "interventions": [
+                {
+                    "type": "BEHAVIORAL",
+                    "name": "Movámonos Physical Activity Support Program",
+                    "description": "The 12-week Movámonos program includes four intervention components: 1) weekly, 60-minute group-based classes, 2) 3, 45-minute individualized support sessions, 3) group fitness classes, and 4) weekly mental guided imagery sessions. Participants will be asked to build up their physical activity levels up to 150 minutes/week.",
+                    "armGroupLabels": [
+                        "Movámonos physical activity support program"
+                    ]
+                }
+            ]
+        },
+        "outcomesModule": {
+            "primaryOutcomes": [
+                {
+                    "measure": "Program Acceptability - Qualitative",
+                    "description": "Acceptability of the physical activity support program will be assessed with results of the semi-structured focus groups or interviews from the participant perspective.",
+                    "timeFrame": "3 months"
+                },
+                {
+                    "measure": "Program Feasibility - Qualitative",
+                    "description": "Feasibility of the physical activity support program will be assessed with results of the semi-structured focus groups or interviews from the participant perspective.",
+                    "timeFrame": "3 months"
+                }
+            ],
+            "secondaryOutcomes": [
+                {
+                    "measure": "Program Acceptability - Quantitative",
+                    "description": "Acceptability of the physical activity support program components will be assessed using the Acceptability of Intervention Measure (AIM) from the participant perspective. Scores range from 0 to 5, with higher scores indicating a better outcome.",
+                    "timeFrame": "3 months"
+                },
+                {
+                    "measure": "Program Feasibility - Quantitative",
+                    "description": "Feasibility of the physical activity support program will be assessed using the Feasibility of Intervention Measure (FIM). Scores range from 0 to 5, with higher scores indicating a better outcome.",
+                    "timeFrame": "3 months"
+                }
+            ]
+        },
+        "eligibilityModule": {
+            "eligibilityCriteria": "Inclusion Criteria:\n\n* Men and Women\n* Age 18-65 years\n* Speak Spanish as their primary language\n* Self-identify as Hispanic or Latino\n* Body Mass Index 25-45 kg/m2\n* Insufficiently active (defined as \\<150 min/week of voluntary exercise at moderate intensity over the past 3 months)\n* Willing not to enroll in any other formal weight loss, physical activity program, or fitness center membership over the next 6 months.\n* Capable and willing to give informed consent, understand exclusion criteria, attend the Movámonos program sessions, and complete outcome measures.\n* Able to provide signed physician clearance for exercise if indicated by the Physical Activity Readiness Questionnaire (PAR-Q+) and determined by the study PI.\n\nExclusion Criteria:\n\n* Considered high risk, based on the American College of Sports Medicine Guidelines for Exercise Testing and Prescription33 (i.e. have cardiovascular disease symptoms or known cardiovascular disease, diabetes, or end-stage renal disease). These conditions are identified in the PAR-Q+.\n* Females who are currently pregnant or lactating, were pregnant within the past 3 months, or planning to become pregnant in the next 6 months will also be excluded\n* Self-reported cardiovascular disease:\n* Cardiac, peripheral vascular, or cerebrovascular disease\n* Self-reported symptoms suggestive of cardiovascular disease: pain, discomfort in the chest, neck, jaw, arms, or other areas that may result from cardiac ischemia; shortness of breath at rest or with mild exertion; dizziness or syncope; orthopnea or paroxysmal nocturnal dyspnea; ankle edema; palpitations or tachycardia; intermittent claudication.\n* Self-reported end-stage renal disease\n* Self-reported diabetes (history of type 1 or type 2 diabetes; fasting glucose ≥126 mg/dL or Hemoglobin A1C ≥6.5%)\n* Uncontrolled hypertension, defined as diastolic blood pressure \\>100 mmHG, systolic blood pressure \\>160 mmHG, or resting heart rate \\>100 bpm as measured in duplicate at the screening visit after 5 minutes of rest in a seated position.\n* Self-reported pulmonary disease requiring chronic oxygen supplementation; severe asthma or chronic obstructive pulmonary disease requiring hospitalization in past year.\n* Plans to relocate in the next 6 months\n* Currently participating in or planning to participate in any formal weight loss, dietary modification, or physical activity/exercise programs or clinical trials.\n* Current severe depression or history of severe depression within the previous year, based on DSM-IV-TR criteria for Major Depressive Episode. Scores \\>=16 on CES-D will require further assessment by the Study PI to determine if it is appropriate for the subject to participate in the study.\n* History of other significant psychiatric illness (e.g., psychosis, schizophrenia, mania, bipolar disorder) which in the opinion of the Study PI would interfere with ability to adhere to the exercise intervention.\n* History of clinically diagnosed eating disorders including anorexia nervosa, bulimia, binge eating disorder. Scores \\>20 on the EATS-26 Spanish version34 or global scores ≥2.3 on the Spanish version of the Eating Disorder Examination Questionnaire (S-EDE-Q)35,36 suggestive of a possible eating disorder will require further assessment by the Study PI to determine if it is appropriate for the subject to participate in the study.\n* Current alcohol or substance abuse\n* Nicotine use (current or past 6 months)\n* Regular use of prescription or over-the-counter medications known to significantly impact appetite, weight, sleep, or energy metabolism (e.g., appetite suppressants, lithium, stimulants, anti-psychotics, tricyclic antidepressants)\n* Regular use of obesity pharmacotherapeutic agents within the last 6 months.\n* Previous obesity treatment with surgery or weight loss device, except: (1) liposuction and/or abdominoplasty if performed \\> 1 year before screening, (2) lap banding if the band has been removed \\> 1 year before screening, (3) intragastric balloon if the balloon has been removed \\> 1 year before screening (4) duodenal-jejunal bypass sleeve, if the sleeve has been removed \\> 1 year before screening or 5) AspireAssist or other endoscopically placed weight loss device if the device has been removed \\> 1 year before screening.\n* Undiagnosed hypo- or hyper-thyroidism (TSH outside of the normal range) or history of uncontrolled thyroid disorder. History of thyroid disease or current thyroid disease treated with a stable medication regimen for at least 6 months is acceptable.\n* Hematocrit, white blood cell count or platelets significantly outside the normal reference range.\n* Triglycerides \\> 400 mg/dL\n* LDL cholesterol \\>200 mg/dL",
+            "healthyVolunteers": true,
+            "sex": "ALL",
+            "minimumAge": "18 Years",
+            "maximumAge": "65 Years",
+            "stdAges": [
+                "ADULT",
+                "OLDER_ADULT"
+            ]
+        },
+        "contactsLocationsModule": {
+            "centralContacts": [
+                {
+                    "name": "Danielle Ostendorf, PhD",
+                    "role": "CONTACT",
+                    "phone": "18659748606",
+                    "email": "dostendo@utk.edu"
+                },
+                {
+                    "name": "Ryan Marker, PhD, PT",
+                    "role": "CONTACT",
+                    "phone": "1303-724-0819",
+                    "email": "ryan.marker@cuanschutz.edu"
+                }
+            ]
+        },
+        "ipdSharingStatementModule": {
+            "ipdSharing": "NO",
+            "description": "Participants have not consented to individual level data being shared."
+        }
+    },
+    "derivedSection": {
+        "miscInfoModule": {
+            "versionHolder": "2026-05-01"
+        },
+        "conditionBrowseModule": {
+            "meshes": [
+                {
+                    "id": "D050177",
+                    "term": "Overweight"
+                },
+                {
+                    "id": "D057185",
+                    "term": "Sedentary Behavior"
+                }
+            ],
+            "ancestors": [
+                {
+                    "id": "D044343",
+                    "term": "Overnutrition"
+                },
+                {
+                    "id": "D009748",
+                    "term": "Nutrition Disorders"
+                },
+                {
+                    "id": "D009750",
+                    "term": "Nutritional and Metabolic Diseases"
+                },
+                {
+                    "id": "D001835",
+                    "term": "Body Weight"
+                },
+                {
+                    "id": "D012816",
+                    "term": "Signs and Symptoms"
+                },
+                {
+                    "id": "D013568",
+                    "term": "Pathological Conditions, Signs and Symptoms"
+                },
+                {
+                    "id": "D001519",
+                    "term": "Behavior"
+                }
+            ]
+        }
+    },
+    "hasResults": false
+}

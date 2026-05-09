@@ -1,0 +1,63 @@
+{
+    "patient_id": "P001",
+    "demographics": {
+        "age": 45,
+        "sex": "female",
+        "pregnancy_status": "not_pregnant",
+        "fertility_status": "premenopausal",
+        "children": 0
+    },
+    "diagnoses": [
+        {
+            "name": "type 2 diabetes mellitus",
+            "since": "2019"
+        }
+    ],
+    "oncology": {
+        "has_active_cancer": false,
+        "history_of_cancer": false
+    },
+    "procedures": [
+        {
+            "name": "appendectomy",
+            "date": "2005"
+        }
+    ],
+    "medications": [
+        {
+            "name": "metformin",
+            "dose": "1000 mg",
+            "freq": "bid"
+        }
+    ],
+    "allergies": [
+        "penicillin"
+    ],
+    "vitals": {
+        "bmi": 31.2
+    },
+    "labs": {
+        "hba1c": {
+            "value": 7.8,
+            "unit": "%",
+            "date": "2025-01"
+        },
+        "egfr": {
+            "value": 75,
+            "unit": "ml/min",
+            "date": "2025-01"
+        }
+    },
+    "clinical_flags": {
+        "smoker": false,
+        "alcohol_use": "none",
+        "substance_abuse": false
+    },
+    "timeline_notes": [
+        "No hospitalizations in last 6 months"
+    ],
+    "missing_data": [
+        "ecg",
+        "pregnancy_test"
+    ]
+}

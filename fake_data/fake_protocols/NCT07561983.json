@@ -1,0 +1,333 @@
+{
+    "protocolSection": {
+        "identificationModule": {
+            "nctId": "NCT07561983",
+            "orgStudyIdInfo": {
+                "id": "KY-2025-346-03"
+            },
+            "organization": {
+                "fullName": "Sichuan Cancer Hospital and Research Institute",
+                "class": "OTHER"
+            },
+            "briefTitle": "Tislelizumab Plus Chemotherapy and BACE for Unresectable NSCLC",
+            "officialTitle": "Tislelizumab Combined With Intravenous Chemotherapy and Bronchial Artery Chemoembolization as Conversion Therapy for Unresectable Non-Small Cell Lung Cancer: A Multicenter, Single-Arm, Phase II Trial (BEACON-Lung)",
+            "acronym": "BEACON-Lung"
+        },
+        "statusModule": {
+            "statusVerifiedDate": "2026-04",
+            "overallStatus": "NOT_YET_RECRUITING",
+            "expandedAccessInfo": {
+                "hasExpandedAccess": false
+            },
+            "startDateStruct": {
+                "date": "2026-05-01",
+                "type": "ESTIMATED"
+            },
+            "primaryCompletionDateStruct": {
+                "date": "2028-10-31",
+                "type": "ESTIMATED"
+            },
+            "completionDateStruct": {
+                "date": "2028-12-31",
+                "type": "ESTIMATED"
+            },
+            "studyFirstSubmitDate": "2026-04-24",
+            "studyFirstSubmitQcDate": "2026-04-24",
+            "studyFirstPostDateStruct": {
+                "date": "2026-05-01",
+                "type": "ACTUAL"
+            },
+            "lastUpdateSubmitDate": "2026-04-24",
+            "lastUpdatePostDateStruct": {
+                "date": "2026-05-01",
+                "type": "ACTUAL"
+            }
+        },
+        "sponsorCollaboratorsModule": {
+            "responsibleParty": {
+                "type": "PRINCIPAL_INVESTIGATOR",
+                "investigatorFullName": "Guohui Xu",
+                "investigatorTitle": "Principal Investigator, Chief Physician, Director of Department of Interventional Therapy",
+                "investigatorAffiliation": "Sichuan Cancer Hospital and Research Institute"
+            },
+            "leadSponsor": {
+                "name": "Sichuan Cancer Hospital and Research Institute",
+                "class": "OTHER"
+            }
+        },
+        "oversightModule": {
+            "oversightHasDmc": false,
+            "isFdaRegulatedDrug": false,
+            "isFdaRegulatedDevice": false
+        },
+        "descriptionModule": {
+            "briefSummary": "The goal of this phase 2 trial is to evaluate the efficacy and safety of tislelizumab combined with intravenous chemotherapy and bronchial artery chemoembolization (BACE) as conversion therapy for patients with initially unresectable stage IIIA-IIIB non-small cell lung cancer (NSCLC). The main questions it aims to answer are:\n\n* What is the 1-year event-free survival (EFS) rate with this treatment?\n* Can this treatment improve tumor response and the chance of curative-intent resection?\n* What adverse events occur during treatment?\n\nParticipants will receive tislelizumab, intravenous chemotherapy, and BACE for up to 4 cycles. Tumor response and resectability will be evaluated by imaging and multidisciplinary team (MDT) assessment every 2 cycles. Participants who become resectable may undergo surgery followed by postoperative treatment per protocol. Participants who remain unresectable after 4 cycles will receive guideline-recommended chemoradiotherapy followed by tislelizumab consolidation. Regular follow-up will be performed for efficacy and safety assessment."
+        },
+        "conditionsModule": {
+            "conditions": [
+                "Unresectable Stage III Non-small Cell Lung Cancer",
+                "Tislelizumab",
+                "Chemotherapy",
+                "Chemoembolization, Therapeutic",
+                "Conversion Therapy"
+            ],
+            "keywords": [
+                "Unresectable Non-Small Cell Lung Cancer",
+                "Tislelizumab",
+                "Chemotherapy",
+                "Bronchial Artery Chemoembolization",
+                "Conversion Therapy"
+            ]
+        },
+        "designModule": {
+            "studyType": "INTERVENTIONAL",
+            "phases": [
+                "PHASE2"
+            ],
+            "designInfo": {
+                "allocation": "NA",
+                "interventionModel": "SINGLE_GROUP",
+                "primaryPurpose": "TREATMENT",
+                "maskingInfo": {
+                    "masking": "NONE"
+                }
+            },
+            "enrollmentInfo": {
+                "count": 39,
+                "type": "ESTIMATED"
+            }
+        },
+        "armsInterventionsModule": {
+            "armGroups": [
+                {
+                    "label": "Tislelizumab Plus Chemotherapy and BACE",
+                    "type": "EXPERIMENTAL",
+                    "description": "Participants receive tislelizumab, intravenous chemotherapy, and bronchial artery chemoembolization (BACE) as conversion therapy. Tislelizumab 200 mg is administered intravenously on Day 0 of each 21-day cycle. On Day 1, participants receive intravenous chemotherapy (albumin-bound paclitaxel for lung squamous cell carcinoma or pemetrexed for lung adenocarcinoma) and BACE with intra-arterial carboplatin plus 300-500 μm blank microspheres. Conversion treatment is given for up to 4 cycles. The number of BACE procedures ranges from 1 to 4 and is determined by tumor response and multidisciplinary team assessment. Participants who become resectable may undergo surgery followed by protocol-defined postoperative treatment. Participants who remain unresectable after 4 cycles may receive guideline-recommended chemoradiotherapy followed by tislelizumab consolidation.",
+                    "interventionNames": [
+                        "Drug: Tislelizumab",
+                        "Drug: Intravenous Chemotherapy",
+                        "Procedure: Bronchial Artery Chemoembolization (BACE)"
+                    ]
+                }
+            ],
+            "interventions": [
+                {
+                    "type": "DRUG",
+                    "name": "Tislelizumab",
+                    "description": "Tislelizumab 200 mg is administered intravenously on Day 0 of each 21-day cycle for up to 4 cycles. Postoperative or consolidation tislelizumab may be given according to protocol-defined treatment pathways.",
+                    "armGroupLabels": [
+                        "Tislelizumab Plus Chemotherapy and BACE"
+                    ]
+                },
+                {
+                    "type": "DRUG",
+                    "name": "Intravenous Chemotherapy",
+                    "description": "Intravenous chemotherapy is administered on Day 1 of each 21-day cycle for up to 4 cycles. Patients with lung squamous cell carcinoma receive albumin-bound paclitaxel, and patients with lung adenocarcinoma receive pemetrexed. Carboplatin is administered intra-arterially during BACE in cycles with the procedure; if BACE is not performed in a given cycle, carboplatin is administered intravenously on the same day per protocol.",
+                    "armGroupLabels": [
+                        "Tislelizumab Plus Chemotherapy and BACE"
+                    ]
+                },
+                {
+                    "type": "PROCEDURE",
+                    "name": "Bronchial Artery Chemoembolization (BACE)",
+                    "description": "BACE is performed on Day 1 of the first 21-day treatment cycle using intra-arterial carboplatin infusion followed by embolization with 300-500 μm blank microspheres. Subsequent BACE procedures are performed on demand, based on tumor response on contrast-enhanced chest CT and multidisciplinary team (MDT) evaluation. The total number of BACE procedures ranges from 1 to 4.",
+                    "armGroupLabels": [
+                        "Tislelizumab Plus Chemotherapy and BACE"
+                    ]
+                }
+            ]
+        },
+        "outcomesModule": {
+            "primaryOutcomes": [
+                {
+                    "measure": "1-Year Event-Free Survival (EFS) Rate",
+                    "description": "The proportion of participants who remain event-free at 1 year after the first dose of study treatment. Events include radiographic disease progression according to RECIST 1.1, failure to complete the planned surgery for any reason, postoperative recurrence, or death from any cause.",
+                    "timeFrame": "1 year after the first dose of study treatment"
+                }
+            ],
+            "secondaryOutcomes": [
+                {
+                    "measure": "R0 Resection Rate",
+                    "description": "The proportion of participants who undergo curative-intent surgery and achieve microscopically margin-negative (R0) resection after conversion treatment.",
+                    "timeFrame": "Up to approximately 20 weeks after the first dose of study treatment"
+                },
+                {
+                    "measure": "Objective Response Rate (ORR)",
+                    "description": "The proportion of evaluable participants who achieve a complete response (CR) or partial response (PR) according to RECIST version 1.1 based on center imaging assessment.",
+                    "timeFrame": "Up to approximately 30 months after the first dose of study treatment."
+                },
+                {
+                    "measure": "Pathologic Complete Response (pCR) Rate",
+                    "description": "The proportion of participants who undergo surgery and have no residual viable tumor cells in the resected primary tumor and all resected lymph nodes.",
+                    "timeFrame": "At the time of surgery, up to approximately 20 weeks after the first dose of study treatment."
+                },
+                {
+                    "measure": "Major Pathologic Response (MPR) Rate",
+                    "description": "The proportion of participants who undergo surgery and have 10% or less residual viable tumor cells in the resected primary tumor.",
+                    "timeFrame": "At the time of surgery, up to approximately 20 weeks after the first dose of study treatment."
+                },
+                {
+                    "measure": "Event-Free Survival (EFS)",
+                    "description": "Time from the first dose of study treatment to the first occurrence of radiographic disease progression according to RECIST 1.1, failure to complete the planned surgery for any reason, postoperative recurrence, or death from any cause. Participants without an event will be censored at the date of last follow-up.",
+                    "timeFrame": "From the first dose of study treatment up to approximately 30 months"
+                },
+                {
+                    "measure": "Overall Survival (OS)",
+                    "description": "Time from the first dose of study treatment to death from any cause. Participants who are lost to follow-up or alive at the end of study follow-up will be censored at the last known date alive.",
+                    "timeFrame": "From the first dose of study treatment up to approximately 30 months."
+                },
+                {
+                    "measure": "Incidence of Adverse Events",
+                    "description": "Incidence, severity, relationship to study treatment, and outcomes of adverse events assessed according to NCI-CTCAE version 5.0.",
+                    "timeFrame": "From the first dose of study treatment up to approximately 30 months."
+                }
+            ]
+        },
+        "eligibilityModule": {
+            "eligibilityCriteria": "Inclusion Criteria:\n\n* Age 18 to 80 years\n* Histologically or cytologically confirmed non-small cell lung cancer (NSCLC)\n* Newly diagnosed, previously untreated stage IIIA-IIIB NSCLC according to the 9th edition TNM staging system\n* Initially unresectable disease as determined by multidisciplinary team (MDT) assessment\n* At least 1 measurable intrapulmonary lesion according to RECIST version 1.1\n* Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1\n* Forced expiratory volume in the first second (FEV1) \\> 1.0 L and \\> 40% of predicted normal value\n* Estimated life expectancy of at least 3 months\n* Adequate organ function\n* Willingness to provide tumor tissue for pathology, molecular testing, and PD-L1 assessment before enrollment\n* Women of childbearing potential must have a negative pregnancy test within 72 hours before the first dose and agree to use effective contraception during the study and for 3 months after the last dose of tislelizumab\n* Men with partners of childbearing potential must agree to use effective contraception during the study and for 3 months after the last dose of tislelizumab\n* Ability to understand and willingness to sign a written informed consent form\n\nExclusion Criteria:\n\n* Prior local therapy for NSCLC, including radiotherapy or interventional therapy\n* Known positive driver genomic alterations, including EGFR mutations, ALK rearrangements, ROS1 rearrangements, and MET exon 14 skipping alterations\n* Distant organ metastasis\n* History of another malignancy within the past 5 years\n* Active autoimmune disease or history of autoimmune disease requiring systemic treatment\n* Known allergy to any study drug or excipient\n* Interstitial lung disease, non-infectious pneumonitis, chronic obstructive pulmonary disease, or other uncontrolled systemic diseases judged to interfere with study treatment\n* Severe chronic or active infection requiring systemic antibacterial, antifungal, or antiviral therapy, including active tuberculosis\n* Major surgery requiring general anesthesia within 4 weeks before first dose\n* Any medical condition, alcohol or drug abuse, or dependence that may interfere with study treatment, interpretation of results, or increase treatment risk\n* Participation in another interventional therapeutic clinical study\n* Psychiatric illness or history of psychotropic drug abuse that may compromise study participation\n* Any condition judged by the investigator to make the patient unsuitable for the study",
+            "healthyVolunteers": false,
+            "sex": "ALL",
+            "minimumAge": "18 Years",
+            "maximumAge": "80 Years",
+            "stdAges": [
+                "ADULT",
+                "OLDER_ADULT"
+            ]
+        },
+        "contactsLocationsModule": {
+            "centralContacts": [
+                {
+                    "name": "Xuegang Yang, MD",
+                    "role": "CONTACT",
+                    "phone": "+8613683476844",
+                    "email": "yanggangxue@163.com"
+                }
+            ],
+            "overallOfficials": [
+                {
+                    "name": "Xuegang Yang, MD",
+                    "affiliation": "Sichuan Cancer Hospital and Research Institute",
+                    "role": "PRINCIPAL_INVESTIGATOR"
+                },
+                {
+                    "name": "Guohui Xu, MD",
+                    "affiliation": "Sichuan Cancer Hospital and Research Institute",
+                    "role": "STUDY_CHAIR"
+                }
+            ],
+            "locations": [
+                {
+                    "facility": "Sichuan Cancer Hospital and Research Institute",
+                    "city": "Chengdu",
+                    "state": "Sichuan",
+                    "zip": "610041",
+                    "country": "China",
+                    "contacts": [
+                        {
+                            "name": "Guohui Xu",
+                            "role": "CONTACT",
+                            "phone": "+8613708010123",
+                            "email": "xgh0913@hotmail.com"
+                        },
+                        {
+                            "name": "Xuegang Yang, MD",
+                            "role": "CONTACT",
+                            "phone": "+8613683476844",
+                            "email": "yanggangxue@163.com"
+                        },
+                        {
+                            "name": "Xuegang Yang, MD",
+                            "role": "PRINCIPAL_INVESTIGATOR"
+                        }
+                    ],
+                    "geoPoint": {
+                        "lat": 30.66667,
+                        "lon": 104.06667
+                    }
+                }
+            ]
+        },
+        "referencesModule": {
+            "references": [
+                {
+                    "pmid": "41634290",
+                    "type": "BACKGROUND",
+                    "citation": "Liu B, Zhou J, He W, Zhang R, Cheng X, Xu L, Xie B, Liang Y, Guo S. Bronchial artery infusion of PD-1 inhibitors plus chemotherapy improves progression-free survival in advanced NSCLC: a prospective cohort study. Sci Rep. 2026 Feb 3;16(1):7067. doi: 10.1038/s41598-026-37607-7."
+                },
+                {
+                    "pmid": "41680955",
+                    "type": "BACKGROUND",
+                    "citation": "Zheng L, Zhang D, Zhang Y, Chen L, Chen W, Huang C, Zhu L, Fang S, Weng Q, Chen M, Tu J, Zhao Z, Ji J. Efficacy and safety of bronchial artery chemoembolization combined with chemotherapy and immune checkpoint inhibitors for advanced lung squamous cell carcinoma. Eur J Med Res. 2026 Feb 12. doi: 10.1186/s40001-026-03979-9. Online ahead of print."
+                },
+                {
+                    "pmid": "41548595",
+                    "type": "BACKGROUND",
+                    "citation": "Liang C, Han D, Li H, Wang M, Kuang D, Chen H, Miao H, Chen P, Lu H, Jiao P, Ren J, Han X, Li F, Duan X. Bronchial Arterial Chemoembolization Combined with Tislelizumab for Non-Small Cell Lung Cancer: An Exploratory, Prospective, Single-Arm, Phase II Trial. J Vasc Interv Radiol. 2026 Apr;37(4):108001. doi: 10.1016/j.jvir.2026.108001. Epub 2026 Jan 16."
+                },
+                {
+                    "pmid": "40068253",
+                    "type": "BACKGROUND",
+                    "citation": "Xiang J, Lan W, Cai D, Wang Y, Li W, Tu J, Huang J. Clinical outcomes, toxic effect, and immune microenvironment changes of drug-eluting bead bronchial arterial chemoembolisation/bronchial arterial chemoembolization combined with immunotherapy in treating elderly patients with non-small cell lung cancer. Clin Radiol. 2025 May;84:106849. doi: 10.1016/j.crad.2025.106849. Epub 2025 Feb 13."
+                },
+                {
+                    "pmid": "40615377",
+                    "type": "BACKGROUND",
+                    "citation": "Sheng J, Luo H, Liu X, Liu C, Zhou W, Zhao Y, Liu R, Li D, Xu C, Yang B, Liu Y, Fu X, Bao L, Wang K, Hao J, Liu W. Tislelizumab (anti-PD-1) plus chemotherapy as neoadjuvant therapy for patients with stage IB3/IIA2 cervical cancer (NATIC): a prospective, single-arm, phase II study. Signal Transduct Target Ther. 2025 Jul 4;10(1):215. doi: 10.1038/s41392-025-02294-9."
+                },
+                {
+                    "pmid": "38906157",
+                    "type": "BACKGROUND",
+                    "citation": "Zhou Q, Pan Y, Yang X, Zhao Y, Han G, Pang Q, Zhang Z, Wang Q, Yao J, Wang H, Yang W, Liu B, Chen Q, Du X, Cai K, Li B, Huang Y, Li X, Song L, Shi W, Wu YL. Neoadjuvant SHR-1701 with or without chemotherapy in unresectable stage III non-small-cell lung cancer: A proof-of-concept, phase 2 trial. Cancer Cell. 2024 Jul 8;42(7):1258-1267.e2. doi: 10.1016/j.ccell.2024.05.024. Epub 2024 Jun 20."
+                },
+                {
+                    "pmid": "38512301",
+                    "type": "BACKGROUND",
+                    "citation": "Sorin M, Prosty C, Ghaleb L, Nie K, Katergi K, Shahzad MH, Dube LR, Atallah A, Swaby A, Dankner M, Crump T, Walsh LA, Fiset PO, Sepesi B, Forde PM, Cascone T, Provencio M, Spicer JD. Neoadjuvant Chemoimmunotherapy for NSCLC: A Systematic Review and Meta-Analysis. JAMA Oncol. 2024 May 1;10(5):621-633. doi: 10.1001/jamaoncol.2024.0057."
+                },
+                {
+                    "pmid": "38447919",
+                    "type": "BACKGROUND",
+                    "citation": "Rami-Porta R, Nishimura KK, Giroux DJ, Detterbeck F, Cardillo G, Edwards JG, Fong KM, Giuliani M, Huang J, Kernstine KH Sr, Marom EM, Nicholson AG, Van Schil PE, Travis WD, Tsao MS, Watanabe SI, Rusch VW, Asamura H; Members of the IASLC Staging and Prognostic Factors Committee and of the Advisory Boards, and Participating Institutions. The International Association for the Study of Lung Cancer Lung Cancer Staging Project: Proposals for Revision of the TNM Stage Groups in the Forthcoming (Ninth) Edition of the TNM Classification for Lung Cancer. J Thorac Oncol. 2024 Jul;19(7):1007-1027. doi: 10.1016/j.jtho.2024.02.011. Epub 2024 Mar 4."
+                },
+                {
+                    "pmid": "37272513",
+                    "type": "BACKGROUND",
+                    "citation": "Wakelee H, Liberman M, Kato T, Tsuboi M, Lee SH, Gao S, Chen KN, Dooms C, Majem M, Eigendorff E, Martinengo GL, Bylicki O, Rodriguez-Abreu D, Chaft JE, Novello S, Yang J, Keller SM, Samkari A, Spicer JD; KEYNOTE-671 Investigators. Perioperative Pembrolizumab for Early-Stage Non-Small-Cell Lung Cancer. N Engl J Med. 2023 Aug 10;389(6):491-503. doi: 10.1056/NEJMoa2302983. Epub 2023 Jun 3."
+                },
+                {
+                    "pmid": "37870974",
+                    "type": "BACKGROUND",
+                    "citation": "Heymach JV, Harpole D, Mitsudomi T, Taube JM, Galffy G, Hochmair M, Winder T, Zukov R, Garbaos G, Gao S, Kuroda H, Ostoros G, Tran TV, You J, Lee KY, Antonuzzo L, Papai-Szekely Z, Akamatsu H, Biswas B, Spira A, Crawford J, Le HT, Aperghis M, Doherty GJ, Mann H, Fouad TM, Reck M; AEGEAN Investigators. Perioperative Durvalumab for Resectable Non-Small-Cell Lung Cancer. N Engl J Med. 2023 Nov 2;389(18):1672-1684. doi: 10.1056/NEJMoa2304875. Epub 2023 Oct 23."
+                },
+                {
+                    "pmid": "35403841",
+                    "type": "BACKGROUND",
+                    "citation": "Forde PM, Spicer J, Lu S, Provencio M, Mitsudomi T, Awad MM, Felip E, Broderick SR, Brahmer JR, Swanson SJ, Kerr K, Wang C, Ciuleanu TE, Saylors GB, Tanaka F, Ito H, Chen KN, Liberman M, Vokes EE, Taube JM, Dorange C, Cai J, Fiore J, Jarkowski A, Balli D, Sausen M, Pandya D, Calvet CY, Girard N; CheckMate 816 Investigators. Neoadjuvant Nivolumab plus Chemotherapy in Resectable Lung Cancer. N Engl J Med. 2022 May 26;386(21):1973-1985. doi: 10.1056/NEJMoa2202170. Epub 2022 Apr 11."
+                },
+                {
+                    "pmid": "28885881",
+                    "type": "BACKGROUND",
+                    "citation": "Antonia SJ, Villegas A, Daniel D, Vicente D, Murakami S, Hui R, Yokoi T, Chiappori A, Lee KH, de Wit M, Cho BC, Bourhaba M, Quantin X, Tokito T, Mekhail T, Planchard D, Kim YC, Karapetis CS, Hiret S, Ostoros G, Kubota K, Gray JE, Paz-Ares L, de Castro Carpeno J, Wadsworth C, Melillo G, Jiang H, Huang Y, Dennis PA, Ozguroglu M; PACIFIC Investigators. Durvalumab after Chemoradiotherapy in Stage III Non-Small-Cell Lung Cancer. N Engl J Med. 2017 Nov 16;377(20):1919-1929. doi: 10.1056/NEJMoa1709937. Epub 2017 Sep 8."
+                }
+            ]
+        },
+        "ipdSharingStatementModule": {
+            "ipdSharing": "UNDECIDED",
+            "description": "Individual participant data are not planned to be publicly shared because of privacy, ethical, and legal considerations. The study includes sensitive clinical, imaging, and biomarker data, and the relatively small sample size may increase the risk of participant re-identification. Summary statistical data may be obtained from the Principal Investigator upon reasonable request and with approval from the Ethics Committee."
+        }
+    },
+    "derivedSection": {
+        "miscInfoModule": {
+            "versionHolder": "2026-05-01"
+        },
+        "interventionBrowseModule": {
+            "meshes": [
+                {
+                    "id": "C000707970",
+                    "term": "tislelizumab"
+                }
+            ]
+        }
+    },
+    "hasResults": false
+}

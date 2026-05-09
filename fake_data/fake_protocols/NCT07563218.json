@@ -1,0 +1,327 @@
+{
+    "protocolSection": {
+        "identificationModule": {
+            "nctId": "NCT07563218",
+            "orgStudyIdInfo": {
+                "id": "276/25"
+            },
+            "organization": {
+                "fullName": "IRCCS Eugenio Medea",
+                "class": "OTHER"
+            },
+            "briefTitle": "I-TOPS With Patients With Genetic Syndrome SYN-TOPS",
+            "officialTitle": "SYN-TOPS: A Multicenter Randomized Clinical Trial on the Use of the I-TOPS Intervention to Improve Adaptive Skills in Adolescents and Young Adults With Genetic Syndromes",
+            "acronym": "SYN-TOPS"
+        },
+        "statusModule": {
+            "statusVerifiedDate": "2026-04",
+            "overallStatus": "RECRUITING",
+            "expandedAccessInfo": {
+                "hasExpandedAccess": false
+            },
+            "startDateStruct": {
+                "date": "2026-02-18",
+                "type": "ACTUAL"
+            },
+            "primaryCompletionDateStruct": {
+                "date": "2027-02-17",
+                "type": "ESTIMATED"
+            },
+            "completionDateStruct": {
+                "date": "2028-02-17",
+                "type": "ESTIMATED"
+            },
+            "studyFirstSubmitDate": "2026-04-13",
+            "studyFirstSubmitQcDate": "2026-04-24",
+            "studyFirstPostDateStruct": {
+                "date": "2026-05-01",
+                "type": "ACTUAL"
+            },
+            "lastUpdateSubmitDate": "2026-04-24",
+            "lastUpdatePostDateStruct": {
+                "date": "2026-05-01",
+                "type": "ACTUAL"
+            }
+        },
+        "sponsorCollaboratorsModule": {
+            "responsibleParty": {
+                "type": "SPONSOR"
+            },
+            "leadSponsor": {
+                "name": "IRCCS Eugenio Medea",
+                "class": "OTHER"
+            },
+            "collaborators": [
+                {
+                    "name": "IRCCS Fondazione Don Carlo Gnocchi, Milano",
+                    "class": "UNKNOWN"
+                }
+            ]
+        },
+        "oversightModule": {
+            "oversightHasDmc": true,
+            "isFdaRegulatedDrug": false,
+            "isFdaRegulatedDevice": false
+        },
+        "descriptionModule": {
+            "briefSummary": "Genetic syndromes involving the central nervous system are often associated with cognitive, behavioral and communication difficulties that negatively impact adaptive functioning and quality of life. Despite advances in digital health, there remains a lack of evidence-based interventions targeting executive functions and psychosocial outcomes in this population.\n\nThis multicenter study aims to evaluate the feasibility and efficacy of an adapted version of the Teen Online Problem-Solving (TOPS) program, a web-based intervention designed to enhance problem-solving, self-regulation and communication skills in everyday contexts. The adapted intervention (I-TOPS) will be tailored for adolescents and young adults with genetic syndromes involving the central nervous system. The I-TOPS intervention requires the participation of both the adolescent/young adult and at least one parent, caregiver or legal guardian, as it is a family-centered program.\n\nParticipants will complete online modules at home, supported by bimonthly videoconference sessions with a cognitive-behavioral psychologist. Outcomes will be assessed through pre- and post-intervention measures of executive functioning, adaptive behavior and psychological well-being, reported by both participants and caregivers. Psychological well-being of participating parents/caregivers/guardians will also be evaluated.\n\nThe study aims to provide evidence for an accessible, scalable telehealth intervention to improve cognitive and behavioral outcomes in this underserved population.",
+            "detailedDescription": "Genetic syndromes involving the central nervous system often entail not only physical complications but also cognitive, communication, and behavioral difficulties that negatively affect quality of life and social participation. Executive functions-such as planning, organization, and behavioral regulation-are particularly vulnerable, and their impairment has significant consequences for adaptive functioning.\n\nIn recent years, cognitive and behavioral rehabilitation programs have increasingly incorporated remote delivery methods that leverage digital technologies to enhance treatment intensity and accessibility. However, evidence-based interventions specifically targeting higher-order cognitive functions and the psychological and behavioral difficulties associated with neurological conditions remain limited.\n\nThe present project aims to address this gap by adapting the Teen Online Problem-Solving (TOPS) program-an evidence-based, web-delivered intervention developed in the United States to improve everyday executive functioning in individuals with neurological conditions-for adolescents and young adults with genetic syndromes involving the central nervous system. TOPS is designed to enhance behavioral adjustment in daily life by providing a contextualized intervention focused on problem-solving, self-regulation, and communication skills within an ecological framework.\n\nThe TOPS program includes online sessions delivered through a dedicated web platform, which patients and their families complete independently at home. These sessions provide educational and informational materials, interviews exploring cognitive, psychological, and behavioral challenges associated with the individual's neurological condition, and video demonstrations illustrating problem-solving strategies relevant to situations commonly experienced as challenging by adolescents and young adults.\n\nIn addition, the intervention includes biweekly videoconference sessions conducted by a psychologist with expertise in cognitive-behavioral therapy. These sessions aim to monitor adherence to the program and completion of the online modules, support the application of executive-function-based strategies to real-life challenges, and promote the use of metacognitive techniques to strengthen self-monitoring and self-regulation.\n\nIn Italy, the dissemination of remote rehabilitation interventions remains limited, particularly for young individuals with neurological conditions, due to geographical barriers and restricted economic resources. Nonetheless, the growing interest in telemedicine is creating new opportunities for accessible and continuous care.\n\nThis multicenter study will evaluate the efficacy and feasibility of an adapted version of TOPS for patients with genetic syndromes involving the central nervous system, with the goal of improving cognitive, psychological, and behavioral functioning in the target population.\n\nTo assess efficacy, patients will undergo pre- and post-treatment evaluations of functioning, including performance-based measures and questionnaires completed by participants or their parents/guardians/caregivers, addressing psycho-behavioral adjustment and executive functioning, as well as the psychological well-being of parents/guardians/caregivers involved in the intervention.\n\nThe new Italian version of the TOPS program-adapted both for the target population and to include young adult participants-will be named Italian Tailored Online Problem Solving (I-TOPS). This designation preserves continuity with the original program while emphasizing, through the term Tailored, the evolution of the intervention toward a broader focus, an expanded age range, and increased opportunities for personalization."
+        },
+        "conditionsModule": {
+            "conditions": [
+                "Genetic Syndrome"
+            ],
+            "keywords": [
+                "executive functions",
+                "social skills",
+                "adaptive skills",
+                "telerehabilitation",
+                "rehabilitation"
+            ]
+        },
+        "designModule": {
+            "studyType": "INTERVENTIONAL",
+            "phases": [
+                "NA"
+            ],
+            "designInfo": {
+                "allocation": "RANDOMIZED",
+                "interventionModel": "PARALLEL",
+                "primaryPurpose": "TREATMENT",
+                "maskingInfo": {
+                    "masking": "TRIPLE",
+                    "maskingDescription": "The randomization list will be generated by an Institute researcher who is independent from the study team and will be provided exclusively to the psychotherapist responsible for conducting the remote sessions with patients and families. After completing each patient's baseline assessment (T0), the psychotherapist will contact the patient's parents (for minors) or the patient (for adults) via Google Meet to explain the subsequent study phases according to the assigned condition. Consequently, only the psychotherapist and the independent researcher will have access to treatment allocation.\n\nThe psychotherapist will be specifically instructed not to disclose allocation information to any other member of the research team and to maintain a strict separation of roles, facilitated by their position as an external consultant.\n\nAll other study personnel-including research team members, participants and their parents/guardians/caregivers, test administrators, and the statistician conducting th",
+                    "whoMasked": [
+                        "PARTICIPANT",
+                        "INVESTIGATOR",
+                        "OUTCOMES_ASSESSOR"
+                    ]
+                }
+            },
+            "enrollmentInfo": {
+                "count": 42,
+                "type": "ESTIMATED"
+            }
+        },
+        "armsInterventionsModule": {
+            "armGroups": [
+                {
+                    "label": "Treatment-first",
+                    "type": "EXPERIMENTAL",
+                    "description": "Participants assigned to this arm will receive the I-TOPS intervention, a combined web-based and telehealth program. The intervention includes two integrated components: (1) a digital platform through which patients independently complete structured psychoeducational activities (e.g., informational materials on neurological conditions and video-based problem-solving strategies for everyday situations), and (2) scheduled telemedicine sessions delivered by a psychologist trained in cognitive-behavioral therapy and experienced in neuropsychological rehabilitation. These sessions provide clinical guidance, monitor adherence, and support the application of learned strategies to daily life. The intervention is designed to integrate psychoeducation with cognitive-behavioral and neuropsychological rehabilitation principles.\n\nParticipants will undergo assessments at three time points: T0 (baseline, prior to treatment), T1 (immediately post-treatment) and T2 (six-month post-treatment follow-up).",
+                    "interventionNames": [
+                        "Behavioral: Italian Tailored Online Problem-Solving (I-TOPS)"
+                    ]
+                },
+                {
+                    "label": "Waiting-list-first",
+                    "type": "ACTIVE_COMPARATOR",
+                    "description": "Participants assigned to this arm will receive the I-TOPS intervention after a waiting-list period corresponding to the treatment period of Group 1 (experimental group). Participants will undergo assessments at three time points: T0 (baseline, prior to the waiting-list period), T1 (immediately after the waiting-list period), and T2 (immediately post-treatment).",
+                    "interventionNames": [
+                        "Behavioral: Italian Tailored Online Problem-Solving (I-TOPS)"
+                    ]
+                }
+            ],
+            "interventions": [
+                {
+                    "type": "BEHAVIORAL",
+                    "name": "Italian Tailored Online Problem-Solving (I-TOPS)",
+                    "description": "The I-TOPS web-based platform is structured into 10 core sessions aimed at providing patients, on the one hand, with information about the effects of their neurological condition and, on the other, with support in learning and applying strategies for planning and organization, enhancement of social skills, and emotion regulation. The combination of patients' independent work on the platform and the online support sessions conducted by the therapist ensures that the intervention goes beyond the mere delivery of informational content and includes practical activities to be carried out in daily life. These activities are based on specific cognitive-behavioral strategies proposed by both the program and the therapist, with personalized support tailored to the patient's real-life context by the clinician (contextualization process).",
+                    "armGroupLabels": [
+                        "Treatment-first",
+                        "Waiting-list-first"
+                    ]
+                }
+            ]
+        },
+        "outcomesModule": {
+            "primaryOutcomes": [
+                {
+                    "measure": "Total score from Child Behavior Checklist 6-18 (CBCL 6-18)",
+                    "description": "This measure will assess caregiver-reported psycho-behavioral adjustment for participants who are minors (CBCL 6-18). Scores will be expressed as T scores (M= 50; SD=10). Higher scores will indicate worse outcomes.",
+                    "timeFrame": "T0 (baseline: day 1), T1 (post-intervention for Group 1 and post-waiting-list period for Group 2: 6 months after study start), T2 (6-month follow-up post-intervention for Group 1 and immediate post-intervention for Group 2: 1 year after study start)."
+                },
+                {
+                    "measure": "Total score from Adult Behavior Checklist 18-59 (ABCL 18-59)",
+                    "description": "This measure will assess caregiver-reported psycho-behavioral adjustment for participants of legal age (ABCL 18-59). Scores will be expressed as T scores (M= 50; SD=10). Higher scores will indicate worse outcomes.",
+                    "timeFrame": "T0 (baseline: day 1), T1 (post-intervention for Group 1 and post-waiting-list period for Group 2: 6 months after study start), T2 (6-month follow-up post-intervention for Group 1 and immediate post-intervention for Group 2: 1 year after study start)."
+                }
+            ],
+            "secondaryOutcomes": [
+                {
+                    "measure": "Global Executive Composite (GEC) score from Behavior Rating Inventory of Executive Function-2 (BRIEF-2) -parent informant-report form",
+                    "description": "This measure is designed to assess behaviors related to executive functioning in the daily life of children and adolescents aged 5 to 18 years (BRIEF-2), based on parent/caregiver observations. Scores will be expressed as T scores (M= 50; SD=10). Higher scores will indicate worse performance.",
+                    "timeFrame": "T0 (baseline: day 1), T1 (post-intervention for Group 1 and post-waiting-list period for Group 2: 6 months after study start), T2 (6-month follow-up post-intervention for Group 1 and immediate post-intervention for Group 2: 1 year after study start)."
+                },
+                {
+                    "measure": "Global Executive Composite (GEC) score from Behavior Rating Inventory of Executive Function-Adult Version (BRIEF-A)-informant-report form.",
+                    "description": "This measure is designed to assess behaviors related to executive functioning in the daily life of adults aged 18 to 59 years (BRIEF-A), based on parent/caregiver/informant observations. Scores will be expressed as T scores (M= 50; SD=10). Higher scores will indicate worse performance.",
+                    "timeFrame": "T0 (baseline: day 1), T1 (post-intervention for Group 1 and post-waiting-list period for Group 2: 6 months after study start), T2 (6-month follow-up post-intervention for Group 1 and immediate post-intervention for Group 2: 1 year after study start)."
+                },
+                {
+                    "measure": "Global Executive Composite (GEC) score from Behavior Rating Inventory of Executive Function Second Edition (BRIEF 2)-self-report form",
+                    "description": "These measures assess executive functioning in daily life based on self-report by minors aged 11 to 18. Scores will be expressed as T scores (M= 50; SD=10). Higher scores will indicate worse outcomes.",
+                    "timeFrame": "T0 (baseline: day 1), T1 (post-intervention for Group 1 and post-waiting-list period for Group 2: 6 months after study start), T2 (6-month follow-up post-intervention for Group 1 and immediate post-intervention for Group 2: 1 year after study start)."
+                },
+                {
+                    "measure": "Global Executive Composite (GEC) score from Behavior Rating Inventory of Executive Function-Adult Version (BRIEF-A)-self-report form",
+                    "description": "These measures assess executive functioning in daily life based on self-report by adults aged 18 to 59. Scores will be expressed as T scores (M= 50; SD=10). Higher scores will indicate worse outcomes.",
+                    "timeFrame": "T0 (baseline: day 1), T1 (post-intervention for Group 1 and post-waiting-list period for Group 2: 6 months after study start), T2 (6-month follow-up post-intervention for Group 1 and immediate post-intervention for Group 2: 1 year after study start)."
+                },
+                {
+                    "measure": "Total score from Youth Self-Report 11-18 (YSR 11-18)",
+                    "description": "This measure is designed to assess psychological adjustment and behavioral functioning in adolescents aged 11 to 18 years. Scores will be expressed as T scores (M= 50; SD= 10). Higher scores will indicate worse performance.",
+                    "timeFrame": "T0 (baseline: day 1), T1 (post-intervention for Group 1 and post-waiting-list period for Group 2: 6 months after study start), T2 (6-month follow-up post-intervention for Group 1 and immediate post-intervention for Group 2: 1 year after study start)."
+                },
+                {
+                    "measure": "Total score from Adult Self-Report 18-59 (ASR 18-59).",
+                    "description": "This measure is designed to assess psychological adjustment and behavioral functioning in adults aged 18 to 59 years. Scores will be expressed as T scores (M= 50; SD= 10). Higher scores will indicate worse performance.",
+                    "timeFrame": "T0 (baseline: day 1), T1 (post-intervention for Group 1 and post-waiting-list period for Group 2: 6 months after study start), T2 (6-month follow-up post-intervention for Group 1 and immediate post-intervention for Group 2: 1 year after study start)."
+                },
+                {
+                    "measure": "Global Severity Index (GSI) from Symptom Checklist-90 (SCL-90)",
+                    "description": "The SCL-90 is a self-report questionnaire for adults, used to measure the severity of psychiatric symptoms across 9 subscales: somatization, obsessive-compulsive functioning, interpersonal sensitivity, depression, anxiety, hostility, phobic anxiety, paranoid ideation and psychoticism. In the study it will be administered to parents of participants. The Global Severity Index (GSI) will be considered, for which the score is reported as a ratio of the sum of all 90 items (0-360) to the number of items scored. Higher scores will indicate higher psychiatric symptom intensity; an average score corresponding to ≥1 on the GSI enters the clinical range.",
+                    "timeFrame": "T0 (baseline: day 1), T1 (post-intervention for Group 1 and post-waiting-list period for Group 2: 6 months after study start), T2 (6-month follow-up post-intervention for Group 1 and immediate post-intervention for Group 2: 1 year after study start)."
+                },
+                {
+                    "measure": "Total score from Beck Anxiety Inventory (BAI)",
+                    "description": "The Beck Anxiety Inventory (BAI) is a 21-item questionnaire designed to assess state and trait anxiety in adults. In the study it will be administered to parents of participants to evaluate their psychological well-being. The total score will be calculated as the sum of the 21 items (4-point Likert scale, ranging 0-3), with a minimum score of 0 and a maximum score of 108. Higher scores indicate a worse outcome. Specifically, a score of 0 to 21 will indicate low levels of anxiety, a score of 22 to 35 moderate levels of anxiety, and a score of 36 to 108 potentially concerning levels of anxiety.",
+                    "timeFrame": "T0 (baseline: day 1), T1 (post-intervention for Group 1 and post-waiting-list period for Group 2: 6 months after study start), T2 (6-month follow-up post-intervention for Group 1 and immediate post-intervention for Group 2: 1 year after study start)."
+                },
+                {
+                    "measure": "Coping Orientation to the Problems Experienced-Nuova Versione Italiana [New Italian Version] (COPE-NVI)",
+                    "description": "The COPE-NVI is a self-report questionnaire assessing various coping styles. It evaluates how frequently an individual uses specific coping strategies in stressful situations, without reference to any particular stressor. In this study it will be administered to parents of participants to examine their coping style. The following 5 domains will be evaluated: 1) Social support (scores: 12-48; M= 27,7; SD= 8,4); 2) Strategies of avoidance (scores: 16-64; M= 23,5; SD= 5,1); 3) Positive attitude (scores: 12-48; M= 30,9; SD= 6); 4) Orientation to the problem (scores: 12-48; M= 32; SD= 6,7); 5) Trascendent Orientation (scores: 8-32; M= 22,7; SD= 5,6).",
+                    "timeFrame": "T0 (baseline: day 1), T1 (post-intervention for Group 1 and post-waiting-list period for Group 2: 6 months after study start), T2 (6-month follow-up post-intervention for Group 1 and immediate post-intervention for Group 2: 1 year after study start)."
+                },
+                {
+                    "measure": "Batteria di Cognizione Sociale [Battery on Social Cognition] by Prior, Sartori and Marchi",
+                    "description": "This battery is designed to assess social cognition in adolescents and adults, with a particular focus on individuals with neurological conditions. The battery consists of 4 subtests. For the Theory of Mind subtest the maximum score is 13; a score ≥ 12 falls within the normal range. For the Emotion Attribution Test, each emotion has a different score. For sadness, the cut-off is 7 for ages 18-30 and 6 for ages 31-60 or 8-11 years of education; for awkwardness, it is 8 and 7; for anger, it is 7 and 6 (males) and 7 (females). The Social Situations Test has a score range of 0-15; a score ≥13 indicates a good understanding of social dynamics. For the Moral and Conventional Distinction Test, the gravity score for conventional behaviors ranges from 0-60, with cut-offs of 19 and 28 for males and females aged 18-30, and 19 and 20 for those aged 31-60.",
+                    "timeFrame": "T0 (baseline: day 1), T1 (post-intervention for Group 1 and post-waiting-list period for Group 2: 6 months after study start), T2 (6-month follow-up post-intervention for Group 1 and immediate post-intervention for Group 2: 1 year after study start)."
+                }
+            ]
+        },
+        "eligibilityModule": {
+            "eligibilityCriteria": "Inclusion Criteria:\n\n* Diagnosis of genetic syndrome\n* Age: 11 to 39 years and 11 months\n* Ownership of a personal computer and access to the Internet at home;\n* Basic computer literacy of the patient and/or family, sufficient to manage email, browse the Internet, use websites and conduct video-calls;\n* Presence of at least one parent, caregiver or guardian living with the patient who is available to participate in the intervention.\n\nExclusion Criteria:\n\n* Presence of severe or profound intellectual disability;\n* Autism Spectrum Disorder, Level 3 (requiring very substantial support) based on DSM-5;\n* Presence of an acute psychiatric disorder.",
+            "healthyVolunteers": false,
+            "sex": "ALL",
+            "minimumAge": "11 Years",
+            "maximumAge": "39 Years",
+            "stdAges": [
+                "CHILD",
+                "ADULT"
+            ]
+        },
+        "contactsLocationsModule": {
+            "centralContacts": [
+                {
+                    "name": "Claudia Corti, PsyD; PhD",
+                    "role": "CONTACT",
+                    "phone": "+39031877111",
+                    "email": "claudia.corti@lanostrafamiglia.it"
+                }
+            ],
+            "locations": [
+                {
+                    "facility": "Scientific Institute, IRCCS E. Medea, Bosisio Parini, Lecco, Italy",
+                    "status": "RECRUITING",
+                    "city": "Bosisio Parini",
+                    "state": "Lecco",
+                    "zip": "23842",
+                    "country": "Italy",
+                    "contacts": [
+                        {
+                            "name": "Claudia Corti, PsyD; PhD",
+                            "role": "CONTACT",
+                            "phone": "+39031877111",
+                            "email": "claudia.corti@lanostrafamiglia.it"
+                        },
+                        {
+                            "name": "Sandra Strazzer, MD",
+                            "role": "CONTACT",
+                            "phone": "+39031877111",
+                            "email": "sandra.strazzer@lanostrafamiglia.it"
+                        }
+                    ],
+                    "geoPoint": {
+                        "lat": 45.80075,
+                        "lon": 9.29
+                    }
+                }
+            ]
+        },
+        "referencesModule": {
+            "references": [
+                {
+                    "pmid": "34871027",
+                    "type": "BACKGROUND",
+                    "citation": "Wade SL, Jones KM, Corti C, Adlam AR, Limond J, Bardoni A, Gies LM. Adapting intervention approaches to new contexts: Three case studies of international adaptation of the Teen Online Problem Solving (TOPS) program. Rehabil Psychol. 2021 Nov;66(4):356-365. doi: 10.1037/rep0000414."
+                },
+                {
+                    "pmid": "39984161",
+                    "type": "BACKGROUND",
+                    "citation": "Corti C, Papini M, Strazzer S, Borgatti R, Romaniello R, Poggi G, Storm FA, Urgesi C, Jansari A, Wade SL, Bardoni A. Examining the Implementation of the Italian Version of the Teen Online Problem-Solving Program Coupled With Remote Psychological Support: Protocol for a Randomized Controlled Trial. JMIR Res Protoc. 2025 Feb 21;14:e64178. doi: 10.2196/64178."
+                },
+                {
+                    "pmid": "36824180",
+                    "type": "BACKGROUND",
+                    "citation": "Wade SL, Walsh K, Slomine BS, Davis KC, Heard C, Maggard B, Sutcliffe M, Van Tubbergen M, McNally K, Deidrick K, Kirkwood MW, Lantagne A, Ashman S, Scratch S, Chesley G, Johnson-Kerner B, Johnson A, Cirincione L, Austin C. Widespread clinical implementation of the teen online problem-solving program: Progress, barriers, and lessons learned. Front Rehabil Sci. 2023 Feb 7;3:1089079. doi: 10.3389/fresc.2022.1089079. eCollection 2022."
+                },
+                {
+                    "pmid": "27530364",
+                    "type": "BACKGROUND",
+                    "citation": "Bulgheroni S, D'Arrigo S, Signorini S, Briguglio M, Di Sabato ML, Casarano M, Mancini F, Romani M, Alfieri P, Battini R, Zoppello M, Tortorella G, Bertini E, Leuzzi V, Valente EM, Riva D. Cognitive, adaptive, and behavioral features in Joubert syndrome. Am J Med Genet A. 2016 Dec;170(12):3115-3124. doi: 10.1002/ajmg.a.37938. Epub 2016 Aug 17."
+                },
+                {
+                    "pmid": "19857864",
+                    "type": "BACKGROUND",
+                    "citation": "Tavano A, Borgatti R. Evidence for a link among cognition, language and emotion in cerebellar malformations. Cortex. 2010 Jul-Aug;46(7):907-18. doi: 10.1016/j.cortex.2009.07.017. Epub 2009 Sep 16."
+                },
+                {
+                    "pmid": "39320140",
+                    "type": "BACKGROUND",
+                    "citation": "Butti N, Urgesi C, Mussa A, Montirosso R. Cognitive, Social, and Emotional-Behavioral Outcomes in Children and Adolescents With Beckwith-Wiedemann Syndrome. Am J Med Genet B Neuropsychiatr Genet. 2025 Mar;198(2):e33006. doi: 10.1002/ajmg.b.33006. Epub 2024 Sep 25."
+                },
+                {
+                    "pmid": "40003249",
+                    "type": "BACKGROUND",
+                    "citation": "Butti N, Urgesi C, Alfieri P, Priolo M, Montirosso R. Profiling Cognitive and Social Functioning in a Small Cohort with Malan Syndrome. Children (Basel). 2025 Jan 27;12(2):147. doi: 10.3390/children12020147."
+                }
+            ]
+        },
+        "ipdSharingStatementModule": {
+            "ipdSharing": "UNDECIDED"
+        }
+    },
+    "derivedSection": {
+        "miscInfoModule": {
+            "versionHolder": "2026-05-01"
+        },
+        "conditionBrowseModule": {
+            "meshes": [
+                {
+                    "id": "D030342",
+                    "term": "Genetic Diseases, Inborn"
+                },
+                {
+                    "id": "D066107",
+                    "term": "Social Skills"
+                }
+            ],
+            "ancestors": [
+                {
+                    "id": "D009358",
+                    "term": "Congenital, Hereditary, and Neonatal Diseases and Abnormalities"
+                },
+                {
+                    "id": "D012919",
+                    "term": "Social Behavior"
+                },
+                {
+                    "id": "D001519",
+                    "term": "Behavior"
+                }
+            ]
+        }
+    },
+    "hasResults": false
+}

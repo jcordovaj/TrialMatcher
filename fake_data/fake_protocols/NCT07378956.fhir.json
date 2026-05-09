@@ -1,0 +1,1505 @@
+{
+    "resourceType": "Bundle",
+    "type": "collection",
+    "timestamp": "2026-04-15T14:30:43.966Z",
+    "total": 11,
+    "entry": [
+        {
+            "resource": {
+                "resourceType": "ResearchStudy",
+                "id": "NCT07378956 FHIR Transform",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/uv/ebm/StructureDefinition/study-registry-record"
+                    ]
+                },
+                "contained": [
+                    {
+                        "resourceType": "EvidenceVariable",
+                        "id": "NCT07378956-device------vuno-med-fundus-ai",
+                        "meta": {
+                            "profile": [
+                                "http://hl7.org/fhir/uv/ebm/StructureDefinition/variable-definition"
+                            ]
+                        },
+                        "name": "NCT07378956_device______vuno_med_fundus_ai",
+                        "title": "VUNO Med®-Fundus AI™",
+                        "status": "active",
+                        "description": "VUNO Med®-Fundus AI™ is an artificial intelligence-based fundus image detection and diagnostic support software. The software automatically identifies abnormal retinal findings and provides information on the type and location of detected abnormalities to aid clinical decision-making.",
+                        "handling": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/variable-handling",
+                                    "code": "boolean",
+                                    "display": "boolean variable"
+                                }
+                            ]
+                        },
+                        "classifier": [
+                            {
+                                "text": "Intervention Type: DEVICE"
+                            }
+                        ]
+                    },
+                    {
+                        "resourceType": "Group",
+                        "id": "NCT07378956-comparison-group-0",
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/artifact-author",
+                                "valueContactDetail": {
+                                    "name": "Computable Publishing®: [System]-to-FEvIR Converter"
+                                }
+                            }
+                        ],
+                        "identifier": [
+                            {
+                                "type": {
+                                    "text": "FEvIR Linking Identifier"
+                                },
+                                "system": "https://fevir.net/FLI",
+                                "value": "NCT07378956-comparison-group-0",
+                                "assigner": {
+                                    "display": "Computable Publishing LLC"
+                                }
+                            }
+                        ],
+                        "title": "NCT07378956 Comparison Group: Intervention group",
+                        "status": "active",
+                        "description": "For participants assigned to the intervention group, VUNO Med®-Fundus AI™ will be applied to the acquired fundus images, and the AI-generated outputs will be shown to clinicians during routine care.",
+                        "membership": "conceptual",
+                        "code": {
+                            "text": "Experimental"
+                        },
+                        "characteristic": [
+                            {
+                                "code": {
+                                    "text": "Exposed to"
+                                },
+                                "valueReference": {
+                                    "reference": "#NCT07378956-device------vuno-med-fundus-ai",
+                                    "type": "EvidenceVariable",
+                                    "display": "Device: VUNO Med®-Fundus AI™"
+                                },
+                                "exclude": false
+                            }
+                        ]
+                    },
+                    {
+                        "resourceType": "Group",
+                        "id": "NCT07378956-comparison-group-1",
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/artifact-author",
+                                "valueContactDetail": {
+                                    "name": "Computable Publishing®: [System]-to-FEvIR Converter"
+                                }
+                            }
+                        ],
+                        "identifier": [
+                            {
+                                "type": {
+                                    "text": "FEvIR Linking Identifier"
+                                },
+                                "system": "https://fevir.net/FLI",
+                                "value": "NCT07378956-comparison-group-1",
+                                "assigner": {
+                                    "display": "Computable Publishing LLC"
+                                }
+                            }
+                        ],
+                        "title": "NCT07378956 Comparison Group: Control group",
+                        "status": "active",
+                        "description": "For participants assigned to the control group, fundus images will be interpreted according to usual clinical care without AI assistance.",
+                        "membership": "conceptual",
+                        "code": {
+                            "text": "No Intervention"
+                        }
+                    },
+                    {
+                        "resourceType": "Practitioner",
+                        "id": "NCT07378956-CentralContact-0",
+                        "name": [
+                            {
+                                "text": "Hee Jun Park"
+                            }
+                        ],
+                        "telecom": [
+                            {
+                                "system": "phone",
+                                "value": "82-10-7101-2844"
+                            },
+                            {
+                                "system": "email",
+                                "value": "heejun.park@vuno.co"
+                            }
+                        ]
+                    },
+                    {
+                        "resourceType": "ResearchStudy",
+                        "id": "NCT07378956-Location-0-ResearchStudy",
+                        "partOf": [
+                            {
+                                "reference": "#",
+                                "type": "ResearchStudy"
+                            }
+                        ],
+                        "status": "active",
+                        "site": [
+                            {
+                                "reference": "#NCT07378956-Location-0",
+                                "type": "Location"
+                            }
+                        ],
+                        "progressStatus": [
+                            {
+                                "state": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystem/research-study-status",
+                                            "code": "recruiting",
+                                            "display": "Recruiting"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "resourceType": "Location",
+                        "id": "NCT07378956-Location-0",
+                        "name": "Inha University Hospital",
+                        "address": {
+                            "city": "Incheon",
+                            "state": "Gyeonggi-do",
+                            "postalCode": "22332",
+                            "country": "South Korea"
+                        },
+                        "position": {
+                            "longitude": 0,
+                            "latitude": 0
+                        }
+                    }
+                ],
+                "extension": [
+                    {
+                        "extension": [
+                            {
+                                "url": "activity",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://hl7.org/fhir/research-study-registration-activity",
+                                            "code": "registration-submission",
+                                            "display": "Registration submission"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "url": "actual",
+                                "valueBoolean": true
+                            },
+                            {
+                                "url": "period",
+                                "valuePeriod": {
+                                    "start": "2026-01-23"
+                                }
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/StructureDefinition/researchStudy-studyRegistration"
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "activity",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://hl7.org/fhir/research-study-registration-activity",
+                                            "code": "registration-submission-qc",
+                                            "display": "Registration submission Quality Check"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "url": "actual",
+                                "valueBoolean": true
+                            },
+                            {
+                                "url": "period",
+                                "valuePeriod": {
+                                    "start": "2026-01-23"
+                                }
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/StructureDefinition/researchStudy-studyRegistration"
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "activity",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://hl7.org/fhir/research-study-registration-activity",
+                                            "code": "record-verification",
+                                            "display": "Record Verification"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "url": "actual",
+                                "valueBoolean": true
+                            },
+                            {
+                                "url": "period",
+                                "valuePeriod": {
+                                    "end": "2026-04"
+                                }
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/StructureDefinition/researchStudy-studyRegistration"
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "activity",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://hl7.org/fhir/research-study-registration-activity",
+                                            "code": "update-submission",
+                                            "display": "Update submission"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "url": "actual",
+                                "valueBoolean": true
+                            },
+                            {
+                                "url": "period",
+                                "valuePeriod": {
+                                    "end": "2026-04-08"
+                                }
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/StructureDefinition/researchStudy-studyRegistration"
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "activity",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://hl7.org/fhir/research-study-registration-activity",
+                                            "code": "registration-posting",
+                                            "display": "Registration posting"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "url": "actual",
+                                "valueBoolean": true
+                            },
+                            {
+                                "url": "period",
+                                "valuePeriod": {
+                                    "start": "2026-01-30"
+                                }
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/StructureDefinition/researchStudy-studyRegistration"
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "activity",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://hl7.org/fhir/research-study-registration-activity",
+                                            "code": "primary-outcome-data-collection",
+                                            "display": "Primary outcome data collection"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "url": "actual",
+                                "valueBoolean": false
+                            },
+                            {
+                                "url": "period",
+                                "valuePeriod": {
+                                    "end": "2027-08-31"
+                                }
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/StructureDefinition/researchStudy-studyRegistration"
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "activity",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://hl7.org/fhir/research-study-registration-activity",
+                                            "code": "update-posting",
+                                            "display": "Update posting"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "url": "actual",
+                                "valueBoolean": true
+                            },
+                            {
+                                "url": "period",
+                                "valuePeriod": {
+                                    "end": "2026-04-13"
+                                }
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/StructureDefinition/researchStudy-studyRegistration"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "https://clinicaltrials.gov",
+                        "value": "NCT07378956"
+                    },
+                    {
+                        "value": "VN-M-03 PR",
+                        "assigner": {
+                            "display": "VUNO Inc."
+                        }
+                    }
+                ],
+                "name": "NCT07378956_FHIR_Transform",
+                "title": "Clinical Efficacy of Implementing an AI-SaMD for Funduscopy Analysis in Patients With Diabetes Mellitus",
+                "label": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/title-type",
+                                    "code": "official",
+                                    "display": "Official title"
+                                }
+                            ]
+                        },
+                        "value": "Clinical Efficacy of Implementing an AI-Driven Software as a Medical Device (SaMD) for Funduscopy Analysis in Patients With Diabetes Mellitus: A Randomized Controlled Trial Protocol"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/title-type",
+                                    "code": "acronym",
+                                    "display": "Acronym"
+                                }
+                            ]
+                        },
+                        "value": "SAFE-DM"
+                    }
+                ],
+                "relatesTo": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/artifact-relationship-type",
+                                    "code": "transforms",
+                                    "display": "Transforms"
+                                }
+                            ]
+                        },
+                        "targetUri": "https://clinicaltrials.gov/api/v2/studies/NCT07378956?format=json"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/artifact-relationship-type",
+                                    "code": "transformed-with",
+                                    "display": "Transformed With"
+                                }
+                            ]
+                        },
+                        "targetAttachment": {
+                            "url": "https://fevir.net/ctgovconvert",
+                            "title": "Computable Publishing®: ClinicalTrials.gov-to-FEvIR Converter"
+                        }
+                    }
+                ],
+                "status": "active",
+                "purposeType": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/research-study-prim-purp-type",
+                                "code": "screening",
+                                "display": "Screening"
+                            }
+                        ]
+                    }
+                ],
+                "phase": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/research-study-phase",
+                            "code": "n-a",
+                            "display": "N/A"
+                        }
+                    ]
+                },
+                "studyDesign": [
+                    {
+                        "text": "Design Masking: None (Open Label)"
+                    },
+                    {
+                        "coding": [
+                            {
+                                "system": "https://fevir.net/sevco",
+                                "code": "SEVCO:01003",
+                                "display": "randomized assignment"
+                            }
+                        ]
+                    },
+                    {
+                        "coding": [
+                            {
+                                "system": "https://fevir.net/sevco",
+                                "code": "SEVCO:01011",
+                                "display": "Parallel cohort design"
+                            }
+                        ]
+                    },
+                    {
+                        "coding": [
+                            {
+                                "system": "https://fevir.net/sevco",
+                                "code": "SEVCO:01001",
+                                "display": "interventional research"
+                            }
+                        ]
+                    }
+                ],
+                "condition": [
+                    {
+                        "text": "Diabetic Retinopathy (DR)"
+                    },
+                    {
+                        "text": "Diabete Mellitus"
+                    },
+                    {
+                        "text": "Fundus Photography"
+                    }
+                ],
+                "descriptionSummary": "The objective of this study is to investigate the efficacy of implementing the AI-SaMD(VUNO Med®-Fundus AI™) alongside routine clinical practice for the detection of diabetic retinopathy.",
+                "description": "The primary objective of this study is to compare the true referral rate between patients with VUNO Med®-Fundus AI™-assisted screening (intervention group) and those receiving usual clinical care without AI assistance (control group) among patients with diabetes mellitus.",
+                "site": [
+                    {
+                        "reference": "#NCT07378956-Location-0-ResearchStudy",
+                        "type": "ResearchStudy"
+                    }
+                ],
+                "classifier": [
+                    {
+                        "text": "IPDSharing: Yes"
+                    },
+                    {
+                        "text": "IPDSharingDescription: The institutional dataset used in this study, along with de-identified results, is available upon reasonable request for purposes such as systematic review or meta-analysis, only with approval from the corresponding author and the official approval of local IRB."
+                    },
+                    {
+                        "text": "IPDSharingInfoType: Study Protocol"
+                    },
+                    {
+                        "text": "IPDSharingInfoType: Statistical Analysis Plan (SAP)"
+                    },
+                    {
+                        "text": "IPDSharingInfoType: Informed Consent Form (ICF)"
+                    },
+                    {
+                        "coding": [
+                            {
+                                "system": "https://fevir.net/resources/CodeSystem/419455",
+                                "code": "does-not-include-healthy-volunteers",
+                                "display": "Does not include healthy volunteers"
+                            }
+                        ]
+                    },
+                    {
+                        "coding": [
+                            {
+                                "system": "https://fevir.net/resources/CodeSystem/419455",
+                                "code": "includes-females",
+                                "display": "Includes female subjects"
+                            }
+                        ]
+                    },
+                    {
+                        "coding": [
+                            {
+                                "system": "https://fevir.net/resources/CodeSystem/419455",
+                                "code": "includes-males",
+                                "display": "Includes male subjects"
+                            }
+                        ]
+                    },
+                    {
+                        "text": "Minimum Age: 19 Years"
+                    },
+                    {
+                        "text": "Age Group: Adult"
+                    },
+                    {
+                        "text": "Age Group: Older Adult"
+                    },
+                    {
+                        "text": "Has Results: False"
+                    },
+                    {
+                        "text": "Oversight Classifier: oversightHasDmc False"
+                    },
+                    {
+                        "text": "Oversight Classifier: isFdaRegulatedDrug False"
+                    },
+                    {
+                        "text": "Oversight Classifier: isFdaRegulatedDevice False"
+                    }
+                ],
+                "associatedParty": [
+                    {
+                        "name": "VUNO Inc.",
+                        "role": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/research-study-party-role",
+                                    "code": "sponsor",
+                                    "display": "Sponsor"
+                                }
+                            ]
+                        },
+                        "classifier": [
+                            {
+                                "text": "INDUSTRY"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "VUNO Inc.",
+                        "role": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/research-study-party-role",
+                                    "code": "lead-sponsor",
+                                    "display": "Lead sponsor"
+                                }
+                            ]
+                        },
+                        "classifier": [
+                            {
+                                "text": "INDUSTRY"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Hee Jun Park",
+                        "role": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/research-study-party-role",
+                                    "code": "recruitment-contact",
+                                    "display": "Recruitment contact"
+                                }
+                            ]
+                        },
+                        "classifier": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://terminology.hl7.org/CodeSystem/research-study-party-role",
+                                        "code": "general-contact",
+                                        "display": "General contact"
+                                    }
+                                ]
+                            }
+                        ],
+                        "party": {
+                            "reference": "#NCT07378956-CentralContact-0",
+                            "type": "Practitioner"
+                        }
+                    }
+                ],
+                "progressStatus": [
+                    {
+                        "state": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/research-study-status",
+                                    "code": "recruiting",
+                                    "display": "Recruiting"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "state": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/research-study-status",
+                                    "code": "overall-study",
+                                    "display": "Overall study"
+                                }
+                            ]
+                        },
+                        "actual": true,
+                        "period": {
+                            "start": "2026-04-07"
+                        }
+                    },
+                    {
+                        "state": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/research-study-status",
+                                    "code": "overall-study",
+                                    "display": "Overall study"
+                                }
+                            ]
+                        },
+                        "actual": false,
+                        "period": {
+                            "end": "2027-08-31"
+                        }
+                    }
+                ],
+                "recruitment": {
+                    "targetNumber": 340,
+                    "eligibility": {
+                        "type": "Group",
+                        "identifier": {
+                            "type": {
+                                "text": "FEvIR Linking Identifier"
+                            },
+                            "system": "https://fevir.net/FLI",
+                            "value": "NCT07378956 Eligibility Criteria",
+                            "assigner": {
+                                "display": "Computable Publishing LLC"
+                            }
+                        },
+                        "display": "NCT07378956 Eligibility Criteria"
+                    }
+                },
+                "comparisonGroup": [
+                    {
+                        "name": "Intervention group",
+                        "eligibility": {
+                            "reference": "#NCT07378956-comparison-group-0",
+                            "type": "Group",
+                            "display": "Intervention group"
+                        },
+                        "description": "For participants assigned to the intervention group, VUNO Med®-Fundus AI™ will be applied to the acquired fundus images, and the AI-generated outputs will be shown to clinicians during routine care."
+                    },
+                    {
+                        "name": "Control group",
+                        "eligibility": {
+                            "reference": "#NCT07378956-comparison-group-1",
+                            "type": "Group",
+                            "display": "Control group"
+                        },
+                        "description": "For participants assigned to the control group, fundus images will be interpreted according to usual clinical care without AI assistance."
+                    }
+                ],
+                "objective": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/research-study-objective-type",
+                                    "code": "primary",
+                                    "display": "Primary"
+                                }
+                            ]
+                        },
+                        "outcomeMeasure": [
+                            {
+                                "name": "True Referral Rate",
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystem/research-study-objective-type",
+                                            "code": "primary",
+                                            "display": "Primary"
+                                        }
+                                    ]
+                                },
+                                "description": "The true referral rate is defined as the proportion of subjects who were diagnosed with diabetic retinopathy by an ophthalmologist among those referred to ophthalmology with suspected diabetic retinopathy. The true referral rate will be compared between the intervention and control groups.",
+                                "endpoint": {
+                                    "type": "EvidenceVariable",
+                                    "identifier": {
+                                        "type": {
+                                            "text": "FEvIR Linking Identifier"
+                                        },
+                                        "system": "https://fevir.net/FLI",
+                                        "value": "NCT07378956-primaryOutcome-0",
+                                        "assigner": {
+                                            "display": "Computable Publishing LLC"
+                                        }
+                                    },
+                                    "display": "True Referral Rate"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/research-study-objective-type",
+                                    "code": "secondary",
+                                    "display": "Secondary"
+                                }
+                            ]
+                        },
+                        "outcomeMeasure": [
+                            {
+                                "name": "Diabetic Retinopathy (DR) Diagnosis Rate",
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystem/research-study-objective-type",
+                                            "code": "secondary",
+                                            "display": "Secondary"
+                                        }
+                                    ]
+                                },
+                                "description": "Proportion of subjects diagnosed with diabetic retinopathy among all enrolled subjects will be compared between the intervention group and the control group.",
+                                "endpoint": {
+                                    "type": "EvidenceVariable",
+                                    "identifier": {
+                                        "type": {
+                                            "text": "FEvIR Linking Identifier"
+                                        },
+                                        "system": "https://fevir.net/FLI",
+                                        "value": "NCT07378956-secondaryOutcome-0",
+                                        "assigner": {
+                                            "display": "Computable Publishing LLC"
+                                        }
+                                    },
+                                    "display": "Diabetic Retinopathy (DR) Diagnosis Rate"
+                                }
+                            },
+                            {
+                                "name": "Odds Ratio",
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystem/research-study-objective-type",
+                                            "code": "secondary",
+                                            "display": "Secondary"
+                                        }
+                                    ]
+                                },
+                                "description": "Odds ratio between the diagnosis of diabetic retinopathy and the application of the AI system among subjects referred to ophthalmology will be calculated.",
+                                "endpoint": {
+                                    "type": "EvidenceVariable",
+                                    "identifier": {
+                                        "type": {
+                                            "text": "FEvIR Linking Identifier"
+                                        },
+                                        "system": "https://fevir.net/FLI",
+                                        "value": "NCT07378956-secondaryOutcome-1",
+                                        "assigner": {
+                                            "display": "Computable Publishing LLC"
+                                        }
+                                    },
+                                    "display": "Odds Ratio"
+                                }
+                            },
+                            {
+                                "name": "Referral Rate",
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystem/research-study-objective-type",
+                                            "code": "secondary",
+                                            "display": "Secondary"
+                                        }
+                                    ]
+                                },
+                                "description": "Proportion of subjects referred to ophthalmology for suspected diabetic retinopathy among all enrolled subjects will be compared between the intervention group and the control group.",
+                                "endpoint": {
+                                    "type": "EvidenceVariable",
+                                    "identifier": {
+                                        "type": {
+                                            "text": "FEvIR Linking Identifier"
+                                        },
+                                        "system": "https://fevir.net/FLI",
+                                        "value": "NCT07378956-secondaryOutcome-2",
+                                        "assigner": {
+                                            "display": "Computable Publishing LLC"
+                                        }
+                                    },
+                                    "display": "Referral Rate"
+                                }
+                            },
+                            {
+                                "name": "Time to Diabetic Retinopathy Diagnosis",
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystem/research-study-objective-type",
+                                            "code": "secondary",
+                                            "display": "Secondary"
+                                        }
+                                    ]
+                                },
+                                "description": "Time interval from the diagnosis of diabetes mellitus to confirmed diagnosis of diabetic retinopathy based on ophthalmologic evaluation among referred subjects will be compared between the intervention group and the control group.",
+                                "endpoint": {
+                                    "type": "EvidenceVariable",
+                                    "identifier": {
+                                        "type": {
+                                            "text": "FEvIR Linking Identifier"
+                                        },
+                                        "system": "https://fevir.net/FLI",
+                                        "value": "NCT07378956-secondaryOutcome-3",
+                                        "assigner": {
+                                            "display": "Computable Publishing LLC"
+                                        }
+                                    },
+                                    "display": "Time to Diabetic Retinopathy Diagnosis"
+                                }
+                            },
+                            {
+                                "name": "Performance of the AI System in Detecting Diabetic Retinopathy",
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystem/research-study-objective-type",
+                                            "code": "secondary",
+                                            "display": "Secondary"
+                                        }
+                                    ]
+                                },
+                                "description": "Sensitivity, specificity, accuracy, positive predictive value (PPV), and negative predictive value (NPV) of the AI system will be calculated in comparison with ophthalmologist-confirmed diagnoses.",
+                                "endpoint": {
+                                    "type": "EvidenceVariable",
+                                    "identifier": {
+                                        "type": {
+                                            "text": "FEvIR Linking Identifier"
+                                        },
+                                        "system": "https://fevir.net/FLI",
+                                        "value": "NCT07378956-secondaryOutcome-4",
+                                        "assigner": {
+                                            "display": "Computable Publishing LLC"
+                                        }
+                                    },
+                                    "display": "Performance of the AI System in Detecting Diabetic Retinopathy"
+                                }
+                            },
+                            {
+                                "name": "Accuracy of Referral for Diabetic Retinopathy",
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystem/research-study-objective-type",
+                                            "code": "secondary",
+                                            "display": "Secondary"
+                                        }
+                                    ]
+                                },
+                                "description": "Proportion of subjects whose referral decisions (referral or non-referral) are concordant with ophthalmologist-confirmed DR status will be compared between the intervention group and the control group.",
+                                "endpoint": {
+                                    "type": "EvidenceVariable",
+                                    "identifier": {
+                                        "type": {
+                                            "text": "FEvIR Linking Identifier"
+                                        },
+                                        "system": "https://fevir.net/FLI",
+                                        "value": "NCT07378956-secondaryOutcome-5",
+                                        "assigner": {
+                                            "display": "Computable Publishing LLC"
+                                        }
+                                    },
+                                    "display": "Accuracy of Referral for Diabetic Retinopathy"
+                                }
+                            },
+                            {
+                                "name": "Adherence Rate",
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystem/research-study-objective-type",
+                                            "code": "secondary",
+                                            "display": "Secondary"
+                                        }
+                                    ]
+                                },
+                                "description": "Proportion of referred subjects who attend an ophthalmology department will be compared between the intervention group and the control group.",
+                                "endpoint": {
+                                    "type": "EvidenceVariable",
+                                    "identifier": {
+                                        "type": {
+                                            "text": "FEvIR Linking Identifier"
+                                        },
+                                        "system": "https://fevir.net/FLI",
+                                        "value": "NCT07378956-secondaryOutcome-6",
+                                        "assigner": {
+                                            "display": "Computable Publishing LLC"
+                                        }
+                                    },
+                                    "display": "Adherence Rate"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/research-study-objective-type",
+                                    "code": "exploratory",
+                                    "display": "Exploratory"
+                                }
+                            ]
+                        },
+                        "outcomeMeasure": [
+                            {
+                                "name": "Interim Analysis",
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystem/research-study-objective-type",
+                                            "code": "exploratory",
+                                            "display": "Exploratory"
+                                        }
+                                    ]
+                                },
+                                "description": "One interim analysis will be conducted when 50% of subjects have completed all study visits. The purpose of this analysis is to review the status of subject dropouts and the reasons for dropout in each group. This procedure will be conducted by a statistician who is independent of the study conduct.",
+                                "endpoint": {
+                                    "type": "EvidenceVariable",
+                                    "identifier": {
+                                        "type": {
+                                            "text": "FEvIR Linking Identifier"
+                                        },
+                                        "system": "https://fevir.net/FLI",
+                                        "value": "NCT07378956-otherOutcome-0",
+                                        "assigner": {
+                                            "display": "Computable Publishing LLC"
+                                        }
+                                    },
+                                    "display": "Interim Analysis"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Group",
+                "identifier": [
+                    {
+                        "type": {
+                            "text": "FEvIR Linking Identifier"
+                        },
+                        "system": "https://fevir.net/FLI",
+                        "value": "NCT07378956 Eligibility Criteria",
+                        "assigner": {
+                            "display": "Computable Publishing LLC"
+                        }
+                    }
+                ],
+                "name": "NCT07378956_Eligibility_Criteria",
+                "title": "NCT07378956 Eligibility Criteria",
+                "status": "active",
+                "description": "Inclusion Criteria:\n* Adults aged 19 years or older.\n* A documented diagnosis of type 2 diabetes mellitus.\n* Ability to communicate adequately and provide written informed consent for participation in the study.\nExclusion Criteria:\n* A prior diagnosis of diabetic retinopathy at the time of screening.\n* A history of ophthalmic surgery within 6 months prior to the screening date.\n* A diagnosis of type 1 diabetes mellitus.\n* Pregnancy at the time of screening.\n* Any condition that, in the opinion of the investigator, would make participation in the study infeasible or inappropriate.",
+                "membership": "conceptual",
+                "combinationMethod": "all-of",
+                "characteristic": [
+                    {
+                        "code": {
+                            "text": "Defined by CodeableConcept"
+                        },
+                        "valueCodeableConcept": {
+                            "text": "Adults aged 19 years or older."
+                        },
+                        "exclude": false
+                    },
+                    {
+                        "code": {
+                            "text": "Defined by CodeableConcept"
+                        },
+                        "valueCodeableConcept": {
+                            "text": "A documented diagnosis of type 2 diabetes mellitus."
+                        },
+                        "exclude": false
+                    },
+                    {
+                        "code": {
+                            "text": "Defined by CodeableConcept"
+                        },
+                        "valueCodeableConcept": {
+                            "text": "Ability to communicate adequately and provide written informed consent for participation in the study."
+                        },
+                        "exclude": false
+                    },
+                    {
+                        "code": {
+                            "text": "Defined by CodeableConcept"
+                        },
+                        "valueCodeableConcept": {
+                            "text": "A prior diagnosis of diabetic retinopathy at the time of screening."
+                        },
+                        "exclude": true
+                    },
+                    {
+                        "code": {
+                            "text": "Defined by CodeableConcept"
+                        },
+                        "valueCodeableConcept": {
+                            "text": "A history of ophthalmic surgery within 6 months prior to the screening date."
+                        },
+                        "exclude": true
+                    },
+                    {
+                        "code": {
+                            "text": "Defined by CodeableConcept"
+                        },
+                        "valueCodeableConcept": {
+                            "text": "A diagnosis of type 1 diabetes mellitus."
+                        },
+                        "exclude": true
+                    },
+                    {
+                        "code": {
+                            "text": "Defined by CodeableConcept"
+                        },
+                        "valueCodeableConcept": {
+                            "text": "Pregnancy at the time of screening."
+                        },
+                        "exclude": true
+                    },
+                    {
+                        "code": {
+                            "text": "Defined by CodeableConcept"
+                        },
+                        "valueCodeableConcept": {
+                            "text": "Any condition that, in the opinion of the investigator, would make participation in the study infeasible or inappropriate."
+                        },
+                        "exclude": true
+                    }
+                ]
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "EvidenceVariable",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/uv/ebm/StructureDefinition/variable-definition"
+                    ]
+                },
+                "identifier": [
+                    {
+                        "type": {
+                            "text": "FEvIR Linking Identifier"
+                        },
+                        "system": "https://fevir.net/FLI",
+                        "value": "NCT07378956-primaryOutcome-0",
+                        "assigner": {
+                            "display": "Computable Publishing LLC"
+                        }
+                    }
+                ],
+                "title": "True Referral Rate (NCT07378956)",
+                "status": "active",
+                "description": "The true referral rate is defined as the proportion of subjects who were diagnosed with diabetic retinopathy by an ophthalmologist among those referred to ophthalmology with suspected diabetic retinopathy. The true referral rate will be compared between the intervention and control groups.",
+                "definition": {
+                    "concept": {
+                        "text": "True Referral Rate The true referral rate is defined as the proportion of subjects who were diagnosed with diabetic retinopathy by an ophthalmologist among those referred to ophthalmology with suspected diabetic retinopathy. The true referral rate will be compared between the intervention and control groups."
+                    }
+                },
+                "handling": {
+                    "coding": [
+                        {
+                            "system": "https://fevir.net/resources/CodeSystem/179423",
+                            "code": "evidence-variable-handling-not-specified",
+                            "display": "Evidence variable handling not specified"
+                        }
+                    ]
+                },
+                "timing": [
+                    {
+                        "text": "within 6 months"
+                    }
+                ]
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "EvidenceVariable",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/uv/ebm/StructureDefinition/variable-definition"
+                    ]
+                },
+                "identifier": [
+                    {
+                        "type": {
+                            "text": "FEvIR Linking Identifier"
+                        },
+                        "system": "https://fevir.net/FLI",
+                        "value": "NCT07378956-secondaryOutcome-0",
+                        "assigner": {
+                            "display": "Computable Publishing LLC"
+                        }
+                    }
+                ],
+                "title": "Diabetic Retinopathy (DR) Diagnosis Rate (NCT07378956)",
+                "status": "active",
+                "description": "Proportion of subjects diagnosed with diabetic retinopathy among all enrolled subjects will be compared between the intervention group and the control group.",
+                "definition": {
+                    "concept": {
+                        "text": "Diabetic Retinopathy (DR) Diagnosis Rate Proportion of subjects diagnosed with diabetic retinopathy among all enrolled subjects will be compared between the intervention group and the control group."
+                    }
+                },
+                "handling": {
+                    "coding": [
+                        {
+                            "system": "https://fevir.net/resources/CodeSystem/179423",
+                            "code": "evidence-variable-handling-not-specified",
+                            "display": "Evidence variable handling not specified"
+                        }
+                    ]
+                },
+                "timing": [
+                    {
+                        "text": "Within 6 months"
+                    }
+                ]
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "EvidenceVariable",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/uv/ebm/StructureDefinition/variable-definition"
+                    ]
+                },
+                "identifier": [
+                    {
+                        "type": {
+                            "text": "FEvIR Linking Identifier"
+                        },
+                        "system": "https://fevir.net/FLI",
+                        "value": "NCT07378956-secondaryOutcome-1",
+                        "assigner": {
+                            "display": "Computable Publishing LLC"
+                        }
+                    }
+                ],
+                "title": "Odds Ratio (NCT07378956)",
+                "status": "active",
+                "description": "Odds ratio between the diagnosis of diabetic retinopathy and the application of the AI system among subjects referred to ophthalmology will be calculated.",
+                "definition": {
+                    "concept": {
+                        "text": "Odds Ratio Odds ratio between the diagnosis of diabetic retinopathy and the application of the AI system among subjects referred to ophthalmology will be calculated."
+                    }
+                },
+                "handling": {
+                    "coding": [
+                        {
+                            "system": "https://fevir.net/resources/CodeSystem/179423",
+                            "code": "evidence-variable-handling-not-specified",
+                            "display": "Evidence variable handling not specified"
+                        }
+                    ]
+                },
+                "timing": [
+                    {
+                        "text": "Within 6 months"
+                    }
+                ]
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "EvidenceVariable",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/uv/ebm/StructureDefinition/variable-definition"
+                    ]
+                },
+                "identifier": [
+                    {
+                        "type": {
+                            "text": "FEvIR Linking Identifier"
+                        },
+                        "system": "https://fevir.net/FLI",
+                        "value": "NCT07378956-secondaryOutcome-2",
+                        "assigner": {
+                            "display": "Computable Publishing LLC"
+                        }
+                    }
+                ],
+                "title": "Referral Rate (NCT07378956)",
+                "status": "active",
+                "description": "Proportion of subjects referred to ophthalmology for suspected diabetic retinopathy among all enrolled subjects will be compared between the intervention group and the control group.",
+                "definition": {
+                    "concept": {
+                        "text": "Referral Rate Proportion of subjects referred to ophthalmology for suspected diabetic retinopathy among all enrolled subjects will be compared between the intervention group and the control group."
+                    }
+                },
+                "handling": {
+                    "coding": [
+                        {
+                            "system": "https://fevir.net/resources/CodeSystem/179423",
+                            "code": "evidence-variable-handling-not-specified",
+                            "display": "Evidence variable handling not specified"
+                        }
+                    ]
+                },
+                "timing": [
+                    {
+                        "text": "Within 6 months"
+                    }
+                ]
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "EvidenceVariable",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/uv/ebm/StructureDefinition/variable-definition"
+                    ]
+                },
+                "identifier": [
+                    {
+                        "type": {
+                            "text": "FEvIR Linking Identifier"
+                        },
+                        "system": "https://fevir.net/FLI",
+                        "value": "NCT07378956-secondaryOutcome-3",
+                        "assigner": {
+                            "display": "Computable Publishing LLC"
+                        }
+                    }
+                ],
+                "title": "Time to Diabetic Retinopathy Diagnosis (NCT07378956)",
+                "status": "active",
+                "description": "Time interval from the diagnosis of diabetes mellitus to confirmed diagnosis of diabetic retinopathy based on ophthalmologic evaluation among referred subjects will be compared between the intervention group and the control group.",
+                "definition": {
+                    "concept": {
+                        "text": "Time to Diabetic Retinopathy Diagnosis Time interval from the diagnosis of diabetes mellitus to confirmed diagnosis of diabetic retinopathy based on ophthalmologic evaluation among referred subjects will be compared between the intervention group and the control group."
+                    }
+                },
+                "handling": {
+                    "coding": [
+                        {
+                            "system": "https://fevir.net/resources/CodeSystem/179423",
+                            "code": "evidence-variable-handling-not-specified",
+                            "display": "Evidence variable handling not specified"
+                        }
+                    ]
+                },
+                "timing": [
+                    {
+                        "text": "Within 6 months"
+                    }
+                ]
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "EvidenceVariable",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/uv/ebm/StructureDefinition/variable-definition"
+                    ]
+                },
+                "identifier": [
+                    {
+                        "type": {
+                            "text": "FEvIR Linking Identifier"
+                        },
+                        "system": "https://fevir.net/FLI",
+                        "value": "NCT07378956-secondaryOutcome-4",
+                        "assigner": {
+                            "display": "Computable Publishing LLC"
+                        }
+                    }
+                ],
+                "title": "Performance of the AI System in Detecting Diabetic Retinopathy (NCT07378956)",
+                "status": "active",
+                "description": "Sensitivity, specificity, accuracy, positive predictive value (PPV), and negative predictive value (NPV) of the AI system will be calculated in comparison with ophthalmologist-confirmed diagnoses.",
+                "definition": {
+                    "concept": {
+                        "text": "Performance of the AI System in Detecting Diabetic Retinopathy Sensitivity, specificity, accuracy, positive predictive value (PPV), and negative predictive value (NPV) of the AI system will be calculated in comparison with ophthalmologist-confirmed diagnoses."
+                    }
+                },
+                "handling": {
+                    "coding": [
+                        {
+                            "system": "https://fevir.net/resources/CodeSystem/179423",
+                            "code": "evidence-variable-handling-not-specified",
+                            "display": "Evidence variable handling not specified"
+                        }
+                    ]
+                },
+                "timing": [
+                    {
+                        "text": "Within 6 months"
+                    }
+                ]
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "EvidenceVariable",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/uv/ebm/StructureDefinition/variable-definition"
+                    ]
+                },
+                "identifier": [
+                    {
+                        "type": {
+                            "text": "FEvIR Linking Identifier"
+                        },
+                        "system": "https://fevir.net/FLI",
+                        "value": "NCT07378956-secondaryOutcome-5",
+                        "assigner": {
+                            "display": "Computable Publishing LLC"
+                        }
+                    }
+                ],
+                "title": "Accuracy of Referral for Diabetic Retinopathy (NCT07378956)",
+                "status": "active",
+                "description": "Proportion of subjects whose referral decisions (referral or non-referral) are concordant with ophthalmologist-confirmed DR status will be compared between the intervention group and the control group.",
+                "definition": {
+                    "concept": {
+                        "text": "Accuracy of Referral for Diabetic Retinopathy Proportion of subjects whose referral decisions (referral or non-referral) are concordant with ophthalmologist-confirmed DR status will be compared between the intervention group and the control group."
+                    }
+                },
+                "handling": {
+                    "coding": [
+                        {
+                            "system": "https://fevir.net/resources/CodeSystem/179423",
+                            "code": "evidence-variable-handling-not-specified",
+                            "display": "Evidence variable handling not specified"
+                        }
+                    ]
+                },
+                "timing": [
+                    {
+                        "text": "Within 6 months"
+                    }
+                ]
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "EvidenceVariable",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/uv/ebm/StructureDefinition/variable-definition"
+                    ]
+                },
+                "identifier": [
+                    {
+                        "type": {
+                            "text": "FEvIR Linking Identifier"
+                        },
+                        "system": "https://fevir.net/FLI",
+                        "value": "NCT07378956-secondaryOutcome-6",
+                        "assigner": {
+                            "display": "Computable Publishing LLC"
+                        }
+                    }
+                ],
+                "title": "Adherence Rate (NCT07378956)",
+                "status": "active",
+                "description": "Proportion of referred subjects who attend an ophthalmology department will be compared between the intervention group and the control group.",
+                "definition": {
+                    "concept": {
+                        "text": "Adherence Rate Proportion of referred subjects who attend an ophthalmology department will be compared between the intervention group and the control group."
+                    }
+                },
+                "handling": {
+                    "coding": [
+                        {
+                            "system": "https://fevir.net/resources/CodeSystem/179423",
+                            "code": "evidence-variable-handling-not-specified",
+                            "display": "Evidence variable handling not specified"
+                        }
+                    ]
+                },
+                "timing": [
+                    {
+                        "text": "Within 6 months"
+                    }
+                ]
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "EvidenceVariable",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/uv/ebm/StructureDefinition/variable-definition"
+                    ]
+                },
+                "identifier": [
+                    {
+                        "type": {
+                            "text": "FEvIR Linking Identifier"
+                        },
+                        "system": "https://fevir.net/FLI",
+                        "value": "NCT07378956-otherOutcome-0",
+                        "assigner": {
+                            "display": "Computable Publishing LLC"
+                        }
+                    }
+                ],
+                "title": "Interim Analysis (NCT07378956)",
+                "status": "active",
+                "description": "One interim analysis will be conducted when 50% of subjects have completed all study visits. The purpose of this analysis is to review the status of subject dropouts and the reasons for dropout in each group. This procedure will be conducted by a statistician who is independent of the study conduct.",
+                "definition": {
+                    "concept": {
+                        "text": "Interim Analysis One interim analysis will be conducted when 50% of subjects have completed all study visits. The purpose of this analysis is to review the status of subject dropouts and the reasons for dropout in each group. This procedure will be conducted by a statistician who is independent of the study conduct."
+                    }
+                },
+                "handling": {
+                    "coding": [
+                        {
+                            "system": "https://fevir.net/resources/CodeSystem/179423",
+                            "code": "evidence-variable-handling-not-specified",
+                            "display": "Evidence variable handling not specified"
+                        }
+                    ]
+                },
+                "timing": [
+                    {
+                        "text": "Within 6 months"
+                    }
+                ]
+            }
+        }
+    ]
+}

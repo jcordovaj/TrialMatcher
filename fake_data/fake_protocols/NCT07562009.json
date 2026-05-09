@@ -1,0 +1,246 @@
+{
+    "protocolSection": {
+        "identificationModule": {
+            "nctId": "NCT07562009",
+            "orgStudyIdInfo": {
+                "id": "2026-01"
+            },
+            "organization": {
+                "fullName": "Saglik Bilimleri Universitesi",
+                "class": "OTHER"
+            },
+            "briefTitle": "Investigation of Allergen Sensitization in Newborn Babies Diagnosed With Necrotizing Enterocolitis.",
+            "officialTitle": "Allergy Risk and Sensitization Following Necrotizing Enterocolitis",
+            "acronym": "AlisNEC"
+        },
+        "statusModule": {
+            "statusVerifiedDate": "2026-01",
+            "overallStatus": "NOT_YET_RECRUITING",
+            "expandedAccessInfo": {
+                "hasExpandedAccess": false
+            },
+            "startDateStruct": {
+                "date": "2026-04-01",
+                "type": "ESTIMATED"
+            },
+            "primaryCompletionDateStruct": {
+                "date": "2027-10-01",
+                "type": "ESTIMATED"
+            },
+            "completionDateStruct": {
+                "date": "2028-01-01",
+                "type": "ESTIMATED"
+            },
+            "studyFirstSubmitDate": "2026-03-05",
+            "studyFirstSubmitQcDate": "2026-04-24",
+            "studyFirstPostDateStruct": {
+                "date": "2026-05-01",
+                "type": "ACTUAL"
+            },
+            "lastUpdateSubmitDate": "2026-04-24",
+            "lastUpdatePostDateStruct": {
+                "date": "2026-05-01",
+                "type": "ACTUAL"
+            }
+        },
+        "sponsorCollaboratorsModule": {
+            "responsibleParty": {
+                "type": "SPONSOR"
+            },
+            "leadSponsor": {
+                "name": "Saglik Bilimleri Universitesi",
+                "class": "OTHER"
+            }
+        },
+        "oversightModule": {
+            "oversightHasDmc": false,
+            "isFdaRegulatedDrug": false,
+            "isFdaRegulatedDevice": false
+        },
+        "descriptionModule": {
+            "briefSummary": "To evaluate the frequency of allergy between 12 and 24 months of age in infants who were treated in the neonatal clinic and had NEC. To investigate the relationship between NEC development and the development of allergy in the later period."
+        },
+        "conditionsModule": {
+            "conditions": [
+                "Necrotizing Enterocolitis",
+                "Allergy",
+                "Preterm"
+            ]
+        },
+        "designModule": {
+            "studyType": "INTERVENTIONAL",
+            "phases": [
+                "NA"
+            ],
+            "designInfo": {
+                "allocation": "NON_RANDOMIZED",
+                "interventionModel": "CROSSOVER",
+                "interventionModelDescription": "Premature babies with NEC Stages I, II, and III will be evaluated between 12 and 24 months of life and will undergo a skin prick test. As a control, preterm babies who have not experienced NEC will be evaluated between 12 and 24 months and will undergo a skin prick test.",
+                "primaryPurpose": "DIAGNOSTIC",
+                "maskingInfo": {
+                    "masking": "NONE"
+                }
+            },
+            "enrollmentInfo": {
+                "count": 130,
+                "type": "ESTIMATED"
+            }
+        },
+        "armsInterventionsModule": {
+            "armGroups": [
+                {
+                    "label": "NEC Study Group",
+                    "type": "EXPERIMENTAL",
+                    "description": "Neonates diagnosed with Necrotizing enterocolitis during the neonatal period who are eveluated for allergens sensitization",
+                    "interventionNames": [
+                        "Diagnostic Test: skin prick test"
+                    ]
+                },
+                {
+                    "label": "Control Group",
+                    "type": "EXPERIMENTAL",
+                    "description": "Neonates without a history of Necrotizing enterocolitis who are eveluated for allergens sensitization",
+                    "interventionNames": [
+                        "Diagnostic Test: skin prick test"
+                    ]
+                }
+            ],
+            "interventions": [
+                {
+                    "type": "DIAGNOSTIC_TEST",
+                    "name": "skin prick test",
+                    "description": "Skin Prick Test Procedure:\n\nThe SPT was performed when patients were free of acute health problems, and medications that could affect test results had been discontinued. A histamine solution (10 mg/mL, ALK-Abelló®, Canada) was used as a positive control, and 0.9% sodium chloride was used as a negative control. The test was performed on the volar surface of the forearm, and results were read after 20 minutes. A wheal ≥3 mm greater than the negative control, with erythema, was considered positive (Heinzerling L, et al. Clin Transl Allergy 2013;3:3).\n\nSensitization to aeroallergens, including house dust mites (Dermatophagoides farinae, Dermatophagoides pteronyssinus), grass pollen mix, tree pollen mix, mold mix, cat epithelium, dog epithelium, and cockroach extract (ALK-Abelló®, Canada), was assessed. Sensitization to food allergens (cow's milk, egg, wheat, nuts, fish, and soy) was also evaluated using commercial extracts (ALK-Abelló®, Canada).",
+                    "armGroupLabels": [
+                        "Control Group",
+                        "NEC Study Group"
+                    ]
+                }
+            ]
+        },
+        "outcomesModule": {
+            "primaryOutcomes": [
+                {
+                    "measure": "The effect of necrotizing enterocolitis development in premature infants on response to allergens.",
+                    "description": "The primary objective of this study was to compare the positivity rates on skin prick tests for airway allergens or food allergens in premature infants who developed NEC and those who did not, between the ages of 12 and 24 months.",
+                    "timeFrame": "Through study completion, an average of 1 year"
+                }
+            ]
+        },
+        "eligibilityModule": {
+            "eligibilityCriteria": "Inclusion Criteria:\n\n1. Infants born in our hospital and diagnosed with NEC during the study period.\n2. Age-matched control infants born in our hospital during the same period but without NEC diagnosis.\n3. Written and verbal informed consent obtained from at least one parent.\n\n   \\-\n\nExclusion Criteria:\n\n1. Infants whose parents did not provide written or verbal consent.\n2. Infants with major congenital anomalies.\n3. Infants with chromosomal disorders.\n4. Infants with gastrointestinal malformations (e.g., duodenal atresia, gastroschisis, omphalocele).\n5. Infants diagnosed with immunodeficiency. -",
+            "healthyVolunteers": true,
+            "sex": "ALL",
+            "minimumAge": "12 Months",
+            "maximumAge": "24 Months",
+            "stdAges": [
+                "CHILD"
+            ]
+        }
+    },
+    "derivedSection": {
+        "miscInfoModule": {
+            "versionHolder": "2026-05-01"
+        },
+        "conditionBrowseModule": {
+            "meshes": [
+                {
+                    "id": "D020345",
+                    "term": "Enterocolitis, Necrotizing"
+                },
+                {
+                    "id": "D006967",
+                    "term": "Hypersensitivity"
+                },
+                {
+                    "id": "D047928",
+                    "term": "Premature Birth"
+                }
+            ],
+            "ancestors": [
+                {
+                    "id": "D004760",
+                    "term": "Enterocolitis"
+                },
+                {
+                    "id": "D005759",
+                    "term": "Gastroenteritis"
+                },
+                {
+                    "id": "D005767",
+                    "term": "Gastrointestinal Diseases"
+                },
+                {
+                    "id": "D004066",
+                    "term": "Digestive System Diseases"
+                },
+                {
+                    "id": "D007410",
+                    "term": "Intestinal Diseases"
+                },
+                {
+                    "id": "D007154",
+                    "term": "Immune System Diseases"
+                },
+                {
+                    "id": "D007752",
+                    "term": "Obstetric Labor, Premature"
+                },
+                {
+                    "id": "D007744",
+                    "term": "Obstetric Labor Complications"
+                },
+                {
+                    "id": "D011248",
+                    "term": "Pregnancy Complications"
+                },
+                {
+                    "id": "D005261",
+                    "term": "Female Urogenital Diseases and Pregnancy Complications"
+                },
+                {
+                    "id": "D000091642",
+                    "term": "Urogenital Diseases"
+                }
+            ]
+        },
+        "interventionBrowseModule": {
+            "meshes": [
+                {
+                    "id": "D010328",
+                    "term": "Patch Tests"
+                }
+            ],
+            "ancestors": [
+                {
+                    "id": "D012882",
+                    "term": "Skin Tests"
+                },
+                {
+                    "id": "D007159",
+                    "term": "Immunologic Tests"
+                },
+                {
+                    "id": "D019411",
+                    "term": "Clinical Laboratory Techniques"
+                },
+                {
+                    "id": "D019937",
+                    "term": "Diagnostic Techniques and Procedures"
+                },
+                {
+                    "id": "D003933",
+                    "term": "Diagnosis"
+                },
+                {
+                    "id": "D008919",
+                    "term": "Investigative Techniques"
+                },
+                {
+                    "id": "D007158",
+                    "term": "Immunologic Techniques"
+                }
+            ]
+        }
+    },
+    "hasResults": false
+}
