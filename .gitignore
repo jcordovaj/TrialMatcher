@@ -8,7 +8,7 @@ audit.db
 
 # Local configuration file (sdk path, etc)
 *.cfg
-
+*.vscode/
 local.properties
 .git/
 # Log/OS Files
