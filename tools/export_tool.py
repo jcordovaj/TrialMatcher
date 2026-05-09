@@ -3,6 +3,7 @@ import json
 from typing import List, Dict, Any
 from datetime import datetime, timezone
 
+
 def export_results_json(results: List[Dict[str, Any]], out_path: str = None) -> str:
     if not out_path:
         ts = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")

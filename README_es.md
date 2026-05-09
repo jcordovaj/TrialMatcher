@@ -1,9 +1,10 @@
-# TrialMatcher: Motor de Orquestación de Ensayos Clínicos basado en IA
+# TrialMatcher: Superando la brecha de USD 2.3B en el enrolamiento para ensayos clínicos
 
-**Acortando la brecha de inscripción de $2.3B en ensayos clínicos mediante Inteligencia Agéntica.**
+**Motor de orquestación de ensayos clínicos impulsado por IA**
 
-[![MCP Compatible](https://img.shields.io/badge/MCP-Model%20Context%20Protocol-blue)](https://modelcontextprotocol.io)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MCP Compatible](https://img.shields.io/badge/MCP-Model%20Context%20Protocol-blue)](https://modelcontextprotocol.io/)[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://chat.z.ai/c/LICENSE)
+
+![Snapshot TrialMatcher](image/README/banner2.png)
 
 ---
 
@@ -21,9 +22,9 @@ Al aprovechar la _Interoperabilidad Conversacional (COIN)_, cerramos la brecha e
 
 ### El Problema
 
-- **Datos Heterogéneos:** La información del paciente está dispersa en servidores FHIR, PDFs y notas de texto libre.
-- **Complejidad del Protocolo:** Criterios con lógica temporal ("≥3 meses de estabilidad") son imposibles de consultar solo con SQL.
-- **Puntos Ciegos de Auditoría:** Las decisiones de IA a menudo carecen del rastro de evidencia clínica requerido por el cumplimiento farmacéutico.
+- **Datos heterogéneos:** La información del paciente está dispersa en servidores FHIR, PDFs y notas de texto libre.
+- **Complejidad de los Protocolos:** Criterios con lógica temporal ("≥3 meses de estabilidad") son imposibles de consultar solo con SQL.
+- **Puntos ciegos de Auditoría:** Las decisiones de IA a menudo carecen del rastro de evidencia clínica requerido por el cumplimiento farmacéutico.
 
 ### La Solución
 
