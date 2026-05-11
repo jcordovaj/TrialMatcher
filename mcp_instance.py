@@ -2,6 +2,10 @@ from mcp.server.fastmcp import FastMCP
 from tools.match_patient_tool import match_patient_to_trial
 from tools.check_audit_tool import check_previous_evaluation
 from tools.reset_tool import reset_screening_history
+from tools.ingest_data_asset_tool import ingest_data_asset
+from tools.update_patient_tool import update_patient as update_patient_tool
+from tools.save_evaluation_tool import save_evaluation
+
 
 mcp = FastMCP("TrialMatcher Pro", stateless_http=True)
 
@@ -43,7 +47,7 @@ mcp.tool(
 mcp.tool(
     name="IngestClinicalAsset",
     description="Pre-processes large clinical files (PDF/JSON). Categorizes data into Patients or Protocols and stores them in the vector database."
-)(ingest_data_asset_tool)
+)(ingest_data_asset)
 
 mcp.tool(
     name="UpdatePatientRecord",

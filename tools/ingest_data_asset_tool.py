@@ -1,3 +1,6 @@
+from mcp.server.fastmcp import Context
+from tools.trial_parser import extract_eligibility_chunk
+
 async def ingest_data_asset(file_content: str, file_name: str, ctx: Context):
     """
     Analyzes the file type. If it's a protocol, it extracts criteria using trial_parser.py.
