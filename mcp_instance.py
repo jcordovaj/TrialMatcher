@@ -39,3 +39,13 @@ mcp.tool(
     name="AdminResetHistory", 
     description="Developer tool to clear patient screening logs for re-testing."
 )(reset_screening_history)
+
+mcp.tool(
+    name="IngestClinicalAsset",
+    description="Pre-processes large clinical files (PDF/JSON). Categorizes data into Patients or Protocols and stores them in the vector database."
+)(ingest_data_asset_tool)
+
+mcp.tool(
+    name="UpdatePatientRecord",
+    description="Updates an existing patient profile with new lab results or medical findings."
+)(update_patient_tool)

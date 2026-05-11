@@ -76,7 +76,7 @@ flowchart TD
 ### The Solution
 
 - **Agentic workflow:** An AI agent retrieves patient data while another parses protocols; TrialMatcher MCP conducts the match.
-- **Non-Binary logic:** We don't just return "Eligible/NotEligible". We are able to identify "Potential Matches", "Data Gaps", and "Missing Lab Requirements".
+- **Non-Binary logic:** We don't just return "Eligible/NotEligible". We are able to identify "Potential Matches", "Data Gaps", for instance, due to "Missing Lab Requirements".
 - **Audit-Ready by design:** Every action, change, or match decision is backed by a "Clinical Reasoning Trace", citing specific record IDs, timestamps, and values.
 
 ## ✨ Key Capabilities
@@ -95,8 +95,8 @@ Automatically parses complex protocols to extract temporal criteria and biomarke
 
 Moves beyond binary classification:
 
-- Eligible / Possibly Eligible / Not Eligible / Data Gap.
-- Un certainty Handling: Flags cases needing "Physician Review" (Human-in-the-loop).
+- Eligible / Possibly Eligible (Flag) / Not Eligible / Data Gap (Flag).
+- Uncertainty Handling: Flags cases needing "Physician Review" (Human-On-the-loop).
 
 #### 3.1 Stratified Multi-Criteria Scoring Model (MCDA)
 

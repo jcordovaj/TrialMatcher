@@ -4,7 +4,7 @@ from pydantic import Field
 from fhir_client import FhirClient
 from fhir_utilities import get_fhir_context, get_patient_id_if_context_exists
 from mcp_utilities import create_text_response
-from scrapbook.reasoning.templates import ReasoningTemplates
+from reasoning.templates import ReasoningTemplates
 from audit_manager import AuditManager
 
 async def match_patient_to_trial(
