@@ -5,6 +5,7 @@ Scripts/
 MCPServer/
 audit.db
 *.db
+.env
 
 # Local configuration file (sdk path, etc)
 *.cfg
