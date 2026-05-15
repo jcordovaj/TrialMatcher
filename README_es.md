@@ -67,6 +67,32 @@ No solo "Paciente -> Estudio", sino "Paciente -> Todos los Estudios Aplicables".
 
 ---
 
+---
+
+## 🔒 Gobernanza y Arquitectura
+
+Para que el sistema sea coherente, sin redundancias y con una clara separación de responsabilidades, cada agente que ajecuta el MCP posee SKILLS específica que cumplen con el formato de skills.org.
+
+Todo se organiza en 4 Skills maestras que agrupan las funcionalidades lógicas que debe interpretar el asistente, eliminando heurísticas que causaban ruido.
+
+---
+
+### Agentes y Skills
+
+1. Agente A: Clinical Eligibility Specialist
+
+   Este agente es el "Cerebro Clínico". Se encarga del análisis profundo, la seguridad y el cálculo matemático.
+   - Skill 1: clinical-intelligence-engine: (Agrupa: Multi Criteria Scoring, Absolute Safety Hard Stop, y Protocol Semantic Parsing).
+   - Skill 2: compliance-and-traceability: (Agrupa: Evidentiary Traceability, Pseudonymized Compliance Guard, y Cognitive Sensitivity Simulation).
+
+2. Agente B: Clinical Trial Master Orchestrator
+
+   Este agente es el "Director de Orquesta". Maneja la interacción, el flujo de datos y la gestión de archivos masivos.
+   - Skill 3: clinical-asset-orchestration: (Agrupa: Coordinate Batch Trial Matching, Clinical Asset Ingestion, y In Context Batch Screening).
+   - Skill 4: patient-record-evolution: (Mantiene la lógica de actualización dinámica de laboratorios/perfiles).
+
+---
+
 ## 🔒 Cumplimiento y Seguridad (Innegociable)
 
 Estamos construidos para el entorno farmacéutico altamente regulado.

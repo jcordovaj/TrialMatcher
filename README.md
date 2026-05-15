@@ -310,26 +310,59 @@ flowchart TD
 
 ---
 
-## 🔒 Gobernanza y Arquitectura
+## 🔒 Governance & Architecture
 
-Para que el sistema sea coherente, sin redundancias y con una clara separación de responsabilidades, cada agente que ajecuta el MCP posee SKILLS específica que cumplen con el formato de skills.org.
+To ensure architectural consistency, eliminate redundancy, and maintain a clear separation of responsibilities, every MCP-executing agent is designed around dedicated SKILLS that follow the `skills.org` specification format.
 
-Todo se organiza en 4 Skills maestras que agrupan las funcionalidades lógicas que debe interpretar el asistente, eliminando heurísticas que causaban ruido.
+The entire system is structured around four master Skills that consolidate the assistant’s core logical capabilities, replacing fragmented heuristics that previously introduced operational noise and ambiguity.
 
-### Agentes y Skills
+### Agents & Skills
 
-1. Agente A: Clinical Eligibility Specialist
+### 1. Agent A — Clinical Eligibility Specialist
 
-   Este agente es el "Cerebro Clínico". Se encarga del análisis profundo, la seguridad y el cálculo matemático.
-   - Skill 1: clinical-intelligence-engine: (Agrupa: Multi Criteria Scoring, Absolute Safety Hard Stop, y Protocol Semantic Parsing).
-   - Skill 2: compliance-and-traceability: (Agrupa: Evidentiary Traceability, Pseudonymized Compliance Guard, y Cognitive Sensitivity Simulation).
+This agent acts as the system’s **Clinical Intelligence Core** .
 
-2. Agente B: Clinical Trial Master Orchestrator
+It is responsible for deep clinical reasoning, safety enforcement, protocol interpretation, and mathematical eligibility analysis.
 
-   Este agente es el "Director de Orquesta". Maneja la interacción, el flujo de datos y la gestión de archivos masivos.
-   - Skill 3: clinical-asset-orchestration: (Agrupa: Coordinate Batch Trial Matching, Clinical Asset Ingestion, y In Context Batch Screening).
+#### Skill 1: `clinical-intelligence-engine`
 
-   - Skill 4: patient-record-evolution: (Mantiene la lógica de actualización dinámica de laboratorios/perfiles).
+Consolidates:
+
+- Multi-Criteria Scoring
+- Absolute Safety Hard Stop
+- Protocol Semantic Parsing
+
+#### Skill 2: `compliance-and-traceability`
+
+Consolidates:
+
+- Evidentiary Traceability
+- Pseudonymized Compliance Guard
+- Cognitive Sensitivity Simulation
+
+---
+
+### 2. Agent B — Clinical Trial Master Orchestrator
+
+This agent functions as the system’s **Operational Conductor** , acting as the bridge between the Prompt Opinion platform, the MCP layer, the end user, and any external resources or tools required during execution.
+
+It manages interaction flows, large-scale data orchestration, and contextual processing pipelines.
+
+#### Skill 3: `clinical-asset-orchestration`
+
+Consolidates:
+
+- Coordinate Batch Trial Matching
+- Clinical Asset Ingestion
+- In-Context Batch Screening
+
+#### Skill 4: `patient-record-evolution`
+
+Maintains the dynamic logic responsible for:
+
+- Laboratory result evolution
+- Longitudinal patient profile updates
+- Adaptive clinical state synchronization
 
 ---
 
