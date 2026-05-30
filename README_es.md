@@ -1,7 +1,6 @@
 # TrialMatcher: Superando la brecha de USD 2.3B en el enrolamiento para ensayos clínicos
 
 **Motor de orquestación de ensayos clínicos impulsado por IA**
-
 [![MCP Compatible](https://img.shields.io/badge/MCP-Model%20Context%20Protocol-blue)](https://modelcontextprotocol.io/)[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://chat.z.ai/c/LICENSE)
 
 ![Snapshot TrialMatcher](image/README/banner2.png)
